@@ -1,0 +1,22 @@
+{
+  "welcome": "Selamat datang di Hotel kami",
+  "site": {
+    "name": "Hotel Kami"
+  },
+  "layouts": {
+    "title": "Hotel Kami"
+  },
+  "pages": {
+    "home": {
+      "title": "Beranda - Hotel Kami"
+    },
+    "top": {
+      "description": "Nikmati kenyamanan dan pelayanan terbaik di hotel kami.",
+      "languages": "Bahasa tersedia"
+    },
+    "about": {
+      "title": "Tentang Kami - Hotel Kami",
+      "description": "Pelajari lebih lanjut tentang sejarah, fasilitas, dan layanan hotel kami."
+    }
+  }
+}

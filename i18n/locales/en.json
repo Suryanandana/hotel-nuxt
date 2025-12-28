@@ -1,0 +1,22 @@
+{
+  "welcome": "Welcome to our Hotel",
+  "site": {
+    "name": "My Hotel"
+  },
+  "layouts": {
+    "title": "My Hotel"
+  },
+  "pages": {
+    "home": {
+      "title": "Home - My Hotel"
+    },
+    "top": {
+      "description": "Experience comfort and great service at our hotel.",
+      "languages": "Available languages"
+    },
+    "about": {
+      "title": "About Us - My Hotel",
+      "description": "Learn more about our hotel's story, amenities, and services."
+    }
+  }
+}
