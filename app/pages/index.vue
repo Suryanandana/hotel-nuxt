@@ -31,8 +31,8 @@ useHead({
 <template>
   <div>
     <LandingHero />
-    <LandingAbout />
     <LandingFaq />
+    <LandingAbout />
     <LandingFacility />
     <p>{{ t('pages.top.description') }}</p>
     <p>{{ t('pages.top.languages') }}</p>

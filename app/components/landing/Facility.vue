@@ -13,7 +13,7 @@ onMounted(() => {
       pin: true,
       pinSpacing: true,
       start: 'top-=50px top',
-      end: '+=2000',
+      end: '+=2300',
       scrub: 1,
     }
   })
@@ -39,11 +39,13 @@ onMounted(() => {
   tl.to('.card1', { scale: 0.925, yPercent: -1.5, opacity: 0.9 }, '-=0.3')
   tl.to('.card2', { scale: 0.95, yPercent: -1.125, opacity: 0.9 }, '-=0.3')
   tl.to('.card3', { scale: 0.98, yPercent: -0.85, opacity: 0.9 }, '-=0.3')
+
+  tl.to({}, { duration: 0.5 })
 })
 </script>
 
 <template>
-  <section class="container">
+  <section class="container-scope">
     <div class="cards">
       <div class="custom-card card1">
         <NuxtImg src="/images/slide1.jpg" class="w-full h-full object-contain" />
@@ -56,8 +58,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.container {
-  height: 300vh;
+.container-scope {
   padding: 100px 0;
 }
 
