@@ -1,6 +1,8 @@
 <script setup>
 import { computed } from 'vue'
 import Button from '~/components/ui/button/Button.vue'
+import About from './about.vue'
+import StackedCards from '~/components/landing/StackedCards.vue'
 
 definePageMeta({
   title: 'pages.home.title'
@@ -28,7 +30,10 @@ useHead({
 
 <template>
   <div>
-    <div class="h-screen bg-red-200"></div>
+    <LandingHero />
+    <LandingAbout />
+    <LandingFaq />
+    <LandingFacility />
     <p>{{ t('pages.top.description') }}</p>
     <p>{{ t('pages.top.languages') }}</p>
     <nav>
@@ -38,8 +43,8 @@ useHead({
           {{ locale.name ?? locale.code }}
         </NuxtLink>
         <Button variant="outline">
-      Button
-    </Button>
+          Button
+        </Button>
       </template>
     </nav>
   </div>

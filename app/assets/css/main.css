@@ -118,3 +118,108 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.splide__arrow.splide__arrow--prev, .splide__arrow.splide__arrow--next{
+    /* display: none; */
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #c9cc12;
+}
+
+button.splide__pagination__page.is-active{
+    background-color: #c9cc12;
+    width: 13px;
+    height: 7px;
+    border-radius: 5px;
+}
+
+button.splide__pagination__page{
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: gray;
+}
+
+li.splide__slide.is-active .animation{
+    animation: zoomOut 15s forwards ease-in-out;
+}
+
+li.splide__slide.is-active .text-slide span{
+    animation: fadeUp 1s forwards ease-in-out;
+}
+
+li.splide__slide.is-active .text-slide p{
+    animation: fadeDown 1s forwards ease-in-out;
+}
+
+li.splide__slide.is-active .text-slide div{
+    animation: fadeRight 1s forwards ease-in-out;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.splide__arrow[disabled]{
+    display: none;
+}
+
+/* New code */
+:root {
+  --swiper-pagination-color: #c9cc12;
+}

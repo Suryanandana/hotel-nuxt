@@ -1,34 +1,44 @@
 <script setup>
-import { ref, onMounted, watch, nextTick } from "vue";
+import { ref, onMounted, onUnmounted, nextTick } from "vue";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 
 const isOpen = ref(false);
 const isScrolled = ref(false);
+const { locale, locales, t } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 const navItems = [
-    { label: "About", href: "/about" },
-    { label: "Rooms", href: "/rooms" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "Activities", href: "/activities" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "About", href: "/" },
+    { label: "Rooms", href: "/" },
+    { label: "Facilities", href: "/" },
+    { label: "Contact", href: "/" },
 ];
 
 const openMenu = async () => {
-  isOpen.value = true;
+    isOpen.value = true;
 
-  await nextTick(); // <-- pastikan aside sudah render
+    await nextTick(); // <-- pastikan aside sudah render
 
-  gsap.fromTo(
-    ".mobile-panel",
-    { x: "100%" },
-    { x: "0%", duration: 0.6, ease: "power4.out" }
-  );
+    gsap.fromTo(
+        ".mobile-panel",
+        { x: "100%" },
+        { x: "0%", duration: 0.6, ease: "power4.out" }
+    );
 
-  gsap.fromTo(
-    ".mobile-item",
-    { x: 40, opacity: 0 },
-    { x: 0, opacity: 1, stagger: 0.12, duration: 0.4, delay: 0.1 }
-  );
+    gsap.fromTo(
+        ".mobile-item",
+        { x: 40, opacity: 0 },
+        { x: 0, opacity: 1, stagger: 0.12, duration: 0.4, delay: 0.1 }
+    );
 };
 
 const closeMenu = () => {
@@ -42,16 +52,14 @@ const closeMenu = () => {
     });
 };
 
-// Lock scroll saat menu terbuka
-watch(isOpen, (val) => {
-    document.body.style.overflow = val ? "hidden" : "";
-});
-
 // Detect scroll
 onMounted(() => {
-    window.addEventListener("scroll", () => {
-        isScrolled.value = window.scrollY > 20;
+    const trigger = ScrollTrigger.create({
+        start: 0,
+        end: "max",
+        onUpdate: (self) => isScrolled.value = self.scroll() > 20
     });
+    onUnmounted(() => trigger.kill());
 });
 </script>
 
@@ -60,44 +68,72 @@ onMounted(() => {
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b" :class="isScrolled
         ? 'bg-white shadow-sm border-gray-200'
         : 'bg-transparent border-transparent'">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
-
-            <!-- LOGO -->
-            <NuxtLink to="/" class="font-serif tracking-widest text-xl">
-                PARADISE
-                <span class="block text-[10px] tracking-[0.3em]">HOTEL</span>
-            </NuxtLink>
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16 relative">
 
             <!-- DESKTOP NAV -->
             <nav role="navigation" aria-label="Main navigation"
                 class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <ul class="flex gap-8 items-center">
                     <li v-for="item in navItems" :key="item.href">
-                        <NuxtLink :to="item.href" class="hover:text-gray-500 transition-colors">
+                        <NuxtLink :to="item.href"
+                            class="relative transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+                            :class="isScrolled ? 'text-black' : 'text-white'">
                             {{ item.label }}
                         </NuxtLink>
                     </li>
                 </ul>
-
-                <NuxtLink to="/contact">
-                    <Button class="">
-                        Contact Us
-                    </Button>
-                </NuxtLink>
             </nav>
 
+            <!-- LOGO -->
+            <NuxtLink to="/"
+                class="font-serif tracking-widest text-xl static md:absolute md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
+                <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" />
+            </NuxtLink>
+
+            <div class="gap-x-2 hidden md:flex items-center">
+                <NuxtLink to="/contact">
+                    <Button class="">
+                        Booking
+                        <Icon name="solar:arrow-right-up-linear" />
+                    </Button>
+                </NuxtLink>
+                <DropdownMenu>
+                    <DropdownMenuTrigger as-child>
+                        <Button variant="outline" aria-label="Submit" class="bg-transparent"
+                        :class="isScrolled ? 'text-black' : 'text-white'">
+                            <Icon v-if="locale === 'en'" name="twemoji:flag-united-states" />
+                            <Icon v-else-if="locale === 'id'" name="twemoji:flag-indonesia" />
+                            <span class="ml-1">{{ locale.toUpperCase() }}</span>
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuLabel>Language</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem v-for="l in locales" :key="l.code">
+                            <NuxtLink :to="switchLocalePath(l.code)">{{ l.name ?? l.code.toUpperCase() }}</NuxtLink>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+            </div>
+
             <!-- MOBILE HAMBURGER -->
-            <button class="md:hidden" @click="openMenu" aria-label="Open navigation menu" aria-controls="mobile-menu"
-                :aria-expanded="isOpen">
-                <svg width="30" height="30" fill="none" stroke="black" stroke-width="2">
-                    <path d="M4 7h22M4 15h22M4 23h22" />
+            <button class="md:hidden group" @click="openMenu" aria-label="Open navigation menu"
+                aria-controls="mobile-menu" :aria-expanded="isOpen">
+                <svg width="30" height="30" fill="none" stroke-width="2" class="transition-colors duration-300"
+                    :class="isScrolled ? 'stroke-black' : 'stroke-white'">
+                    <path d="M4 7h22"
+                        class="transition-transform duration-300 ease-in-out group-hover:-translate-y-1" />
+                    <path d="M4 15h22" class="transition-opacity duration-300 ease-in-out group-hover:opacity-75" />
+                    <path d="M4 23h22"
+                        class="transition-transform duration-300 ease-in-out group-hover:translate-y-1" />
                 </svg>
             </button>
         </div>
 
         <!-- OVERLAY -->
         <div v-if="isOpen" class="fixed inset-0 bg-black/40 backdrop-blur-sm md:hidden" @click="closeMenu"
-            aria-hidden="true"></div>
+            aria-hidden="true">
+        </div>
 
         <!-- MOBILE PANEL -->
         <aside v-if="isOpen" id="mobile-menu"
@@ -105,12 +141,12 @@ onMounted(() => {
             aria-modal="true" aria-label="Mobile Navigation Panel">
             <div class="flex justify-between items-center mb-6">
                 <NuxtLink to="/" class="font-serif tracking-widest text-lg">
-                    PARADISE
-                    <span class="block text-[9px] tracking-[0.3em]">HOTEL</span>
+                    <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" />
                 </NuxtLink>
 
-                <button aria-label="Close navigation menu" @click="closeMenu">
-                    <svg width="26" height="26" stroke="black" stroke-width="2">
+                <button aria-label="Close navigation menu" @click="closeMenu" class="group">
+                    <svg width="26" height="26" stroke="black" stroke-width="2"
+                        class="transition-transform duration-300 ease-in-out group-hover:rotate-90">
                         <line x1="4" y1="4" x2="22" y2="22" />
                         <line x1="22" y1="4" x2="4" y2="22" />
                     </svg>
