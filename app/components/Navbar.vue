@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
 import { gsap } from "gsap";
-import { DropdownMenuItem } from '@/components/ui/dropdown-menu'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
     Popover,
@@ -89,14 +88,14 @@ onMounted(() => {
             </NuxtLink>
 
             <div class="gap-x-2 hidden md:flex items-center">
-                <NuxtLink to="https://secure.guestpro.net/theulu/booking">
-                    <Button class="">
+                <Button as-child>
+                    <NuxtLink to="https://secure.guestpro.net/theulu/booking">
                         Booking Now
                         <Icon name="solar:arrow-right-up-linear" />
-                    </Button>
-                </NuxtLink>
+                    </NuxtLink>
+                </Button>
                 <Popover>
-                    <PopoverTrigger>
+                    <PopoverTrigger as-child>
                         <Button variant="outline" aria-label="Submit" class="bg-transparent"
                             :class="isScrolled ? 'text-black' : 'text-white'">
                             <Icon v-if="locale === 'en'" name="twemoji:flag-united-states" />
