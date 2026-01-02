@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 const rooms = [
     {
         title: 'Garden View Room',
-        price: 'FROM $150 / NIGHT',
+        price: 'FROM Rp 750.000 / NIGHT',
         description: 'Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.',
         image: '/images/slide2.jpg',
         features: ['King Size Bed', 'TV', 'Max 2 guests', 'Private Bathroom', 'Free WiFi', 'Air Conditioning', 'Room size : 30m²'],
@@ -16,7 +16,7 @@ const rooms = [
     },
     {
         title: 'Pool View Room',
-        price: 'FROM $250 / NIGHT',
+        price: 'FROM Rp 850.000 / NIGHT',
         description: 'Experience ultimate comfort in our spacious luxury suites featuring a separate living area and premium amenities.',
         image: '/images/pool-view.png',
         features: ['King Size Bed', 'TV', 'Max 2 guests', 'Private Bathroom', 'Free WiFi' , 'Air Conditioning', 'Room size : 30m²'],
@@ -59,7 +59,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="bg-white py-28 space-y-32">
+    <section class="py-28 space-y-32">
         <div 
             v-for="(room, index) in rooms" 
             :key="index"

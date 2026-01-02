@@ -20,7 +20,7 @@ useHead({
 </script>
 
 <template>
-  <section>
+  <section class="w-screen h-screen flex justify-center items-center bg-black text-white">
     <h1>{{ pageTitle }}</h1>
     <p>{{ pageDescription }}</p>
   </section>
