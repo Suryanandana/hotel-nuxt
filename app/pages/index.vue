@@ -34,6 +34,7 @@ useHead({
     <LandingFaq />
     <LandingAbout />
     <LandingFacility />
+    <div class="h-screen bg-red-400"></div>
     <p>{{ t('pages.top.description') }}</p>
     <p>{{ t('pages.top.languages') }}</p>
     <nav>
