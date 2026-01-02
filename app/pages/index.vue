@@ -32,20 +32,9 @@ useHead({
   <div>
     <LandingHero />
     <LandingFaq />
-    <LandingAbout />
+    <LandingRoom />
     <LandingFacility />
-    <p>{{ t('pages.top.description') }}</p>
-    <p>{{ t('pages.top.languages') }}</p>
-    <nav>
-      <template v-for="(locale, index) in availableLocales" :key="locale.code">
-        <span v-if="index"> | </span>
-        <NuxtLink :to="switchLocalePath(locale.code)">
-          {{ locale.name ?? locale.code }}
-        </NuxtLink>
-        <Button variant="outline">
-          Button
-        </Button>
-      </template>
-    </nav>
+    <LandingMaskReveal />
+    <LandingContact />
   </div>
 </template>
