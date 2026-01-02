@@ -6,29 +6,29 @@
     <!-- Left Image -->
     <div
       ref="leftImage"
-      class="absolute left-1/2 -translate-x-1/2 z-10 w-[300px] md:w-[380px]"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]"
     >
-      <img src="/images/slide1.jpg" class="rounded-lg" />
+      <img src="/images/slide1.jpg" class="rounded-lg object-cover w-full h-full shadow-2xl" />
     </div>
 
     <!-- Right Image -->
     <div
       ref="rightImage"
-      class="absolute left-1/2 -translate-x-1/2 z-10 w-[300px] md:w-[380px]"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]"
     >
-      <img src="/images/slide2.jpg" class="rounded-lg" />
+      <img src="/images/slide2.jpg" class="rounded-lg object-cover w-full h-full shadow-2xl" />
     </div>
 
     <!-- Text -->
     <div
       ref="text"
-      class="relative z-20 text-center max-w-xl opacity-0"
+      class="relative z-20 text-center max-w-2xl opacity-0 px-6"
     >
-      <h2 class="text-3xl md:text-4xl font-serif mb-4">
-        Discover your path to wellness and growth.
+      <h2 class="text-4xl md:text-5xl font-serif mb-6 text-gray-900">
+        Why Choose Our Hotel?
       </h2>
-      <p class="text-gray-600">
-        At Ulaman we redefine luxury as an experience...
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Experience the perfect blend of modern luxury and timeless elegance. From our world-class amenities to our dedicated staff, we ensure every moment of your stay is crafted to perfection. Discover a place where comfort meets sophistication.
       </p>
     </div>
   </section>
@@ -50,7 +50,7 @@ onMounted(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section.value,
-      start: "top top",
+      start: "-40px top",
       end: "+=1500",
       scrub: true,
       pin: true
@@ -58,16 +58,16 @@ onMounted(() => {
   })
 
   tl
-    // split images
+    // split images horizontally
     .to(leftImage.value, {
-      x: "-120%",
-      rotate: -2,
+      x: "-150%",
+      rotate: -5,
       ease: "power2.out"
     }, 0)
 
     .to(rightImage.value, {
-      x: "120%",
-      rotate: 2,
+      x: "150%",
+      rotate: 5,
       ease: "power2.out"
     }, 0)
 

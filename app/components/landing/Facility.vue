@@ -79,10 +79,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="cardStacking bg-white text-black">
+  <h2 class="text-4xl md:text-5xl font-serif text-gray-900 text-center font-bold">
+      Our Facilities
+  </h2>
+  <section class="cardStacking text-black bg-white">
     <div class="container mx-auto px-4">
       <div class="flex flex-col items-center justify-center w-full">
-        
         <!-- Loop Cards -->
         <div 
           v-for="(card, index) in cardsData" 

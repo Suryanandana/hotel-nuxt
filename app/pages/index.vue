@@ -32,7 +32,7 @@ useHead({
   <div>
     <LandingHero />
     <LandingFaq />
-    <LandingAbout />
+    <LandingRoom />
     <LandingFacility />
     <div class="h-screen bg-red-400"></div>
     <p>{{ t('pages.top.description') }}</p>
