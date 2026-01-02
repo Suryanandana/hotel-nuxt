@@ -84,7 +84,7 @@ onMounted(() => {
             <!-- LOGO -->
             <NuxtLink to="/"
                 class="font-serif tracking-widest text-xl static md:absolute md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
-                <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" />
+                <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" class="h-[50px] w-auto" />
             </NuxtLink>
 
             <div class="gap-x-2 hidden md:flex items-center">
@@ -140,7 +140,7 @@ onMounted(() => {
             aria-modal="true" aria-label="Mobile Navigation Panel">
             <div class="flex justify-between items-center mb-6">
                 <NuxtLink to="/" class="font-serif tracking-widest text-lg">
-                    <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" />
+                    <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" class="h-[50px] w-auto" />
                 </NuxtLink>
 
                 <button aria-label="Close navigation menu" @click="closeMenu" class="group">
