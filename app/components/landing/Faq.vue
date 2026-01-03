@@ -1,81 +1,99 @@
-<template>
-  <section
-    ref="section"
-    class="relative min-h-screen bg-[#f6f2ea] flex items-center justify-center overflow-hidden"
-  >
-    <!-- Left Image -->
-    <div
-      ref="leftImage"
-      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]"
-    >
-      <img src="/images/slide1.jpg" class="rounded-lg object-cover w-full h-full shadow-2xl" />
-    </div>
-
-    <!-- Right Image -->
-    <div
-      ref="rightImage"
-      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]"
-    >
-      <img src="/images/slide2.jpg" class="rounded-lg object-cover w-full h-full shadow-2xl" />
-    </div>
-
-    <!-- Text -->
-    <div
-      ref="text"
-      class="relative z-20 text-center max-w-2xl opacity-0 px-6"
-    >
-      <h2 class="text-4xl md:text-5xl font-serif mb-6 text-gray-900">
-        Why Choose Our Hotel?
-      </h2>
-      <p class="text-lg text-gray-600 leading-relaxed">
-        Experience the perfect blend of modern luxury and timeless elegance. From our world-class amenities to our dedicated staff, we ensure every moment of your stay is crafted to perfection. Discover a place where comfort meets sophistication.
-      </p>
-    </div>
-  </section>
-</template>
-
 <script setup>
-import { onMounted, ref } from "vue"
-import gsap from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
+import { onMounted, onUnmounted, ref, nextTick } from 'vue'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const section = ref(null)
-const leftImage = ref(null)
-const rightImage = ref(null)
-const text = ref(null)
+const faqs = [
+  {
+    question: "What are the check-in and check-out times?",
+    answer: "Check-in is available from 3:00 PM, and check-out is until 11:00 AM. We can often accommodate early check-ins or late check-outs upon request, subject to availability."
+  },
+  {
+    question: "Is breakfast included in the room rate?",
+    answer: "Our 'Bed & Breakfast' packages include a full continental buffet. For room-only bookings, breakfast can be added upon arrival at our rooftop restaurant."
+  },
+  {
+    question: "Do you offer airport transfers?",
+    answer: "Yes, we provide luxury private car transfers to and from the airport. Please contact our concierge team at least 24 hours in advance to arrange your ride."
+  },
+  {
+    question: "Are pets allowed?",
+    answer: "We are delighted to welcome small pets (up to 10kg) in specific room categories. A small cleaning fee applies per stay to ensure the comfort of all guests."
+  },
+  {
+    question: "Do you have a spa and gym?",
+    answer: "Yes, guests have complimentary access to our 24-hour fitness center. Our wellness spa offers a range of treatments and requires booking in advance."
+  }
+]
 
-onMounted(() => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: section.value,
-      start: "-40px top",
-      end: "+=1500",
-      scrub: true,
-      pin: true
-    }
-  })
+const sectionRef = ref(null)
+let ctx = null
 
-  tl
-    // split images horizontally
-    .to(leftImage.value, {
-      x: "-150%",
-      rotate: -5,
-      ease: "power2.out"
-    }, 0)
+onMounted(async () => {
+  await nextTick() // Tunggu hingga DOM benar-benar siap
+  ctx = gsap.context(() => {
+    gsap.fromTo('.reveal-up',
+      { y: 50, opacity: 0, autoAlpha: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        autoAlpha: 1,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.value,
+          start: "top 80%",
+        }
+      }
+    )
+  }, sectionRef.value)
+})
 
-    .to(rightImage.value, {
-      x: "150%",
-      rotate: 5,
-      ease: "power2.out"
-    }, 0)
-
-    // text fade in
-    .to(text.value, {
-      opacity: 1,
-      y: -20,
-      duration: 0.5
-    }, 0.2)
+onUnmounted(() => {
+  if (ctx) ctx.revert() // Bersihkan animasi saat komponen di-unmount
 })
 </script>
+
+<template>
+  <section ref="sectionRef" class="py-20 md:py-32 bg-stone-50 dark:bg-stone-950">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16 space-y-4 reveal-up opacity-0">
+          <h2 class="text-4xl md:text-5xl font-serif tracking-tight text-stone-900 dark:text-stone-50">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-lg text-stone-600 dark:text-stone-400 font-light">
+            Curated answers to help you plan your perfect stay.
+          </p>
+        </div>
+        
+        <div class="reveal-up opacity-0">
+          <Accordion type="single" collapsible class="space-y-4">
+          <AccordionItem 
+            v-for="(item, index) in faqs" 
+            :key="index" 
+            :value="'item-' + index"
+            class="border border-stone-200 dark:border-stone-800 rounded-xl px-6 bg-white dark:bg-stone-900 shadow-sm hover:shadow-md transition-all duration-300 ease-out"
+          >
+            <AccordionTrigger class="text-lg font-medium text-stone-800 dark:text-stone-100 py-6 hover:no-underline hover:text-primary transition-colors">
+              {{ item.question }}
+            </AccordionTrigger>
+            <AccordionContent class="text-stone-600 dark:text-stone-400 text-base leading-relaxed pb-6">
+              {{ item.answer }}
+            </AccordionContent>
+          </AccordionItem>
+          </Accordion>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

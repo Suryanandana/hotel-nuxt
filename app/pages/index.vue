@@ -31,10 +31,11 @@ useHead({
 <template>
   <div>
     <LandingHero />
-    <LandingFaq />
+    <LandingAbout />
     <LandingRoom />
     <LandingFacility />
     <LandingTextReveal />
+    <LandingFaq />
     <LandingMaskReveal />
     <LandingContact />
   </div>

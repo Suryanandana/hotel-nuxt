@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const sectionRef = ref(null)
 const container = ref(null)
+const imageRef = ref(null)
 const text = "Indulge in an oasis of tranquility and refined luxury. Every corner of our hotel is designed to offer you a unique experience of comfort and style."
 
 let ctx;
@@ -43,23 +44,30 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section ref="sectionRef" class="py-32 bg-white flex items-center justify-center min-h-screen relative overflow-hidden">
+  <section ref="sectionRef" class="py-32 bg-[#F3F1EB] flex items-center justify-center min-h-screen relative overflow-hidden">
     <!-- Background Image -->
-    <div class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+    <div class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none select-none">
       <img 
+        ref="imageRef"
         src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1000&auto=format&fit=crop" 
         alt="Hotel Ambience" 
-        class="w-[300px] h-[450px] md:w-[400px] md:h-[600px] object-cover rounded-t-full opacity-50"
+        class="w-[300px] h-[450px] md:w-[450px] md:h-[650px] object-cover rounded-t-full opacity-20 contrast-125"
       />
     </div>
 
     <div class="container mx-auto px-6 md:px-12 relative z-10">
-      <div ref="container" class="max-w-5xl mx-auto text-center">
-        <p class="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight flex flex-wrap justify-center gap-x-[0.3em] gap-y-2">
+      <div ref="container" class="max-w-6xl mx-auto text-center">
+        <div class="mb-10 flex justify-center">
+          <span class="inline-block text-xs font-bold tracking-[0.3em] text-stone-500 uppercase border border-stone-300 px-4 py-2 rounded-full bg-white/50 backdrop-blur-sm">
+            Our Philosophy
+          </span>
+        </div>
+
+        <p class="text-4xl md:text-6xl lg:text-7xl font-serif leading-[1.1] flex flex-wrap justify-center gap-x-[0.25em] gap-y-2 md:gap-y-4">
           <span 
             v-for="(word, index) in text.split(' ')" 
             :key="index" 
-            class="word opacity-10 text-gray-300"
+            class="word opacity-10 text-stone-400"
           >
             {{ word }}
           </span>

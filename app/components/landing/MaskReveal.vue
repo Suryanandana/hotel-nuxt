@@ -69,11 +69,20 @@ onMounted(() => {
         </div>
 
         <!-- Content -->
-        <div ref="text" class="relative z-20 text-center text-white px-4 opacity-0">
-            <p class="text-sm md:text-base tracking-[0.2em] uppercase mb-4 text-yellow-500 font-bold">Discover Paradise</p>
-            <h2 class="text-4xl md:text-6xl lg:text-7xl font-serif mb-4">
-                Unforgettable<br/>Moments
+        <div ref="text" class="relative z-20 text-center text-white px-6 opacity-0 max-w-4xl mx-auto">
+            <Icon name="ri:double-quotes-l" class="text-5xl md:text-7xl text-white/40 mb-6 inline-block" />
+            
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif italic leading-tight mb-8">
+                "We don't just offer a place to sleep, we create unforgettable moments that last a lifetime."
             </h2>
+            
+            <div class="flex flex-col items-center gap-3 mb-10">
+                <div class="w-12 h-[1px] bg-yellow-500"></div>
+                <p class="text-sm md:text-base tracking-[0.2em] uppercase text-yellow-500 font-bold">
+                    General Manager
+                </p>
+            </div>
+
             <div class="flex gap-x-5 justify-center">
                 <Button>
                     Booking Now
