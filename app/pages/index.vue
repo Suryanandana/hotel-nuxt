@@ -34,6 +34,7 @@ useHead({
     <LandingFaq />
     <LandingRoom />
     <LandingFacility />
+    <LandingTextReveal />
     <LandingMaskReveal />
     <LandingContact />
   </div>
