@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, nextTick } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -15,57 +15,24 @@ const cardsData = [
   { title: 'Beach Club', image: '/images/beach-club.jpg', text: 'Enjoy the vibrant atmosphere of our exclusive beach club with refreshing drinks and live music.' }
 ]
 
-onMounted(() => {
+onMounted(async () => {
+  await nextTick()
   // Gunakan gsap.context untuk scoping yang aman di Vue/Nuxt
   ctx = gsap.context(() => {
-    const cards = gsap.utils.toArray(".stackCard");
-
-    // Jarak tambahan jika diperlukan (sesuai referensi)
-    // let stickDistance = 0;
-
-    cards.forEach((card, index) => {
-      // Hitung scale agar kartu yang di belakang semakin kecil
-      // Logic: 1 - (urutan dari belakang) * factor
-      var scale = 1 - (cards.length - 1 - index) * 0.025;
-
-      // Animasi scale down
-      let scaleDown = gsap.to(card, {
-        scale: scale,
-        transformOrigin: "50% top", // Menggunakan top agar terlihat menumpuk rapi
+    gsap.fromTo('.facility-card',
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
         duration: 1,
-        ease: "none" // Penting untuk scrub yang halus
-      });
-
-      ScrollTrigger.create({
-        trigger: card,
-        start: "center center+=32",
-        // Semua kartu selesai dipin ketika kartu terakhir mencapai posisinya
-        endTrigger: cards[cards.length - 1],
-        end: "center center+=32",
-        pin: true,
-        pinSpacing: false, // KUNCI: False membuat mereka menumpuk (overlap)
-        scrub: true,       // Menggunakan scrub agar animasi mengikuti scroll bar
-        animation: scaleDown,
-        invalidateOnRefresh: true,
-        // markers: true, // Uncomment untuk debugging
-      });
-
-      // 3. Animasi Opacity (Muncul perlahan sebelum ter-pin)
-      gsap.fromTo(card,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 1,
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom", // Mulai fade in saat masuk viewport
-            end: "center center+=32", // Selesai fade in saat di posisi pin
-            scrub: true,
-          }
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".facility-grid",
+          start: "top 80%",
         }
-      );
-    });
+      }
+    );
   });
 })
 
@@ -75,17 +42,26 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="cardStacking text-black bg-white">
+  <section class="py-20 text-black bg-white">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col items-center justify-center w-full">
+      <div class="text-center mb-16 space-y-4 facility-card opacity-0">
+        <h2 class="text-4xl md:text-5xl font-serif tracking-tight text-stone-900 dark:text-stone-50">
+          Experience Our World-Class Facilities
+        </h2>
+        <p class="text-lg text-stone-600 dark:text-stone-400 font-light">
+          Elevate your stay with amenities designed for ultimate comfort and enjoyment.
+        </p>
+      </div>
+      <div class="facility-grid grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         <!-- Loop Cards -->
         <div v-for="(card, index) in cardsData" :key="index"
-          class="stackCard w-full flex items-end justify-between rounded-[30px] relative min-h-[450px] p-[35px] overflow-hidden">
+          class="facility-card w-full flex items-end justify-between rounded-[30px] relative min-h-[450px] p-[35px] overflow-hidden opacity-0 group">
           <!-- Background Image -->
-          <img :src="card.image" :alt="card.title" class="absolute inset-0 w-full h-full object-cover" />
+          <img :src="card.image" :alt="card.title"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
           <!-- Overlay -->
-          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="absolute inset-0 bg-black/40 transition-colors duration-500 group-hover:bg-black/50"></div>
 
           <div class="relative z-10 max-w-xl">
             <h2 class="text-4xl font-bold mb-2 text-white">{{ card.title }}</h2>
@@ -102,22 +78,4 @@ onUnmounted(() => {
   </section>
 </template>
 
-<style scoped>
-.cardStacking {
-  padding: 100px 0;
-  /* Memberikan ruang scroll yang cukup agar efek stacking terasa */
-  padding-bottom: 100px;
-}
-
-.stackCard {
-  /* Transform origin diset di JS, tapi default CSS ini membantu mencegah glitch awal */
-  transform-origin: 50% top;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50vh;
-  /* Memberikan jarak scroll "diam sejenak" antar kartu */
-}
-
-.stackCard:last-child {
-  margin-bottom: 0;
-}
-</style>
+<style scoped></style>

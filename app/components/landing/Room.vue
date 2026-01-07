@@ -54,12 +54,34 @@ onMounted(() => {
             },
             '-=0.4'
         )
+
+        // Animasi untuk judul section
+        gsap.fromTo('.room-header',
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: '.room-header',
+                    start: "top 80%",
+                }
+            })
     })
 })
 </script>
 
 <template>
     <section class="py-28 space-y-32">
+        <div class="text-center mb-16 space-y-4 room-header opacity-0">
+          <h2 class="text-4xl md:text-5xl font-serif tracking-tight text-stone-900 dark:text-stone-50">
+            Our Exquisite Rooms & Suites
+          </h2>
+          <p class="text-lg text-stone-600 dark:text-stone-400 font-light">
+            Discover your perfect sanctuary with our diverse range of luxurious accommodations.
+          </p>
+        </div>
         <div 
             v-for="(room, index) in rooms" 
             :key="index"

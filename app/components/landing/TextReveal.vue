@@ -18,20 +18,23 @@ onMounted(() => {
     
     gsap.fromTo(words, 
       { 
-        opacity: 0.1,
-        color: "#d1d5db" // gray-300 (warna awal tipis)
+        opacity: 0,
+        y: 20,
+        filter: 'blur(8px)',
+        color: "#d1d5db"
       },
       {
         opacity: 1,
-        color: "#000000", // gray-800 (warna akhir jelas)
-        stagger: 0.1,
-        ease: "none",
+        y: 0,
+        filter: 'blur(0px)',
+        color: "#1c1917", // stone-900
+        stagger: 0.03,
+        duration: 0.8,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.value,
-          pin: true,
-          start: "top top",
-          end: "+=200%",
-          scrub: 1, // Efek mengikuti scroll bar (bolak-balik)
+          start: "top 75%",
+          once: true
         }
       }
     )
