@@ -7,6 +7,12 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from '@/components/ui/popover'
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from '@/components/ui/tooltip'
 
 const isOpen = ref(false);
 const isScrolled = ref(false);
@@ -94,25 +100,52 @@ onMounted(() => {
                         <Icon name="solar:arrow-right-up-linear" />
                     </NuxtLink>
                 </Button>
-                <Popover>
-                    <PopoverTrigger as-child>
-                        <Button variant="outline" aria-label="Submit" class="bg-transparent"
-                            :class="isScrolled ? 'text-black' : 'text-white'">
-                            <Icon v-if="locale === 'en'" name="twemoji:flag-united-states" />
-                            <Icon v-else-if="locale === 'id'" name="twemoji:flag-indonesia" />
-                            <span class="ml-1">{{ locale.toUpperCase() }}</span>
-                        </Button>
-                    </PopoverTrigger>
-                    <PopoverContent class="w-[140px] p-1">
-                        <NuxtLink v-for="l in locales" :key="l.code" :to="switchLocalePath(l.code)"
-                            class="flex items-center w-full px-2 py-1.5 text-sm rounded-sm hover:bg-gray-100 transition-colors"
-                            :class="{ 'bg-gray-50 font-medium': locale === l.code }">
-                            <Icon v-if="l.code === 'en'" name="twemoji:flag-united-states" class="mr-2 h-4 w-4" />
-                            <Icon v-else-if="l.code === 'id'" name="twemoji:flag-indonesia" class="mr-2 h-4 w-4" />
-                            {{ l.name ?? l.code.toUpperCase() }}
-                        </NuxtLink>
-                    </PopoverContent>
-                </Popover>
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <Button as-child variant="outline" size="icon" aria-label="Submit"
+                                class="bg-transparent font-bold hover:text-green-300 outline-green-300 border-green-300"
+                                :class="isScrolled ? 'text-white bg-green-600 hover:bg-white' : 'text-green-300'">
+                                <NuxtLink to="https://wa.me/628123456789">
+                                    <Icon name="ic:baseline-whatsapp" />
+                                </NuxtLink>
+                            </Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>Our Whatsapp Contact</p>
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <Popover>
+                                <PopoverTrigger as-child>
+                                    <Button variant="outline" aria-label="Submit" class="bg-transparent"
+                                        :class="isScrolled ? 'text-black' : 'text-white'">
+                                        <Icon v-if="locale === 'en'" name="twemoji:flag-united-states" />
+                                        <Icon v-else-if="locale === 'id'" name="twemoji:flag-indonesia" />
+                                        <span class="ml-1">{{ locale.toUpperCase() }}</span>
+                                    </Button>
+                                </PopoverTrigger>
+                                <PopoverContent class="w-[140px] p-1">
+                                    <NuxtLink v-for="l in locales" :key="l.code" :to="switchLocalePath(l.code)"
+                                        class="flex items-center w-full px-2 py-1.5 text-sm rounded-sm hover:bg-gray-100 transition-colors"
+                                        :class="{ 'bg-gray-50 font-medium': locale === l.code }">
+                                        <Icon v-if="l.code === 'en'" name="twemoji:flag-united-states"
+                                            class="mr-2 h-4 w-4" />
+                                        <Icon v-else-if="l.code === 'id'" name="twemoji:flag-indonesia"
+                                            class="mr-2 h-4 w-4" />
+                                        {{ l.name ?? l.code.toUpperCase() }}
+                                    </NuxtLink>
+                                </PopoverContent>
+                            </Popover>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>Select Language</p>
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
             </div>
 
             <!-- MOBILE HAMBURGER -->
