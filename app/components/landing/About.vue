@@ -50,10 +50,9 @@ onMounted(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section.value,
-      start: "-40px top",
-      end: "+=1500",
-      scrub: true,
-      pin: true
+      start: "top 70%",
+      end: "center center",
+      scrub: true
     }
   })
 

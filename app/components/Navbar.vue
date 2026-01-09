@@ -104,7 +104,7 @@ onMounted(() => {
                     <Tooltip>
                         <TooltipTrigger>
                             <Button as-child variant="outline" size="icon" aria-label="Submit"
-                                class="bg-transparent font-bold hover:text-green-300 outline-green-300 border-green-300"
+                                class="bg-transparent text-lg font-bold hover:text-green-300 outline-green-300 border-green-300"
                                 :class="isScrolled ? 'text-white bg-green-600 hover:bg-white' : 'text-green-300'">
                                 <NuxtLink to="https://wa.me/628123456789">
                                     <Icon name="ic:baseline-whatsapp" />
@@ -121,11 +121,10 @@ onMounted(() => {
                         <TooltipTrigger>
                             <Popover>
                                 <PopoverTrigger as-child>
-                                    <Button variant="outline" aria-label="Submit" class="bg-transparent"
+                                    <Button variant="outline" aria-label="Submit" class="bg-transparent text-lg p-2"
                                         :class="isScrolled ? 'text-black' : 'text-white'">
                                         <Icon v-if="locale === 'en'" name="twemoji:flag-united-states" />
                                         <Icon v-else-if="locale === 'id'" name="twemoji:flag-indonesia" />
-                                        <span class="ml-1">{{ locale.toUpperCase() }}</span>
                                     </Button>
                                 </PopoverTrigger>
                                 <PopoverContent class="w-[140px] p-1">
