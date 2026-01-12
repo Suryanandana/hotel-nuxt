@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon',
     '@nuxt/fonts',
+    'nuxt-aos',
   ],
   vite: {
     plugins: [
@@ -33,6 +34,9 @@ export default defineNuxtConfig({
      * @default "@/components/ui"
      */
     componentDir: '@/components/ui'
+  },
+  aos: {
+    once: true
   },
   i18n: {
     baseUrl: 'https://example.com',

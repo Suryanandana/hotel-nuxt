@@ -18,5 +18,79 @@
       "title": "Tentang Kami - Hotel Kami",
       "description": "Pelajari lebih lanjut tentang sejarah, fasilitas, dan layanan hotel kami."
     }
+  },
+  "landing": {
+    "roomHeader": {
+      "title": "Kamar & Suite Kami yang Indah",
+      "subtitle": "Temukan tempat perlindungan sempurna Anda dengan beragam akomodasi mewah kami."
+    },
+    "roomList": [
+      {
+        "title": "Kamar Pemandangan Taman",
+        "price": "MULAI DARI Rp 750.000 / MALAM",
+        "description": "Desain indah dengan perabotan modern termasuk jendela ceruk glamor dengan pemandangan pribadi Anda ke Lucerne.",
+        "image": "/images/slide2.jpg",
+        "features": [
+          { "key": "bed", "text": "Ranjang Ukuran King" },
+          { "key": "tv", "text": "TV" },
+          { "key": "guests", "text": "Maks 2 tamu" },
+          { "key": "bathroom", "text": "Kamar Mandi Pribadi" },
+          { "key": "wifi", "text": "WiFi Gratis" },
+          { "key": "ac", "text": "Pendingin Ruangan" },
+          { "key": "size", "text": "Ukuran kamar: 30m²" }
+        ],
+        "align": "left",
+        "buttonText": "Detail Kamar"
+      },
+      {
+        "title": "Kamar Pemandangan Kolam",
+        "price": "MULAI DARI Rp 850.000 / MALAM",
+        "description": "Rasakan kenyamanan terbaik di suite mewah kami yang luas dengan ruang tamu terpisah dan fasilitas premium.",
+        "image": "/images/pool-view.png",
+        "features": [
+          { "key": "bed", "text": "Ranjang Ukuran King" },
+          { "key": "tv", "text": "TV" },
+          { "key": "guests", "text": "Maks 2 tamu" },
+          { "key": "bathroom", "text": "Kamar Mandi Pribadi" },
+          { "key": "wifi", "text": "WiFi Gratis" },
+          { "key": "ac", "text": "Pendingin Ruangan" },
+          { "key": "size", "text": "Ukuran kamar: 30m²" }
+        ],
+        "align": "right",
+        "buttonText": "Detail Kamar"
+      }
+    ],
+    "facilitySection": {
+    "header": {
+      "title": "Rasakan Fasilitas Kelas Dunia Kami",
+      "subtitle": "Tingkatkan pengalaman menginap Anda dengan fasilitas yang dirancang untuk kenyamanan dan kenikmatan terbaik."
+    },
+    "list": [
+      {
+        "title": "Kolam Renang Hotel",
+        "image": "/images/pool-view.png",
+        "text": "Bersantailah di kolam renang tanpa batas kami yang menakjubkan dengan pemandangan panorama.",
+        "buttonText": "Detail Fasilitas"
+      },
+      {
+        "title": "Gym Mini",
+        "image": "/images/mini-gym.jpeg",
+        "text": "Tetap aktif selama menginap dengan gym mini kami yang lengkap.",
+        "buttonText": "Detail Fasilitas"
+      },
+      {
+        "title": "Restoran",
+        "image": "/images/restaurant.jpg",
+        "text": "Rasakan keunggulan kuliner bersama koki pemenang penghargaan kami.",
+        "buttonText": "Detail Fasilitas"
+      },
+      {
+        "title": "Beach Club",
+        "image": "/images/beach-club.jpg",
+        "text": "Nikmati suasana semarak klub pantai eksklusif kami dengan minuman menyegarkan dan musik live.",
+        "buttonText": "Detail Fasilitas"
+      }
+    ]
+  }
   }
 }

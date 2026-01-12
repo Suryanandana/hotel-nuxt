@@ -18,5 +18,79 @@
       "title": "About Us - My Hotel",
       "description": "Learn more about our hotel's story, amenities, and services."
     }
+  },
+  "landing": {
+    "roomHeader": {
+      "title": "Our Exquisite Rooms & Suites",
+      "subtitle": "Discover your perfect sanctuary with our diverse range of luxurious accommodations."
+    },
+    "roomList": [
+      {
+        "title": "Garden View Room",
+        "price": "FROM Rp 750.000 / NIGHT",
+        "description": "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
+        "image": "/images/slide2.jpg",
+        "features": [
+          { "key": "bed", "text": "King Size Bed" },
+          { "key": "tv", "text": "TV" },
+          { "key": "guests", "text": "Max 2 guests" },
+          { "key": "bathroom", "text": "Private Bathroom" },
+          { "key": "wifi", "text": "Free WiFi" },
+          { "key": "ac", "text": "Air Conditioning" },
+          { "key": "size", "text": "Room size: 30m²" }
+        ],
+        "align": "left",
+        "buttonText": "Detail Room"
+      },
+      {
+        "title": "Pool View Room",
+        "price": "FROM Rp 850.000 / NIGHT",
+        "description": "Experience ultimate comfort in our spacious luxury suites featuring a separate living area and premium amenities.",
+        "image": "/images/pool-view.png",
+        "features": [
+          { "key": "bed", "text": "King Size Bed" },
+          { "key": "tv", "text": "TV" },
+          { "key": "guests", "text": "Max 2 guests" },
+          { "key": "bathroom", "text": "Private Bathroom" },
+          { "key": "wifi", "text": "Free WiFi" },
+          { "key": "ac", "text": "Air Conditioning" },
+          { "key": "size", "text": "Room size: 30m²" }
+        ],
+        "align": "right",
+        "buttonText": "Detail Room"
+      }
+    ],
+    "facilitySection": {
+      "header": {
+        "title": "Experience Our World-Class Facilities",
+        "subtitle": "Elevate your stay with amenities designed for ultimate comfort and enjoyment."
+      },
+      "list": [
+        {
+          "title": "Hotel Pool",
+          "image": "/images/pool-view.png",
+          "text": "Relax in our stunning infinity pool with panoramic views.",
+          "buttonText": "Detail Facility"
+        },
+        {
+          "title": "Mini Gym",
+          "image": "/images/mini-gym.jpeg",
+          "text": "Stay active during your stay with our well-equipped mini gym.",
+          "buttonText": "Detail Facility"
+        },
+        {
+          "title": "Restaurant",
+          "image": "/images/restaurant.jpg",
+          "text": "Experience culinary excellence with our award-winning chefs.",
+          "buttonText": "Detail Facility"
+        },
+        {
+          "title": "Beach Club",
+          "image": "/images/beach-club.jpg",
+          "text": "Enjoy the vibrant atmosphere of our exclusive beach club with refreshing drinks and live music.",
+          "buttonText": "Detail Facility"
+        }
+      ]
+    }
   }
 }

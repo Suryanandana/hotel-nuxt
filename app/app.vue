@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-x-hidden">
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator color="#FFD700" />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
