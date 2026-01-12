@@ -72,10 +72,10 @@ onMounted(() => {
         <pre>
             {{ rooms }}
         </pre>
-        <!-- <RoomCard
+        <RoomCard
             v-for="(room, index) in rooms" 
             :key="index"
             :room="room"
-        /> -->
+        />
     </section>
 </template>

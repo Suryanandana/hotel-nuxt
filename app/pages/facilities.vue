@@ -49,7 +49,7 @@ onMounted(() => {
         <!-- Bagian Fasilitas -->
         <div class="container mx-auto px-4 pt-32">
             <div class="facility-grid grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-                <!-- <LandingFacilityCard v-for="(card, index) in cardsData" :key="index" :card="card" /> -->
+                <LandingFacilityCard v-for="(card, index) in cardsData" :key="index" :card="card" />
             </div>
         </div>
         <LandingFaq />
