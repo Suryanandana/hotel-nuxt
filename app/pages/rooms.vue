@@ -78,11 +78,11 @@ onMounted(() => {
 
     <!-- Daftar Kamar -->
     <section class="py-20 md:py-32 space-y-32">
-      <RoomCard
+      <!-- <RoomCard
         v-for="(room, index) in rooms" 
         :key="index"
         :room="room"
-      />
+      /> -->
     </section>
 
     <!-- FAQ Section -->

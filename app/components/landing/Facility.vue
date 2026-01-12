@@ -18,11 +18,11 @@ const cardsData = computed(() => tm('landing.facilitySection.list'))
         </p>
       </div>
       <div class="facility-grid grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-        <LandingFacilityCard
+        <!-- <LandingFacilityCard
           v-for="(card, index) in cardsData"
           :key="index"
           :card="card"
-        />
+        /> -->
       </div>
     </div>
   </section>

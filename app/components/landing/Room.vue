@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 const { t, tm } = useI18n()
 
 const rooms = computed(() => tm('landing.roomList'))
+console.log(rooms)
 
 onMounted(() => {
     const sections = gsap.utils.toArray('.room-section')
@@ -68,10 +69,13 @@ onMounted(() => {
             {{ t('landing.roomHeader.subtitle') }}
           </p>
         </div>
-        <RoomCard
+        <pre>
+            {{ rooms }}
+        </pre>
+        <!-- <RoomCard
             v-for="(room, index) in rooms" 
             :key="index"
             :room="room"
-        />
+        /> -->
     </section>
 </template>
