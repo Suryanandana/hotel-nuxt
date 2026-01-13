@@ -53,6 +53,18 @@ export default defineNuxtConfig({
       about: {
         en: '/about-us',
         id: '/tentang',
+      },
+      contact: {
+        en: "/contact",
+        id: "/kontak"
+      },
+      facilities: {
+        en: "/facilities",
+        id: "/fasilitas"
+      },
+      rooms: {
+        en: "/rooms",
+        id: "/kamar"
       }
     },
     locales: [

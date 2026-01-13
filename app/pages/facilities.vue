@@ -33,7 +33,7 @@ onMounted(() => {
                 class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/50"></div>
             <div class="hero-content relative text-center px-4">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif mb-4">
+                <h1 class="text-4xl md:text-6xl font-serif mb-4">
                     {{ t('landing.facilitySection.header.title') }}
                 </h1>
                 <p class="max-w-3xl mx-auto text-lg md:text-xl text-white/90">

@@ -88,7 +88,7 @@ onMounted(() => {
             </nav>
 
             <!-- LOGO -->
-            <NuxtLink to="/"
+            <NuxtLink :to="$localePath('/')"
                 class="font-serif tracking-widest text-xl static md:absolute md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
                 <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" class="h-[50px] w-auto" />
             </NuxtLink>
@@ -128,7 +128,7 @@ onMounted(() => {
                                             <Icon v-else-if="locale === 'id'" name="twemoji:flag-indonesia" />
                                         </Button>
                                     </PopoverTrigger>
-                                    <PopoverContent class="w-[140px] p-1 top-10">
+                                    <PopoverContent class="w-[140px] p-1 translate-y-3">
                                         <NuxtLink v-for="l in locales" :key="l.code" :to="switchLocalePath(l.code)"
                                             class="flex items-center w-full px-2 py-1.5 text-sm rounded-sm hover:bg-gray-100 transition-colors"
                                             :class="{ 'bg-gray-50 font-medium': locale === l.code }">
@@ -173,7 +173,7 @@ onMounted(() => {
             class="mobile-panel fixed top-0 right-0 h-full w-[80%] bg-white shadow-xl p-8 md:hidden" role="dialog"
             aria-modal="true" aria-label="Mobile Navigation Panel">
             <div class="flex justify-between items-center mb-6">
-                <NuxtLink to="/" class="font-serif tracking-widest text-lg">
+                <NuxtLink :to="$localePath('/')" class="font-serif tracking-widest text-lg">
                     <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" class="h-[50px] w-auto" />
                 </NuxtLink>
 
