@@ -19,6 +19,12 @@
       "description": "Pelajari lebih lanjut tentang sejarah, fasilitas, dan layanan hotel kami."
     }
   },
+  "navbar": {
+    "about": "Tentang",
+    "rooms": "Kamar",
+    "facilities": "Fasilitas",
+    "contact": "Kontak"
+  },
   "landing": {
     "roomHeader": {
       "title": "Kamar & Suite Kami yang Indah",

@@ -43,10 +43,17 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
     langDir: 'locales',
+    customRoutes: 'config',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
+    },
+    pages: {
+      about: {
+        en: '/about-us',
+        id: '/tentang',
+      }
     },
     locales: [
       {

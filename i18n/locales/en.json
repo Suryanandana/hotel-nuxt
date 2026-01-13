@@ -19,6 +19,12 @@
       "description": "Learn more about our hotel's story, amenities, and services."
     }
   },
+  "navbar": {
+    "about": "About",
+    "rooms": "Rooms",
+    "facilities": "Facilities",
+    "contact": "Contact"
+  },
   "landing": {
     "roomHeader": {
       "title": "Our Exquisite Rooms & Suites",
