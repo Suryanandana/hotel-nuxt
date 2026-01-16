@@ -37,15 +37,16 @@
         "description": "Desain indah dengan perabotan modern termasuk jendela ceruk glamor dengan pemandangan pribadi Anda ke Lucerne.",
         "image": "/images/slide2.jpg",
         "features": [
-          { "key": "bed", "text": "Ranjang Ukuran King" },
-          { "key": "tv", "text": "TV" },
-          { "key": "guests", "text": "Maks 2 tamu" },
-          { "key": "bathroom", "text": "Kamar Mandi Pribadi" },
-          { "key": "wifi", "text": "WiFi Gratis" },
-          { "key": "ac", "text": "Pendingin Ruangan" },
-          { "key": "size", "text": "Ukuran kamar: 30m²" }
+          { "icon": "solar:bed-linear", "text": "Ranjang Ukuran King" },
+          { "icon": "solar:tv-linear", "text": "TV" },
+          { "icon": "umbleicons:users", "text": "Maks 2 tamu" },
+          { "icon": "fa:bath", "text": "Kamar Mandi Pribadi" },
+          { "icon": "iconoir:wifi-tag", "text": "WiFi Gratis" },
+          { "icon": "icon-park-outline:air-conditioning", "text": "Pendingin Ruangan" },
+          { "icon": "material-symbols:resize", "text": "Ukuran kamar: 30m²" }
         ],
         "align": "left",
+        "url": "rooms-garden",
         "buttonText": "Detail Kamar"
       },
       {
@@ -54,15 +55,16 @@
         "description": "Rasakan kenyamanan terbaik di suite mewah kami yang luas dengan ruang tamu terpisah dan fasilitas premium.",
         "image": "/images/pool-view.png",
         "features": [
-          { "key": "bed", "text": "Ranjang Ukuran King" },
-          { "key": "tv", "text": "TV" },
-          { "key": "guests", "text": "Maks 2 tamu" },
-          { "key": "bathroom", "text": "Kamar Mandi Pribadi" },
-          { "key": "wifi", "text": "WiFi Gratis" },
-          { "key": "ac", "text": "Pendingin Ruangan" },
-          { "key": "size", "text": "Ukuran kamar: 30m²" }
+          { "icon": "solar:bed-linear", "text": "Ranjang Ukuran King" },
+          { "icon": "solar:tv-linear", "text": "TV" },
+          { "icon": "umbleicons:users", "text": "Maks 2 tamu" },
+          { "icon": "fa:bath", "text": "Kamar Mandi Pribadi" },
+          { "icon": "iconoir:wifi-tag", "text": "WiFi Gratis" },
+          { "icon": "icon-park-outline:air-conditioning", "text": "Pendingin Ruangan" },
+          { "icon": "material-symbols:resize", "text": "Ukuran kamar: 30m²" }
         ],
         "align": "right",
+        "url": "rooms-pool",
         "buttonText": "Detail Kamar"
       }
     ],

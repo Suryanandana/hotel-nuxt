@@ -2,7 +2,6 @@
 import { onMounted, computed } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import RoomCard from '~/components/landing/RoomCard.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -59,26 +58,11 @@ onMounted(() => {
 <template>
   <div class="bg-stone-50 dark:bg-stone-950">
     <!-- Hero Section -->
-    <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-white">
-      <img src="/images/mini-gym.jpeg" alt="Hotel Exterior" class="absolute inset-0 w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div class="hero-content relative text-center px-4">
-        <h1 class="text-4xl md:text-6xl font-serif mb-4">
-          {{ t('landing.roomHeader.title') }}
-        </h1>
-        <p class="max-w-3xl mx-auto text-lg md:text-xl text-white/90">
-          {{ t('landing.roomHeader.subtitle') }}
-        </p>
-      </div>
-      <!-- Indikator Scroll -->
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-70">
-        <Icon name="solar:mouse-minimalistic-linear" class="text-4xl animate-bounce" />
-      </div>
-    </section>
+    <Hero :title="t('landing.roomHeader.title')" :sub-title="t('landing.roomHeader.subtitle')" img-url="/images/slide1.jpg" />
 
     <!-- Daftar Kamar -->
     <section class="py-20 md:py-32 space-y-32">
-      <RoomCard v-for="(room, index) in rooms" :key="index" :room="room" />
+      <LandingRoomCardDev v-for="(room, index) in rooms" :key="index" :room="room" />
     </section>
 
     <!-- FAQ Section -->

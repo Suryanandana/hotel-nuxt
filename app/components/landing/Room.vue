@@ -69,9 +69,6 @@ onMounted(() => {
             {{ t('landing.roomHeader.subtitle') }}
           </p>
         </div>
-        <pre>
-            {{ rooms }}
-        </pre>
         <RoomCard
             v-for="(room, index) in rooms" 
             :key="index"

@@ -65,7 +65,15 @@ export default defineNuxtConfig({
       rooms: {
         en: "/rooms",
         id: "/kamar"
-      }
+      },
+      'rooms-garden': {
+        en: "/rooms/garden-view",
+        id: "/rooms/pemandangan-taman"
+      },
+      'rooms-pool': {
+        en: "/rooms/pool-view",
+        id: "/rooms/pemandangan-kolam"
+      },
     },
     locales: [
       {
