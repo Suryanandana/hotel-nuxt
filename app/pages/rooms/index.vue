@@ -9,6 +9,11 @@ gsap.registerPlugin(ScrollTrigger)
 const { t, tm } = useI18n()
 const rooms = computed(() => tm('landing.roomList'))
 
+const breadcrumbs = [
+    {url: '/', label: t('navbar.home')},
+    {url: 'rooms', label: t('navbar.rooms')}
+]
+
 // --- SEO & Metadata Halaman ---
 useHead({
   title: 'Our Rooms & Suites',
@@ -58,7 +63,7 @@ onMounted(() => {
 <template>
   <div class="bg-stone-50 dark:bg-stone-950">
     <!-- Hero Section -->
-    <Hero :title="t('landing.roomHeader.title')" :sub-title="t('landing.roomHeader.subtitle')" img-url="/images/slide1.jpg" />
+    <Hero :title="t('landing.roomHeader.title')" :sub-title="t('landing.roomHeader.subtitle')" img-url="/images/slide1.jpg" :breadcrumbs="breadcrumbs" />
 
     <!-- Daftar Kamar -->
     <section class="py-20 md:py-32 space-y-32">

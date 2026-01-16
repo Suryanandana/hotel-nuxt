@@ -28,7 +28,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="bg-[#f8f6f3] py-28">
+    <section class="py-28">
         <div ref="container"
             class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center opacity-0">
 

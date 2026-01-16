@@ -20,6 +20,7 @@
     }
   },
   "navbar": {
+    "home": "Home",
     "about": "About",
     "rooms": "Rooms",
     "facilities": "Facilities",

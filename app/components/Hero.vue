@@ -8,7 +8,18 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-defineProps(['title', 'subTitle', 'imgUrl'])
+
+defineProps({
+  title: String,
+  subTitle: String,
+  imgUrl: String,
+  breadcrumbs: {
+    type: Array,
+    default: () => [
+      { url: '/', label: 'Home' }
+    ]
+  }
+})
 </script>
 <template>
   <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-white">
@@ -21,25 +32,21 @@ defineProps(['title', 'subTitle', 'imgUrl'])
       <div>
         <Breadcrumb>
           <BreadcrumbList class="w-fit mx-auto dark">
-            <BreadcrumbItem>
-              <BreadcrumbLink as-child>
-                <NuxtLink to="/">
-                  Home
-                </NuxtLink>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink as-child>
-                <NuxtLink to="/docs/components">
-                  Components
-                </NuxtLink>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-            </BreadcrumbItem>
+            <template v-for="(item, index) in breadcrumbs" :key="index">
+              <BreadcrumbItem>
+                <template v-if="index === breadcrumbs.length - 1">
+                  <BreadcrumbPage>{{ item.label }}</BreadcrumbPage>
+                </template>
+                <template v-else>
+                  <BreadcrumbLink as-child>
+                    <NuxtLink :to="$localePath(item.url)">
+                      {{ item.label }}
+                    </NuxtLink>
+                  </BreadcrumbLink>
+                </template>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator v-if="index < breadcrumbs.length - 1" />
+            </template>
           </BreadcrumbList>
         </Breadcrumb>
       </div>
