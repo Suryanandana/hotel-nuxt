@@ -17,6 +17,10 @@
     "about": {
       "title": "Tentang Kami - Hotel Kami",
       "description": "Pelajari lebih lanjut tentang sejarah, fasilitas, dan layanan hotel kami."
+    },
+    "garden": {
+      "title": "Kamar Pemandangan Taman",
+      "description": "Nikmati keindahan tenang Kamar Pemandangan Taman kami, menawarkan tempat peristirahatan damai dengan pemandangan taman yang rimbun."
     }
   },
   "navbar": {

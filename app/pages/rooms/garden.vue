@@ -1,5 +1,4 @@
 <script setup>
-import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 const { t: tLocal } = useI18n({
@@ -10,6 +9,18 @@ const breadcrumbs = [
     { url: 'rooms', label: t('navbar.rooms') },
     { url: t('landing.roomList[0].url'), label: t('landing.roomList[0].title') }
 ]
+
+const pageTitle = computed(() => t('pages.garden.title'))
+const pageDescription = computed(() => t('pages.garden.description'))
+
+useHead({
+    title: pageTitle,
+    meta: [
+        { name: 'description', content: pageDescription },
+        { property: 'og:title', content: pageTitle },
+        { property: 'og:description', content: pageDescription }
+    ]
+})
 </script>
 
 <template>
@@ -25,7 +36,7 @@ const breadcrumbs = [
                 <div class="border rounded-2xl p-6 space-y-4">
                     <div class="flex flex-wrap items-center justify-between gap-4">
                         <div class="flex items-center gap-3">
-                            <h1 class="text-2xl font-semibold">Standard Rooms</h1>
+                            <h1 class="text-2xl font-semibold">Garden View Room</h1>
                             <span class="px-3 py-1 text-sm rounded-full bg-emerald-100 text-emerald-700">
                                 Luxury Rooms
                             </span>
@@ -39,11 +50,11 @@ const breadcrumbs = [
                     </div>
 
                     <p class="text-sm text-gray-500">
-                        2464 Royal Ln. Mesa, New Jersey 45463
+                        Kec. Nusa Penida, Kabupaten Klungkung, Bali
                     </p>
 
                     <p class="text-2xl font-semibold text-emerald-700">
-                        $150 <span class="text-sm font-normal text-gray-500">/ night</span>
+                        $150 <span class="text-sm font-normal text-gray-500">/ {{ tLocal('night') }}</span>
                     </p>
 
                     <div class="border-t pt-4 flex flex-wrap gap-6 text-sm text-gray-600">
@@ -81,9 +92,11 @@ const breadcrumbs = [
 
 <i18n lang="json">{
     "en": {
-        "overview": "Our Garden View Rooms offer a serene escape with lush green landscapes right outside your window. Designed for comfort and relaxation, these rooms provide a peaceful retreat from the everyday hustle. Enjoy modern amenities and a tranquil atmosphere, making your stay both refreshing and memorable."
+        "overview": "Our Garden View Rooms offer a serene escape with lush green landscapes right outside your window. Designed for comfort and relaxation, these rooms provide a peaceful retreat from the everyday hustle. Enjoy modern amenities and a tranquil atmosphere, making your stay both refreshing and memorable.",
+        "night": "night"
     },
     "id": {
-        "overview": "Kamar Garden View kami menawarkan pelarian yang tenang dengan pemandangan hijau subur tepat di luar jendela Anda. Dirancang untuk kenyamanan dan relaksasi, kamar-kamar ini menyediakan tempat peristirahatan yang damai dari hiruk pikuk sehari-hari. Nikmati fasilitas modern dan suasana yang tenang, menjadikan masa menginap Anda menyegarkan dan tak terlupakan."
+        "overview": "Kamar Garden View kami menawarkan pelarian yang tenang dengan pemandangan hijau subur tepat di luar jendela Anda. Dirancang untuk kenyamanan dan relaksasi, kamar-kamar ini menyediakan tempat peristirahatan yang damai dari hiruk pikuk sehari-hari. Nikmati fasilitas modern dan suasana yang tenang, menjadikan masa menginap Anda menyegarkan dan tak terlupakan.",
+        "night": "malam"
     }
 }</i18n>

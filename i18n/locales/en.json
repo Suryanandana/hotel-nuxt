@@ -17,6 +17,10 @@
     "about": {
       "title": "About Us - My Hotel",
       "description": "Learn more about our hotel's story, amenities, and services."
+    },
+    "garden": {
+      "title": "Garden View Room",
+      "description": "Enjoy the serene beauty of our Garden View Room, offering a peaceful retreat with lush garden vistas."
     }
   },
   "navbar": {

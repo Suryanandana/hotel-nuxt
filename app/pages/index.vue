@@ -5,7 +5,8 @@ definePageMeta({
   title: 'pages.home.title'
 })
 
-const { t } = useI18n()
+const { t,  tm } = useI18n()
+const rooms = computed(() => tm('landing.roomList'))
 
 const pageTitle = computed(() => t('pages.home.title'))
 const pageDescription = computed(() => t('pages.top.description'))
@@ -24,7 +25,9 @@ useHead({
   <div>
     <LandingHero />
     <LandingAbout />
-    <LandingRoom />
+    <section class="py-20 md:py-32 space-y-32">
+      <LandingRoomCard v-for="(room, index) in rooms" :key="index" :room="room" />
+    </section>
     <LandingFacility />
     <LandingTextReveal />
     <LandingFaq />
