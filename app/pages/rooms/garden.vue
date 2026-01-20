@@ -10,6 +10,14 @@ const breadcrumbs = [
     { url: t('landing.roomList[0].url'), label: t('landing.roomList[0].title') }
 ]
 
+const slides = [
+  { src: '/images/slide1.jpg', alt: 'Slide 1' },
+  { src: '/images/slide2.jpg', alt: 'Slide 2' },
+  { src: '/images/slide3.png', alt: 'Slide 3' },
+  { src: '/images/pool.jpg', alt: 'Pool' },
+  { src: '/images/restaurant.jpg', alt: 'Restaurant' },
+];
+
 const pageTitle = computed(() => t('pages.garden.title'))
 const pageDescription = computed(() => t('pages.garden.description'))
 
@@ -27,7 +35,7 @@ useHead({
     <Hero :title="t('landing.roomList[0].title')" :breadcrumbs="breadcrumbs" />
     <!-- content -->
     <div class="container mx-auto px-4 pt-32 pb-20">
-        <RoomsHero />
+        <RoomsHero :slides="slides" />
 
         <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-8 mt-10 md:-mt-10 lg:-mt-20">
             <!-- LEFT CONTENT -->

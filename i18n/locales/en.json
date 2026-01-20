@@ -21,6 +21,10 @@
     "garden": {
       "title": "Garden View Room",
       "description": "Enjoy the serene beauty of our Garden View Room, offering a peaceful retreat with lush garden vistas."
+    },
+    "pool": {
+      "title": "Pool View Room",
+      "description": "Relax and unwind in our Pool View Room, offering refreshing views of our sparkling swimming pool."
     }
   },
   "navbar": {

@@ -3,18 +3,10 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import { onMounted, ref, watch } from 'vue';
 import { useBreakpoints } from '@vueuse/core';
 
-defineProps(['title', 'subTitle']);
+defineProps(['slides']);
 
 const main = ref();
 const thumbs = ref();
-
-const slides = [
-  { src: '/images/slide1.jpg', alt: 'Slide 1' },
-  { src: '/images/slide2.jpg', alt: 'Slide 2' },
-  { src: '/images/slide3.png', alt: 'Slide 3' },
-  { src: '/images/pool.jpg', alt: 'Pool' },
-  { src: '/images/restaurant.jpg', alt: 'Restaurant' },
-];
 
 // --- Responsive Logic ---
 const breakpoints = useBreakpoints({ md: 768 });

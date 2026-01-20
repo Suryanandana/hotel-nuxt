@@ -21,6 +21,10 @@
     "garden": {
       "title": "Kamar Pemandangan Taman",
       "description": "Nikmati keindahan tenang Kamar Pemandangan Taman kami, menawarkan tempat peristirahatan damai dengan pemandangan taman yang rimbun."
+    },
+    "pool": {
+      "title": "Kamar Pemandangan Kolam",
+      "description": "Bersantai dan lepaskan penat di Kamar Pemandangan Kolam kami, menawarkan pemandangan kolam renang kami yang berkilau."
     }
   },
   "navbar": {
