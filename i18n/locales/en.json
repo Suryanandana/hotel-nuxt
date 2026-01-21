@@ -48,7 +48,7 @@
         "features": [
           { "icon": "solar:bed-linear", "text": "King Size Bed" },
           { "icon": "solar:tv-linear", "text": "TV" },
-          { "icon": "umbleicons:users", "text": "Max 2 guests" },
+          { "icon": "solar:user-outline", "text": "Max 2 guests" },
           { "icon": "fa:bath", "text": "Private Bathroom" },
           { "icon": "iconoir:wifi-tag", "text": "Free WiFi" },
           { "icon": "icon-park-outline:air-conditioning", "text": "Air Conditioning" },
@@ -66,7 +66,7 @@
         "features": [
           { "icon": "solar:bed-linear", "text": "King Size Bed" },
           { "icon": "solar:tv-linear", "text": "TV" },
-          { "icon": "umbleicons:users", "text": "Max 2 guests" },
+          { "icon": "solar:user-outline", "text": "Max 2 guests" },
           { "icon": "fa:bath", "text": "Private Bathroom" },
           { "icon": "iconoir:wifi-tag", "text": "Free WiFi" },
           { "icon": "icon-park-outline:air-conditioning", "text": "Air Conditioning" },
