@@ -54,10 +54,10 @@ defineProps({
         <div class="border-t pt-4 flex flex-wrap gap-6 text-sm text-gray-600">
             <div v-for="(feature, index) in tm('features')" :key="index" class="flex items-center gap-2">
                 <div class="flex flex-col">
-                    <span class="text-[12px]">{{feature.label}}</span>
+                    <span class="text-[12px]">{{feature.label.b.s }}</span>
                     <div class="flex items-center gap-1 font-semibold">
-                        <Icon :name="feature.icon" />
-                        {{ feature.text }}
+                        <Icon :name="feature.icon.b.s" />
+                        {{ feature.text.b.s }}
                     </div>
                 </div>
             </div>
