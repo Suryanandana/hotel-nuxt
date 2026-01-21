@@ -17,7 +17,22 @@
     "about": {
       "title": "About Us - My Hotel",
       "description": "Learn more about our hotel's story, amenities, and services."
+    },
+    "garden": {
+      "title": "Garden View Room",
+      "description": "Enjoy the serene beauty of our Garden View Room, offering a peaceful retreat with lush garden vistas."
+    },
+    "pool": {
+      "title": "Pool View Room",
+      "description": "Relax and unwind in our Pool View Room, offering refreshing views of our sparkling swimming pool."
     }
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "rooms": "Rooms",
+    "facilities": "Facilities",
+    "contact": "Contact"
   },
   "landing": {
     "roomHeader": {
@@ -31,15 +46,16 @@
         "description": "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
         "image": "/images/slide2.jpg",
         "features": [
-          { "key": "bed", "text": "King Size Bed" },
-          { "key": "tv", "text": "TV" },
-          { "key": "guests", "text": "Max 2 guests" },
-          { "key": "bathroom", "text": "Private Bathroom" },
-          { "key": "wifi", "text": "Free WiFi" },
-          { "key": "ac", "text": "Air Conditioning" },
-          { "key": "size", "text": "Room size: 30m²" }
+          { "icon": "solar:bed-linear", "text": "King Size Bed" },
+          { "icon": "solar:tv-linear", "text": "TV" },
+          { "icon": "solar:user-outline", "text": "Max 2 guests" },
+          { "icon": "fa:bath", "text": "Private Bathroom" },
+          { "icon": "iconoir:wifi-tag", "text": "Free WiFi" },
+          { "icon": "icon-park-outline:air-conditioning", "text": "Air Conditioning" },
+          { "icon": "material-symbols:resize", "text": "Room size: 30m²" }
         ],
         "align": "left",
+        "url": "rooms-garden",
         "buttonText": "Detail Room"
       },
       {
@@ -48,15 +64,16 @@
         "description": "Experience ultimate comfort in our spacious luxury suites featuring a separate living area and premium amenities.",
         "image": "/images/pool-view.png",
         "features": [
-          { "key": "bed", "text": "King Size Bed" },
-          { "key": "tv", "text": "TV" },
-          { "key": "guests", "text": "Max 2 guests" },
-          { "key": "bathroom", "text": "Private Bathroom" },
-          { "key": "wifi", "text": "Free WiFi" },
-          { "key": "ac", "text": "Air Conditioning" },
-          { "key": "size", "text": "Room size: 30m²" }
+          { "icon": "solar:bed-linear", "text": "King Size Bed" },
+          { "icon": "solar:tv-linear", "text": "TV" },
+          { "icon": "solar:user-outline", "text": "Max 2 guests" },
+          { "icon": "fa:bath", "text": "Private Bathroom" },
+          { "icon": "iconoir:wifi-tag", "text": "Free WiFi" },
+          { "icon": "icon-park-outline:air-conditioning", "text": "Air Conditioning" },
+          { "icon": "material-symbols:resize", "text": "Room size: 30m²" }
         ],
         "align": "right",
+        "url": "rooms-pool",
         "buttonText": "Detail Room"
       }
     ],

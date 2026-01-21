@@ -1,19 +1,12 @@
 <script setup>
 import { computed } from 'vue'
-import Button from '~/components/ui/button/Button.vue'
-import About from './about.vue'
-import StackedCards from '~/components/landing/StackedCards.vue'
 
 definePageMeta({
   title: 'pages.home.title'
 })
 
-const { locale, locales, t } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
-
-const availableLocales = computed(() => {
-  return locales.value.filter(i => i.code !== locale.value)
-})
+const { t,  tm } = useI18n()
+const rooms = computed(() => tm('landing.roomList'))
 
 const pageTitle = computed(() => t('pages.home.title'))
 const pageDescription = computed(() => t('pages.top.description'))
@@ -32,7 +25,9 @@ useHead({
   <div>
     <LandingHero />
     <LandingAbout />
-    <LandingRoom />
+    <section class="py-20 md:py-32 space-y-32">
+      <LandingRoomCard v-for="(room, index) in rooms" :key="index" :room="room" />
+    </section>
     <LandingFacility />
     <LandingTextReveal />
     <LandingFaq />

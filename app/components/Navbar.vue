@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick } from "vue";
+import { ref, computed, onMounted, nextTick } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -16,15 +16,15 @@ import {
 
 const isOpen = ref(false);
 const isScrolled = ref(false);
-const { locale, locales, t } = useI18n()
+const { locale, locales, t, useLocalePath  } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
-const navItems = [
-    { label: "About", href: "/about" },
-    { label: "Rooms", href: "/rooms" },
-    { label: "Facilities", href: "/facilities" },
-    { label: "Contact", href: "/contact" },
-];
+const navItems = computed(() => [
+    { label: t('navbar.about'), href: "about" },
+    { label: t('navbar.rooms'), href: "rooms" },
+    { label: t('navbar.facilities'), href: "facilities" },
+    { label: t('navbar.contact'), href: "contact" },
+]);
 
 const openMenu = async () => {
     isOpen.value = true;
@@ -78,7 +78,7 @@ onMounted(() => {
                 class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <ul class="flex gap-8 items-center">
                     <li v-for="item in navItems" :key="item.href">
-                        <NuxtLink :to="item.href"
+                        <NuxtLink :to="$localePath(item.href)"
                             class="relative transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full"
                             :class="isScrolled ? 'text-black' : 'text-white'">
                             {{ item.label }}
@@ -88,7 +88,7 @@ onMounted(() => {
             </nav>
 
             <!-- LOGO -->
-            <NuxtLink to="/"
+            <NuxtLink :to="$localePath('/')"
                 class="font-serif tracking-widest text-xl static md:absolute md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2">
                 <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" class="h-[50px] w-auto" />
             </NuxtLink>
@@ -128,7 +128,7 @@ onMounted(() => {
                                             <Icon v-else-if="locale === 'id'" name="twemoji:flag-indonesia" />
                                         </Button>
                                     </PopoverTrigger>
-                                    <PopoverContent class="w-[140px] p-1">
+                                    <PopoverContent class="w-[140px] p-1 translate-y-3">
                                         <NuxtLink v-for="l in locales" :key="l.code" :to="switchLocalePath(l.code)"
                                             class="flex items-center w-full px-2 py-1.5 text-sm rounded-sm hover:bg-gray-100 transition-colors"
                                             :class="{ 'bg-gray-50 font-medium': locale === l.code }">
@@ -173,7 +173,7 @@ onMounted(() => {
             class="mobile-panel fixed top-0 right-0 h-full w-[80%] bg-white shadow-xl p-8 md:hidden" role="dialog"
             aria-modal="true" aria-label="Mobile Navigation Panel">
             <div class="flex justify-between items-center mb-6">
-                <NuxtLink to="/" class="font-serif tracking-widest text-lg">
+                <NuxtLink :to="$localePath('/')" class="font-serif tracking-widest text-lg">
                     <NuxtImg src="/logo-theulu-nobg.png" alt="logo theulu" height="50" class="h-[50px] w-auto" />
                 </NuxtLink>
 

@@ -43,10 +43,37 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
     langDir: 'locales',
+    customRoutes: 'config',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
+    },
+    pages: {
+      about: {
+        en: '/about-us',
+        id: '/tentang',
+      },
+      contact: {
+        en: "/contact",
+        id: "/kontak"
+      },
+      facilities: {
+        en: "/facilities",
+        id: "/fasilitas"
+      },
+      rooms: {
+        en: "/rooms",
+        id: "/kamar"
+      },
+      'rooms-garden': {
+        en: "/rooms/garden-view",
+        id: "/rooms/pemandangan-taman"
+      },
+      'rooms-pool': {
+        en: "/rooms/pool-view",
+        id: "/rooms/pemandangan-kolam"
+      },
     },
     locales: [
       {

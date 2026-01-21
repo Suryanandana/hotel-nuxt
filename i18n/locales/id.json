@@ -17,7 +17,22 @@
     "about": {
       "title": "Tentang Kami - Hotel Kami",
       "description": "Pelajari lebih lanjut tentang sejarah, fasilitas, dan layanan hotel kami."
+    },
+    "garden": {
+      "title": "Kamar Pemandangan Taman",
+      "description": "Nikmati keindahan tenang Kamar Pemandangan Taman kami, menawarkan tempat peristirahatan damai dengan pemandangan taman yang rimbun."
+    },
+    "pool": {
+      "title": "Kamar Pemandangan Kolam",
+      "description": "Bersantai dan lepaskan penat di Kamar Pemandangan Kolam kami, menawarkan pemandangan kolam renang kami yang berkilau."
     }
+  },
+  "navbar": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "rooms": "Kamar",
+    "facilities": "Fasilitas",
+    "contact": "Kontak"
   },
   "landing": {
     "roomHeader": {
@@ -31,15 +46,16 @@
         "description": "Desain indah dengan perabotan modern termasuk jendela ceruk glamor dengan pemandangan pribadi Anda ke Lucerne.",
         "image": "/images/slide2.jpg",
         "features": [
-          { "key": "bed", "text": "Ranjang Ukuran King" },
-          { "key": "tv", "text": "TV" },
-          { "key": "guests", "text": "Maks 2 tamu" },
-          { "key": "bathroom", "text": "Kamar Mandi Pribadi" },
-          { "key": "wifi", "text": "WiFi Gratis" },
-          { "key": "ac", "text": "Pendingin Ruangan" },
-          { "key": "size", "text": "Ukuran kamar: 30m²" }
+          { "icon": "solar:bed-linear", "text": "Ranjang Ukuran King" },
+          { "icon": "solar:tv-linear", "text": "TV" },
+          { "icon": "umbleicons:users", "text": "Maks 2 tamu" },
+          { "icon": "fa:bath", "text": "Kamar Mandi Pribadi" },
+          { "icon": "iconoir:wifi-tag", "text": "WiFi Gratis" },
+          { "icon": "icon-park-outline:air-conditioning", "text": "Pendingin Ruangan" },
+          { "icon": "material-symbols:resize", "text": "Ukuran kamar: 30m²" }
         ],
         "align": "left",
+        "url": "rooms-garden",
         "buttonText": "Detail Kamar"
       },
       {
@@ -48,15 +64,16 @@
         "description": "Rasakan kenyamanan terbaik di suite mewah kami yang luas dengan ruang tamu terpisah dan fasilitas premium.",
         "image": "/images/pool-view.png",
         "features": [
-          { "key": "bed", "text": "Ranjang Ukuran King" },
-          { "key": "tv", "text": "TV" },
-          { "key": "guests", "text": "Maks 2 tamu" },
-          { "key": "bathroom", "text": "Kamar Mandi Pribadi" },
-          { "key": "wifi", "text": "WiFi Gratis" },
-          { "key": "ac", "text": "Pendingin Ruangan" },
-          { "key": "size", "text": "Ukuran kamar: 30m²" }
+          { "icon": "solar:bed-linear", "text": "Ranjang Ukuran King" },
+          { "icon": "solar:tv-linear", "text": "TV" },
+          { "icon": "umbleicons:users", "text": "Maks 2 tamu" },
+          { "icon": "fa:bath", "text": "Kamar Mandi Pribadi" },
+          { "icon": "iconoir:wifi-tag", "text": "WiFi Gratis" },
+          { "icon": "icon-park-outline:air-conditioning", "text": "Pendingin Ruangan" },
+          { "icon": "material-symbols:resize", "text": "Ukuran kamar: 30m²" }
         ],
         "align": "right",
+        "url": "rooms-pool",
         "buttonText": "Detail Kamar"
       }
     ],
