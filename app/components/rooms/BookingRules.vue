@@ -21,7 +21,7 @@
               class="w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
               ✓
             </span>
-            <span class="text-gray-700 dark:text-gray-300">{{ rule.b.s}}</span>
+            <span class="text-gray-700 dark:text-gray-300">{{ rule.loc.source }}</span>
           </li>
         </ul>
       </div>
@@ -37,7 +37,7 @@
               class="w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
               ✓
             </span>
-            <span class="text-gray-700 dark:text-gray-300">{{ rule.b.s}}</span>
+            <span class="text-gray-700 dark:text-gray-300">{{ rule.loc.source }}</span>
           </li>
         </ul>
       </div>
