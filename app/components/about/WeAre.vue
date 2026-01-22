@@ -15,7 +15,7 @@
                 <!-- About Us (tall - 2 rows) -->
                 <div class="row-span-2 shadow-md border rounded-2xl p-6 flex flex-col justify-center">
                     <div class="flex items-center gap-2 mb-2">
-                        <Icon name="ph:users-four-thin" class="text-xl" />
+                        <Icon name="ph:users-four" class="text-xl" />
                         <h3 class="font-semibold text-lg">About Us</h3>
                     </div>
                     <p class="text-gray-700 leading-relaxed">
