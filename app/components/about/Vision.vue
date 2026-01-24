@@ -26,8 +26,8 @@
 
             <!-- IMAGE -->
             <div
-                class="w-full h-[280px] md:h-[320px] lg:h-[420px] bg-gray-200 rounded-3xl flex items-center justify-center">
-                <span class="text-gray-400 text-sm">Image Here</span>
+                class="w-full h-[280px] md:h-[320px] lg:h-[420px] bg-gray-200 rounded-3xl flex items-center justify-center overflow-hidden">
+                <NuxtImg src="/images/balcon.jpg" class="w-full h-full object-cover" />
             </div>
 
             <!-- LIST -->

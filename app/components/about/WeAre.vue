@@ -7,13 +7,13 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Left Image -->
             <div class="w-full h-[300px] md:h-[380px] lg:h-full bg-gray-200 overflow-hidden rounded-3xl flex items-center">
-                <NuxtImg src="/images/slide1.jpg" class="w-full h-full object-cover" />
+                <NuxtImg src="/images/garden_front2.jpg" class="w-full h-full object-cover" />
             </div>
 
             <!-- Bento Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-6 auto-rows-max">
                 <!-- About Us (tall - 2 rows) -->
-                <div class="row-span-2 shadow-md border rounded-2xl p-6 flex flex-col justify-center">
+                <div class="row-span-2 hover:shadow-md border rounded-2xl p-6 flex flex-col justify-center">
                     <div class="flex items-center gap-2 mb-2">
                         <Icon name="ph:users-four" class="text-xl" />
                         <h3 class="font-semibold text-lg">About Us</h3>
@@ -34,7 +34,7 @@
                 </div>
 
                 <!-- Location -->
-                <div class="bg-white rounded-2xl shadow-md p-6 border flex flex-col justify-center">
+                <div class="bg-white rounded-2xl hover:shadow-md p-6 border flex flex-col justify-center">
                     <div class="flex items-center gap-2 mb-2">
                         <Icon name="hugeicons:location-05" class="text-xl" />
                         <h3 class="font-semibold text-lg">Location</h3>
@@ -48,7 +48,7 @@
                 </div>
 
                 <!-- Commitment -->
-                <div class="shadow-md rounded-2xl p-6 border flex flex-col justify-center">
+                <div class="hover:shadow-md rounded-2xl p-6 border flex flex-col justify-center">
                     <div class="flex items-center gap-2 mb-2">
                         <Icon name="fluent-mdl2:commitments" class="text-xl" />
                         <h3 class="font-semibold text-lg">Commitment</h3>
@@ -62,7 +62,7 @@
                 </div>
 
                 <!-- About (big) -->
-                <div class="sm:col-span-2 bg-white rounded-2xl shadow-md p-6 border">
+                <div class="sm:col-span-2 bg-white rounded-2xl hover:shadow-md p-6 border">
                     <div class="flex items-center gap-2 mb-2">
                         <Icon name="solar:people-nearby-linear" class="text-xl" />
                         <h3 class="font-semibold text-lg">Founder</h3>
