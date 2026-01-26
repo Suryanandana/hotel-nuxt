@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-16">
+  <section class="bg-white py-20">
     <div>
       <div class="grid grid-cols-1 lg:grid-cols-2">
         <!-- BLOCK 1: IMAGE LEFT, TEXT RIGHT -->

@@ -26,9 +26,9 @@ useHead({
 <template>
   <Hero :title="t('pages.about.sub')" img-url="/images/slide1.jpg" :breadcrumbs="breadcrumbs" />
   <div class="container mx-auto px-4 pt-32">
-    <AboutWeAre />
-    <AboutRoomOverview />
-    <AboutVision />
+    <AboutWeAre data-aos="fade-up" />
+    <AboutRoomOverview data-aos="fade-up" />
+    <AboutVision data-aos="fade-up" />
     <LandingContact />
   </div>
 </template>

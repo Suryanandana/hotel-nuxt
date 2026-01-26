@@ -1,5 +1,7 @@
 <script setup>
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
 const { t, tm } = useI18n()
 const { t: tLocal } = useI18n({
     useScope: 'local'
