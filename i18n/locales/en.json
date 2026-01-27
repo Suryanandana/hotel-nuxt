@@ -28,6 +28,12 @@
       "description": "Relax and unwind in our Pool View Room, offering refreshing views of our sparkling swimming pool."
     }
   },
+  "rooms": {
+    "garden": {
+      "title": "Overview",
+      "overview": "Our Garden View Rooms offer a serene escape with lush green landscapes right outside your window. Designed for comfort and relaxation, these rooms provide a peaceful retreat from the everyday hustle. Enjoy modern amenities and a tranquil atmosphere, making your stay both refreshing and memorable."
+    }
+  },
   "navbar": {
     "home": "Home",
     "about": "About",
@@ -40,20 +46,39 @@
       "title": "Our Exquisite Rooms & Suites",
       "subtitle": "Discover your perfect sanctuary with our diverse range of luxurious accommodations."
     },
-    "roomList": [
-      {
+    "roomList": [{
         "title": "Garden View Room",
         "price": "FROM Rp 750.000 / NIGHT",
         "description": "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
         "image": "/images/slide2.jpg",
-        "features": [
-          { "icon": "solar:bed-linear", "text": "King Size Bed" },
-          { "icon": "solar:tv-linear", "text": "TV" },
-          { "icon": "solar:user-outline", "text": "Max 2 guests" },
-          { "icon": "fa:bath", "text": "Private Bathroom" },
-          { "icon": "iconoir:wifi-tag", "text": "Free WiFi" },
-          { "icon": "icon-park-outline:air-conditioning", "text": "Air Conditioning" },
-          { "icon": "material-symbols:resize", "text": "Room size: 30m²" }
+        "features": [{
+            "icon": "solar:bed-linear",
+            "text": "King Size Bed"
+          },
+          {
+            "icon": "solar:tv-linear",
+            "text": "TV"
+          },
+          {
+            "icon": "solar:user-outline",
+            "text": "Max 2 guests"
+          },
+          {
+            "icon": "fa:bath",
+            "text": "Private Bathroom"
+          },
+          {
+            "icon": "iconoir:wifi-tag",
+            "text": "Free WiFi"
+          },
+          {
+            "icon": "icon-park-outline:air-conditioning",
+            "text": "Air Conditioning"
+          },
+          {
+            "icon": "material-symbols:resize",
+            "text": "Room size: 30m²"
+          }
         ],
         "align": "left",
         "url": "rooms-garden",
@@ -64,14 +89,34 @@
         "price": "FROM Rp 850.000 / NIGHT",
         "description": "Experience ultimate comfort in our spacious luxury suites featuring a separate living area and premium amenities.",
         "image": "/images/pool-view.png",
-        "features": [
-          { "icon": "solar:bed-linear", "text": "King Size Bed" },
-          { "icon": "solar:tv-linear", "text": "TV" },
-          { "icon": "solar:user-outline", "text": "Max 2 guests" },
-          { "icon": "fa:bath", "text": "Private Bathroom" },
-          { "icon": "iconoir:wifi-tag", "text": "Free WiFi" },
-          { "icon": "icon-park-outline:air-conditioning", "text": "Air Conditioning" },
-          { "icon": "material-symbols:resize", "text": "Room size: 30m²" }
+        "features": [{
+            "icon": "solar:bed-linear",
+            "text": "King Size Bed"
+          },
+          {
+            "icon": "solar:tv-linear",
+            "text": "TV"
+          },
+          {
+            "icon": "solar:user-outline",
+            "text": "Max 2 guests"
+          },
+          {
+            "icon": "fa:bath",
+            "text": "Private Bathroom"
+          },
+          {
+            "icon": "iconoir:wifi-tag",
+            "text": "Free WiFi"
+          },
+          {
+            "icon": "icon-park-outline:air-conditioning",
+            "text": "Air Conditioning"
+          },
+          {
+            "icon": "material-symbols:resize",
+            "text": "Room size: 30m²"
+          }
         ],
         "align": "right",
         "url": "rooms-pool",
@@ -83,8 +128,7 @@
         "title": "Experience Our World-Class Facilities",
         "subtitle": "Elevate your stay with amenities designed for ultimate comfort and enjoyment."
       },
-      "list": [
-        {
+      "list": [{
           "title": "Hotel Pool",
           "image": "/images/pool-view.png",
           "text": "Relax in our stunning infinity pool with panoramic views.",

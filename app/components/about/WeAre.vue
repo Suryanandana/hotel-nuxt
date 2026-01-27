@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 gap-12 py-20">
+  <div class="grid grid-cols-12 gap-12 pb-20">
     <!-- LEFT TABS -->
     <div class="col-span-12 lg:col-span-4 space-y-6">
       <div
@@ -57,12 +57,6 @@
             {{ rt(item) }}
           </li>
         </ul>
-
-        <!-- image is NOT translatable -->
-        <img
-          :src="tabs[activeTab].image"
-          class="rounded-xl w-full mt-6 max-h-32 object-cover"
-        />
       </div>
     </div>
   </div>
