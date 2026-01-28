@@ -2,6 +2,7 @@
 import { ref, computed, onMounted, nextTick } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRoute } from '#app'
 import {
     Popover,
     PopoverContent,
@@ -14,18 +15,27 @@ import {
     TooltipTrigger,
 } from '@/components/ui/tooltip'
 
+const route = useRoute()
 const isOpen = ref(false);
 const isScrolled = ref(false);
 const { locale, locales, t  } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const navItems = computed(() => [
-    { label: t('navbar.home'), href: "/" },
-    { label: t('navbar.about'), href: "about" },
-    { label: t('navbar.rooms'), href: "rooms" },
-    { label: t('navbar.facilities'), href: "facilities" },
+    { label: t('navbar.home'), href: "/", key: "home" },
+    { label: t('navbar.about'), href: "about", key: "about" },
+    { label: t('navbar.rooms'), href: "rooms", key: "rooms" },
+    { label: t('navbar.facilities'), href: "facilities", key: "facilities" },
     // { label: t('navbar.contact'), href: "contact" },
 ]);
+
+const activeItem = computed(() => {
+    const path = route.path
+    if (path.includes('/about') || path.includes('/tentang')) return 'about'
+    if (path.includes('/rooms') || path.includes('/kamar')) return 'rooms'
+    if (path.includes('/facilities') || path.includes('/fasilitas')) return 'facilities'
+    return 'home'
+})
 
 const openMenu = async () => {
     isOpen.value = true;
@@ -81,7 +91,10 @@ onMounted(() => {
                     <li v-for="item in navItems" :key="item.href">
                         <NuxtLink :to="$localePath(item.href)"
                             class="relative transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-                            :class="isScrolled ? 'text-black' : 'text-white'">
+                            :class="[
+                                isScrolled ? 'text-black' : 'text-white',
+                                activeItem === item.key ? (isScrolled ? 'after:w-full text-yellow-600' : 'after:w-full') : ''
+                            ]">
                             {{ item.label }}
                         </NuxtLink>
                     </li>
@@ -198,7 +211,9 @@ onMounted(() => {
             <nav aria-label="Mobile navigation">
                 <ul class="space-y-6 text-[15px] font-medium">
                     <li v-for="item in navItems" :key="item.href" class="mobile-item">
-                        <NuxtLink :to="item.href" class="block" @click="closeMenu">
+                        <NuxtLink :to="$localePath(item.href)" class="block transition-colors"
+                            :class="activeItem === item.key ? 'text-yellow-600 font-semibold' : 'text-black'"
+                            @click="closeMenu">
                             {{ item.label }}
                         </NuxtLink>
                     </li>

@@ -68,11 +68,11 @@ export default defineNuxtConfig({
       },
       'rooms-garden': {
         en: "/rooms/garden-view",
-        id: "/rooms/pemandangan-taman"
+        id: "/kamar/pemandangan-taman"
       },
       'rooms-pool': {
         en: "/rooms/pool-view",
-        id: "/rooms/pemandangan-kolam"
+        id: "/kamar/pemandangan-kolam"
       },
     },
     locales: [
