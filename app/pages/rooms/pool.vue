@@ -81,7 +81,9 @@ useHead({
                     </p>
                 </div>
 
-                <RoomsFacility class="mt-10" />
+                <ClientOnly>
+                    <RoomsFacility class="mt-10" />
+                </ClientOnly>
                 <RoomsBookingRules class="mt-10" />
             </div>
 

@@ -39,6 +39,10 @@
     "garden": {
       "title": "Overview",
       "overview": "Kamar Garden View kami menawarkan pelarian yang tenang dengan pemandangan hijau subur tepat di luar jendela Anda. Dirancang untuk kenyamanan dan relaksasi, kamar-kamar ini menyediakan tempat peristirahatan yang damai dari hiruk pikuk sehari-hari. Nikmati fasilitas modern dan suasana yang tenang, menjadikan masa menginap Anda menyegarkan dan tak terlupakan."
+    },
+    "amenities": {
+      "title": "Fasilitas Kamar",
+      "desc": "Rasakan kenyamanan tak tertandingi dengan fasilitas kamar kami yang komprehensif, dirancang untuk memenuhi setiap kebutuhan Anda dan meningkatkan masa menginap Anda."
     }
   },
   "landing": {

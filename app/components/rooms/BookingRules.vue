@@ -21,7 +21,7 @@
               class="w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
               ✓
             </span>
-            <span class="text-gray-700 dark:text-gray-300">{{ rule.loc.source }}</span>
+            <span class="text-gray-700 dark:text-gray-300">{{ rt(rule) }}</span>
           </li>
         </ul>
       </div>
@@ -37,7 +37,7 @@
               class="w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
               ✓
             </span>
-            <span class="text-gray-700 dark:text-gray-300">{{ rule.loc.source }}</span>
+            <span class="text-gray-700 dark:text-gray-300">{{ rt(rule) }}</span>
           </li>
         </ul>
       </div>
@@ -48,7 +48,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 
-const { t, tm } = useI18n({ useScope: 'local' })
+const { t, tm, rt } = useI18n({ useScope: 'local' })
 </script>
 
 <i18n lang="json">{

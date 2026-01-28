@@ -32,6 +32,10 @@
     "garden": {
       "title": "Overview",
       "overview": "Our Garden View Rooms offer a serene escape with lush green landscapes right outside your window. Designed for comfort and relaxation, these rooms provide a peaceful retreat from the everyday hustle. Enjoy modern amenities and a tranquil atmosphere, making your stay both refreshing and memorable."
+    },
+    "amenities": {
+      "title": "Room Amenities",
+      "desc": "Experience unparalleled comfort with our comprehensive room amenities, designed to cater to your every need and enhance your stay."
     }
   },
   "navbar": {
