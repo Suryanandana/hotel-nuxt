@@ -33,6 +33,10 @@
       "title": "Overview",
       "overview": "Our Garden View Rooms offer a serene escape with lush green landscapes right outside your window. Designed for comfort and relaxation, these rooms provide a peaceful retreat from the everyday hustle. Enjoy modern amenities and a tranquil atmosphere, making your stay both refreshing and memorable."
     },
+    "pool": {
+      "title": "Overview",
+      "overview": "Our Pool View Rooms offer a refreshing stay with beautiful views of the sparkling swimming pool. Designed for relaxation and comfort, these rooms create a calm and inviting atmosphere, perfect for unwinding while enjoying modern amenities and a soothing resort-style experience."
+    },
     "amenities": {
       "title": "Room Amenities",
       "desc": "Experience unparalleled comfort with our comprehensive room amenities, designed to cater to your every need and enhance your stay."
@@ -43,9 +47,32 @@
     "about": "About",
     "rooms": "Rooms",
     "facilities": "Facilities",
-    "contact": "Contact"
+    "contact": "Contact",
+    "booking": "Book Now",
+    "wa": "Our Whatsapp Contact",
+    "language": "Select Language"
   },
   "landing": {
+    "hero": {
+      "slide1": {
+        "subtitle": "Discover Our Hotel",
+        "title1": "A Sanctuary",
+        "title2": "of Luxury and Comfort",
+        "button": "About Us"
+      },
+      "slide2": {
+        "subtitle": "Comfortable Rooms",
+        "title1": "Experience Ultimate Comfort",
+        "title2": "in Our Luxurious Rooms",
+        "button": "View Rooms"
+      },
+      "slide3": {
+        "subtitle": "Complete Facilities",
+        "title1": "Discover Exceptional",
+        "title2": "Facilities and Services",
+        "button": "Explore Facilities"
+      }
+    },
     "roomHeader": {
       "title": "Our Exquisite Rooms & Suites",
       "subtitle": "Discover your perfect sanctuary with our diverse range of luxurious accommodations."
@@ -134,7 +161,7 @@
       },
       "list": [{
           "title": "Hotel Pool",
-          "image": "/images/pool-view.png",
+          "image": "/images/pool_front.jpg",
           "text": "Relax in our stunning infinity pool with panoramic views.",
           "buttonText": "Detail Facility"
         },

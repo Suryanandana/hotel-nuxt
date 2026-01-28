@@ -2,6 +2,7 @@
 import { ref, computed, onMounted, nextTick } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRoute } from '#app'
 import {
     Popover,
     PopoverContent,
@@ -14,18 +15,27 @@ import {
     TooltipTrigger,
 } from '@/components/ui/tooltip'
 
+const route = useRoute()
 const isOpen = ref(false);
 const isScrolled = ref(false);
-const { locale, locales, t, useLocalePath  } = useI18n()
+const { locale, locales, t  } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const navItems = computed(() => [
-    { label: t('navbar.home'), href: "/" },
-    { label: t('navbar.about'), href: "about" },
-    { label: t('navbar.rooms'), href: "rooms" },
-    { label: t('navbar.facilities'), href: "facilities" },
+    { label: t('navbar.home'), href: "/", key: "home" },
+    { label: t('navbar.about'), href: "about", key: "about" },
+    { label: t('navbar.rooms'), href: "rooms", key: "rooms" },
+    { label: t('navbar.facilities'), href: "facilities", key: "facilities" },
     // { label: t('navbar.contact'), href: "contact" },
 ]);
+
+const activeItem = computed(() => {
+    const path = route.path
+    if (path.includes('/about') || path.includes('/tentang')) return 'about'
+    if (path.includes('/rooms') || path.includes('/kamar')) return 'rooms'
+    if (path.includes('/facilities') || path.includes('/fasilitas')) return 'facilities'
+    return 'home'
+})
 
 const openMenu = async () => {
     isOpen.value = true;
@@ -81,7 +91,10 @@ onMounted(() => {
                     <li v-for="item in navItems" :key="item.href">
                         <NuxtLink :to="$localePath(item.href)"
                             class="relative transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-                            :class="isScrolled ? 'text-black' : 'text-white'">
+                            :class="[
+                                isScrolled ? 'text-black' : 'text-white',
+                                activeItem === item.key ? (isScrolled ? 'after:w-full text-yellow-600' : 'after:w-full') : ''
+                            ]">
                             {{ item.label }}
                         </NuxtLink>
                     </li>
@@ -97,7 +110,7 @@ onMounted(() => {
             <div class="gap-x-2 hidden md:flex items-center">
                 <Button as-child>
                     <NuxtLink to="https://secure.guestpro.net/theulu/booking">
-                        Booking Now
+                        {{ t('navbar.booking') }}
                         <Icon name="solar:arrow-right-up-linear" />
                     </NuxtLink>
                 </Button>
@@ -113,7 +126,7 @@ onMounted(() => {
                             </Button>
                         </TooltipTrigger>
                         <TooltipContent>
-                            <p>Our Whatsapp Contact</p>
+                            <p>{{ t('navbar.wa') }}</p>
                         </TooltipContent>
                     </Tooltip>
                 </TooltipProvider>
@@ -143,7 +156,7 @@ onMounted(() => {
                                 </Popover>
                             </TooltipTrigger>
                             <TooltipContent>
-                                <p>Select Language</p>
+                                <p>{{ t('navbar.language') }}</p>
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
@@ -151,17 +164,25 @@ onMounted(() => {
             </div>
 
             <!-- MOBILE HAMBURGER -->
-            <button class="md:hidden group" @click="openMenu" aria-label="Open navigation menu"
-                aria-controls="mobile-menu" :aria-expanded="isOpen">
-                <svg width="30" height="30" fill="none" stroke-width="2" class="transition-colors duration-300"
-                    :class="isScrolled ? 'stroke-black' : 'stroke-white'">
-                    <path d="M4 7h22"
-                        class="transition-transform duration-300 ease-in-out group-hover:-translate-y-1" />
-                    <path d="M4 15h22" class="transition-opacity duration-300 ease-in-out group-hover:opacity-75" />
-                    <path d="M4 23h22"
-                        class="transition-transform duration-300 ease-in-out group-hover:translate-y-1" />
-                </svg>
-            </button>
+             <div class="flex gap-3 md:hidden group">
+                <Button as-child>
+                    <NuxtLink to="https://secure.guestpro.net/theulu/booking">
+                        {{ t('navbar.booking') }}
+                        <Icon name="solar:arrow-right-up-linear" />
+                    </NuxtLink>
+                </Button>
+                 <button @click="openMenu" aria-label="Open navigation menu"
+                     aria-controls="mobile-menu" :aria-expanded="isOpen">
+                     <svg width="30" height="30" fill="none" stroke-width="2" class="transition-colors duration-300"
+                         :class="isScrolled ? 'stroke-black' : 'stroke-white'">
+                         <path d="M4 7h22"
+                             class="transition-transform duration-300 ease-in-out group-hover:-translate-y-1" />
+                         <path d="M4 15h22" class="transition-opacity duration-300 ease-in-out group-hover:opacity-75" />
+                         <path d="M4 23h22"
+                             class="transition-transform duration-300 ease-in-out group-hover:translate-y-1" />
+                     </svg>
+                 </button>
+             </div>
         </div>
 
         <!-- OVERLAY -->
@@ -190,12 +211,38 @@ onMounted(() => {
             <nav aria-label="Mobile navigation">
                 <ul class="space-y-6 text-[15px] font-medium">
                     <li v-for="item in navItems" :key="item.href" class="mobile-item">
-                        <NuxtLink :to="item.href" class="block" @click="closeMenu">
+                        <NuxtLink :to="$localePath(item.href)" class="block transition-colors"
+                            :class="activeItem === item.key ? 'text-yellow-600 font-semibold' : 'text-black'"
+                            @click="closeMenu">
                             {{ item.label }}
                         </NuxtLink>
                     </li>
                 </ul>
             </nav>
+
+            <!-- MOBILE ACTIONS -->
+            <div class="mt-8 space-y-4">
+                <Button as-child variant="outline" class="w-full bg-transparent text-green-600 border-green-600 hover:bg-green-600 hover:text-white">
+                    <NuxtLink to="https://wa.me/628123456789" @click="closeMenu">
+                        <Icon name="ic:baseline-whatsapp" class="mr-2" />
+                        {{ t('navbar.wa') }}
+                    </NuxtLink>
+                </Button>
+                <ClientOnly>
+                    <div class="flex gap-2">
+                        <NuxtLink v-for="l in locales" :key="l.code" :to="switchLocalePath(l.code)"
+                            class="flex items-center justify-center gap-2 px-3 py-2 text-sm rounded-md border transition-all duration-200 flex-1"
+                            :class="locale === l.code 
+                                ? 'bg-yellow-50 border-yellow-400 text-yellow-700 font-semibold shadow-sm' 
+                                : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400'"
+                            @click="closeMenu">
+                            <Icon v-if="l.code === 'en'" name="twemoji:flag-united-states" class="h-4 w-4" />
+                            <Icon v-else-if="l.code === 'id'" name="twemoji:flag-indonesia" class="h-4 w-4" />
+                            {{ l.code.toUpperCase() }}
+                        </NuxtLink>
+                    </div>
+                </ClientOnly>
+            </div>
         </aside>
     </header>
 </template>

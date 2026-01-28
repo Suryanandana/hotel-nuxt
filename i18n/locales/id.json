@@ -33,12 +33,19 @@
     "about": "Tentang",
     "rooms": "Kamar",
     "facilities": "Fasilitas",
-    "contact": "Kontak"
+    "contact": "Kontak",
+    "booking": "Pesan Sekarang",
+    "wa": "Kontak Whatsapp Kami",
+    "language": "Pilih Bahasa"
   },
   "rooms": {
     "garden": {
       "title": "Overview",
       "overview": "Kamar Garden View kami menawarkan pelarian yang tenang dengan pemandangan hijau subur tepat di luar jendela Anda. Dirancang untuk kenyamanan dan relaksasi, kamar-kamar ini menyediakan tempat peristirahatan yang damai dari hiruk pikuk sehari-hari. Nikmati fasilitas modern dan suasana yang tenang, menjadikan masa menginap Anda menyegarkan dan tak terlupakan."
+    },
+    "pool": {
+      "title": "Overview",
+      "overview": "Kamar dengan Pemandangan Kolam kami menawarkan pengalaman menginap yang menyegarkan dengan pemandangan kolam renang yang indah. Dirancang untuk kenyamanan dan relaksasi, kamar ini menghadirkan suasana tenang yang ideal untuk bersantai sambil menikmati fasilitas modern dan nuansa resor yang menenangkan."
     },
     "amenities": {
       "title": "Fasilitas Kamar",
@@ -46,6 +53,26 @@
     }
   },
   "landing": {
+    "hero": {
+      "slide1": {
+        "subtitle": "Temukan Hotel Kami",
+        "title1": "Tempat Perlindungan",
+        "title2": "Kemewahan dan Kenyamanan",
+        "button": "Tentang Kami"
+      },
+      "slide2": {
+        "subtitle": "Kamar Nyaman",
+        "title1": "Rasakan Kenyamanan Maksimal",
+        "title2": "di Kamar Mewah Kami",
+        "button": "Lihat Kamar"
+      },
+      "slide3": {
+        "subtitle": "Fasilitas Lengkap",
+        "title1": "Temukan Fasilitas",
+        "title2": "dan Layanan Istimewa",
+        "button": "Jelajahi Fasilitas"
+      }
+    },
     "roomHeader": {
       "title": "Kamar & Suite Kami yang Indah",
       "subtitle": "Temukan tempat perlindungan sempurna Anda dengan beragam akomodasi mewah kami."
@@ -96,7 +123,7 @@
     "list": [
       {
         "title": "Kolam Renang Hotel",
-        "image": "/images/pool-view.png",
+        "image": "/images/pool_front.jpg",
         "text": "Bersantailah di kolam renang tanpa batas kami yang menakjubkan dengan pemandangan panorama.",
         "buttonText": "Detail Fasilitas"
       },

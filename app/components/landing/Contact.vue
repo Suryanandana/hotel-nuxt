@@ -3,6 +3,10 @@ import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n({ useScope: 'local' })
+
 gsap.registerPlugin(ScrollTrigger)
 
 const container = ref(null)
@@ -35,17 +39,15 @@ onMounted(() => {
             <!-- LEFT CONTENT -->
             <div>
                 <p class="text-xs tracking-widest text-neutral-500 mb-3 uppercase">
-                    LUXURY HOTEL EXPERIENCE
+                    {{ t('subtitle') }}
                 </p>
 
                 <h2 class="text-4xl md:text-5xl font-serif mb-6 text-gray-900">
-                    Get in Touch
+                    {{ t('title') }}
                 </h2>
 
                 <p class="text-gray-600 mb-8 text-lg leading-relaxed">
-                    Ready to experience unparalleled luxury? Contact us today to book your unforgettable stay or to
-                    inquire about our bespoke services. Our dedicated team is here to assist you with every detail,
-                    ensuring your visit is nothing short of perfect.
+                    {{ t('text') }}
                 </p>
 
                 <div class="space-y-5 text-gray-700 mb-8">
@@ -84,3 +86,16 @@ onMounted(() => {
         </div>
     </section>
 </template>
+
+<i18n lang="json">{
+    "en": {
+        "title": "Get in Touch",
+        "subTitle": "Luxury Hotel Experience",
+        "text": "Ready to experience unparalleled luxury? Contact us today to book your unforgettable stay or to inquire about our bespoke services. Our dedicated team is here to assist you with every detail, ensuring your visit is nothing short of perfect."
+    },
+    "id": {
+        "title": "Hubungi Kami",
+        "subTitle": "Pengalaman Hotel Mewah",
+        "text": "Siap merasakan kemewahan yang tak tertandingi? Hubungi kami sekarang untuk memesan pengalaman menginap yang tak terlupakan atau menanyakan layanan eksklusif kami. Tim profesional kami siap membantu setiap detail, memastikan kunjungan Anda sempurna."
+    }
+}</i18n>

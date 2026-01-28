@@ -161,7 +161,7 @@ li.splide__slide.is-active .animation{
     animation: zoomOut 15s forwards ease-in-out;
 }
 
-li.splide__slide.is-active .text-slide span{
+li.splide__slide.is-active .text-slide span, li.splide__slide.is-active .text-slide .button-slider-up{
     animation: fadeUp 1s forwards ease-in-out;
 }
 

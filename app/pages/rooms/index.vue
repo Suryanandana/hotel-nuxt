@@ -64,7 +64,7 @@ onMounted(() => {
   <div class="bg-stone-50 dark:bg-stone-950">
     <!-- Hero Section -->
     <Hero :title="t('landing.roomHeader.title')" :sub-title="t('landing.roomHeader.subtitle')"
-      img-url="/images/slide1.jpg" :breadcrumbs="breadcrumbs" />
+      img-url="/images/room_hero.webp" :breadcrumbs="breadcrumbs" />
 
     <!-- Daftar Kamar -->
     <section class="py-20 md:py-32 space-y-32">

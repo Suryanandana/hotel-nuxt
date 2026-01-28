@@ -3,6 +3,10 @@ import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n({ useScope: 'local' })
+
 gsap.registerPlugin(ScrollTrigger)
 
 const section = ref(null)
@@ -25,7 +29,7 @@ onMounted(() => {
         scrollTrigger: {
             trigger: section.value,
             start: "top 80%",
-            end: "+=250%", // Durasi diperpanjang agar reveal lebih lambat & halus
+            end: "+=150%", // Durasi diperpanjang agar reveal lebih lambat & halus
             scrub: 1,
         }
     })
@@ -70,29 +74,38 @@ onMounted(() => {
 
         <!-- Content -->
         <div ref="text" class="relative z-20 text-center text-white px-6 opacity-0 max-w-4xl mx-auto">
-            <Icon name="ri:double-quotes-l" class="text-5xl md:text-7xl text-white/40 mb-6 inline-block" />
+            <Icon name="ri:double-quotes-l" class="text-5xl md:text-7xl text-white/40 mb-6 inline-block text-yellow-500" />
             
             <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif italic leading-tight mb-8">
-                "We don't just offer a place to sleep, we create unforgettable moments that last a lifetime."
+                "{{t('title')}}"
             </h2>
             
             <div class="flex flex-col items-center gap-3 mb-10">
                 <div class="w-12 h-[1px] bg-yellow-500"></div>
                 <p class="text-sm md:text-base tracking-[0.2em] uppercase text-yellow-500 font-bold">
-                    General Manager
+                    {{ t('manager') }}
                 </p>
             </div>
 
             <div class="flex gap-x-5 justify-center">
                 <Button>
-                    Booking Now
+                    {{ t('booking') }}
                     <Icon name="solar:arrow-right-up-linear" />
-                </Button>
-                <Button class="bg-transparent outline-1 border hover:bg-white hover:text-black">
-                    <Icon name="ri:question-line"></Icon>
-                    How to book?
                 </Button>
             </div>
         </div>
     </section>
 </template>
+
+<i18n lang="json">{
+  "en": {
+    "title": "We don’t just offer a place to stay, we create unforgettable moments that last a lifetime.",
+    "manager": "General Manager",
+    "booking": "Book Now"
+  },
+  "id": {
+    "title": "Kami tidak hanya menyediakan tempat menginap, tetapi juga menciptakan momen tak terlupakan yang akan dikenang seumur hidup.",
+    "manager": "General Manager",
+    "booking": "Pesan Sekarang"
+  }
+}</i18n>

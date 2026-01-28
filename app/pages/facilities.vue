@@ -12,6 +12,10 @@ useHead({
         { name: 'description', content: 'Explore the world-class facilities at our hotel, designed for your comfort and enjoyment.' }
     ]
 })
+const breadcrumbs = [
+    {url: '/', label: t('navbar.home')},
+    {url: 'facilities', label: t('navbar.facilities')}
+]
 
 // --- Animasi ---
 onMounted(() => {
@@ -28,12 +32,13 @@ onMounted(() => {
 <template>
     <div class="bg-white dark:bg-stone-950">
         <!-- Hero Section -->
-        <Hero :title="t('landing.facilitySection.header.title')" :sub-title="t('landing.facilitySection.header.subtitle')" img-url="/images/mini-gym.jpeg" />
+        <Hero :title="t('landing.facilitySection.header.title')" img-url="/images/pool-view-hero.jpg" :breadcrumbs="breadcrumbs" />
         <!-- Bagian Fasilitas -->
         <div class="container mx-auto px-4 pt-32">
             <div class="facility-grid grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                 <LandingFacilityCard v-for="(card, index) in cardsData" :key="index" :card="card" />
             </div>
+            <AboutFacilityOverview class="mt-20" data-aos="fade-up" />
         </div>
         <LandingFaq />
         <LandingContact />
