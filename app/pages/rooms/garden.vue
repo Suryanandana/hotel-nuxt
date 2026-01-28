@@ -52,7 +52,7 @@ useHead({
                         {{ t('rooms.garden.overview') }}
                     </p>
                 </div>
-                <RoomsFacility class="mt-10" :features="tm('landing.roomList[0].features')" />
+                <RoomsFacility class="mt-10" />
                 <RoomsBookingRules class="mt-10" />
                 <RoomsRoomPolicy class="mt-10" />
             </template>
