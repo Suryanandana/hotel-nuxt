@@ -14,9 +14,9 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div v-for="item in features" :key="item.label" class="flex items-center gap-4">
         <div class="w-12 h-12 rounded-xl border flex items-center justify-center bg-white">
-          <Icon :name="item.icon" class="text-yellow-600 font-bold text-2xl" />
+          <Icon :name="item.icon.loc.source" class="text-yellow-600 font-bold text-2xl" />
         </div>
-        <p class="font-medium">{{ item.text }}</p>
+        <p class="font-medium">{{ item.text.loc.source }}</p>
       </div>
     </div>
   </section>

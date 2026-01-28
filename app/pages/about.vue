@@ -6,6 +6,10 @@ definePageMeta({
 })
 
 const { t } = useI18n()
+const breadcrumbs = [
+    {url: '/', label: t('navbar.home')},
+    {url: 'about', label: t('navbar.about')}
+]
 const pageTitle = computed(() => t('pages.about.title'))
 const pageDescription = computed(() => t('pages.about.description'))
 
@@ -20,8 +24,11 @@ useHead({
 </script>
 
 <template>
-  <section class="w-screen h-screen flex justify-center items-center bg-black text-white">
-    <h1>{{ pageTitle }}</h1>
-    <p>{{ pageDescription }}</p>
-  </section>
+  <Hero :title="t('pages.about.sub')" img-url="/images/slide1.jpg" :breadcrumbs="breadcrumbs" />
+  <div class="container mx-auto px-4 pt-32">
+    <AboutWeAre data-aos="fade-up" />
+    <AboutRoomOverview data-aos="fade-up" />
+    <AboutVision data-aos="fade-up" />
+    <LandingContact />
+  </div>
 </template>

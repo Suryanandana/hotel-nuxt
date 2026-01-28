@@ -16,6 +16,7 @@
     },
     "about": {
       "title": "Tentang Kami - Hotel Kami",
+       "sub": "Pelajari lebih lanjut tentang hotel kami",
       "description": "Pelajari lebih lanjut tentang sejarah, fasilitas, dan layanan hotel kami."
     },
     "garden": {
@@ -33,6 +34,12 @@
     "rooms": "Kamar",
     "facilities": "Fasilitas",
     "contact": "Kontak"
+  },
+  "rooms": {
+    "garden": {
+      "title": "Overview",
+      "overview": "Kamar Garden View kami menawarkan pelarian yang tenang dengan pemandangan hijau subur tepat di luar jendela Anda. Dirancang untuk kenyamanan dan relaksasi, kamar-kamar ini menyediakan tempat peristirahatan yang damai dari hiruk pikuk sehari-hari. Nikmati fasilitas modern dan suasana yang tenang, menjadikan masa menginap Anda menyegarkan dan tak terlupakan."
+    }
   },
   "landing": {
     "roomHeader": {

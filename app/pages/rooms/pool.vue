@@ -35,7 +35,9 @@ useHead({
     <Hero :title="t('landing.roomList[1].title')" :breadcrumbs="breadcrumbs" />
     <!-- content -->
     <div class="container mx-auto px-4 pt-32 pb-20">
-        <RoomsHero :slides="slides" />
+        <ClientOnly>
+            <RoomsHero :slides="slides" />
+        </ClientOnly>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-8 mt-10 md:-mt-10 lg:-mt-20">
             <!-- LEFT CONTENT -->

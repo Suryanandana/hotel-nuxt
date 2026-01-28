@@ -20,10 +20,11 @@ const { locale, locales, t, useLocalePath  } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const navItems = computed(() => [
+    { label: t('navbar.home'), href: "/" },
     { label: t('navbar.about'), href: "about" },
     { label: t('navbar.rooms'), href: "rooms" },
     { label: t('navbar.facilities'), href: "facilities" },
-    { label: t('navbar.contact'), href: "contact" },
+    // { label: t('navbar.contact'), href: "contact" },
 ]);
 
 const openMenu = async () => {
