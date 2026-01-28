@@ -151,17 +151,25 @@ onMounted(() => {
             </div>
 
             <!-- MOBILE HAMBURGER -->
-            <button class="md:hidden group" @click="openMenu" aria-label="Open navigation menu"
-                aria-controls="mobile-menu" :aria-expanded="isOpen">
-                <svg width="30" height="30" fill="none" stroke-width="2" class="transition-colors duration-300"
-                    :class="isScrolled ? 'stroke-black' : 'stroke-white'">
-                    <path d="M4 7h22"
-                        class="transition-transform duration-300 ease-in-out group-hover:-translate-y-1" />
-                    <path d="M4 15h22" class="transition-opacity duration-300 ease-in-out group-hover:opacity-75" />
-                    <path d="M4 23h22"
-                        class="transition-transform duration-300 ease-in-out group-hover:translate-y-1" />
-                </svg>
-            </button>
+             <div class="flex gap-3 md:hidden group">
+                <Button as-child>
+                    <NuxtLink to="https://secure.guestpro.net/theulu/booking">
+                        {{ t('navbar.booking') }}
+                        <Icon name="solar:arrow-right-up-linear" />
+                    </NuxtLink>
+                </Button>
+                 <button @click="openMenu" aria-label="Open navigation menu"
+                     aria-controls="mobile-menu" :aria-expanded="isOpen">
+                     <svg width="30" height="30" fill="none" stroke-width="2" class="transition-colors duration-300"
+                         :class="isScrolled ? 'stroke-black' : 'stroke-white'">
+                         <path d="M4 7h22"
+                             class="transition-transform duration-300 ease-in-out group-hover:-translate-y-1" />
+                         <path d="M4 15h22" class="transition-opacity duration-300 ease-in-out group-hover:opacity-75" />
+                         <path d="M4 23h22"
+                             class="transition-transform duration-300 ease-in-out group-hover:translate-y-1" />
+                     </svg>
+                 </button>
+             </div>
         </div>
 
         <!-- OVERLAY -->
@@ -196,6 +204,30 @@ onMounted(() => {
                     </li>
                 </ul>
             </nav>
+
+            <!-- MOBILE ACTIONS -->
+            <div class="mt-8 space-y-4">
+                <Button as-child variant="outline" class="w-full bg-transparent text-green-600 border-green-600 hover:bg-green-600 hover:text-white">
+                    <NuxtLink to="https://wa.me/628123456789" @click="closeMenu">
+                        <Icon name="ic:baseline-whatsapp" class="mr-2" />
+                        {{ t('navbar.wa') }}
+                    </NuxtLink>
+                </Button>
+                <ClientOnly>
+                    <div class="flex gap-2">
+                        <NuxtLink v-for="l in locales" :key="l.code" :to="switchLocalePath(l.code)"
+                            class="flex items-center justify-center gap-2 px-3 py-2 text-sm rounded-md border transition-all duration-200 flex-1"
+                            :class="locale === l.code 
+                                ? 'bg-yellow-50 border-yellow-400 text-yellow-700 font-semibold shadow-sm' 
+                                : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400'"
+                            @click="closeMenu">
+                            <Icon v-if="l.code === 'en'" name="twemoji:flag-united-states" class="h-4 w-4" />
+                            <Icon v-else-if="l.code === 'id'" name="twemoji:flag-indonesia" class="h-4 w-4" />
+                            {{ l.code.toUpperCase() }}
+                        </NuxtLink>
+                    </div>
+                </ClientOnly>
+            </div>
         </aside>
     </header>
 </template>
