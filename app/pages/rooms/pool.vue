@@ -1,9 +1,9 @@
 <script setup>
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
-const { t: tLocal } = useI18n({
-    useScope: 'local'
-})
+
+const { t, tm } = useI18n()
+
 const breadcrumbs = [
     { url: '/', label: t('navbar.home') },
     { url: 'rooms', label: t('navbar.rooms') },
@@ -11,15 +11,16 @@ const breadcrumbs = [
 ]
 
 const slides = [
-  { src: '/images/slide1.jpg', alt: 'Slide 1' },
-  { src: '/images/slide2.jpg', alt: 'Slide 2' },
-  { src: '/images/slide3.png', alt: 'Slide 3' },
-  { src: '/images/pool.jpg', alt: 'Pool' },
-  { src: '/images/restaurant.jpg', alt: 'Restaurant' },
+    { src: '/images/pool-room1.webp', alt: 'Slide 1' },
+    { src: '/images/pool.jpg', alt: 'Slide 2' },
+    { src: '/images/pool-room2.webp', alt: 'Slide 3' },
+    { src: '/images/outdoor-pool.webp', alt: 'Slide 4' },
+    { src: '/images/pool-room3.webp', alt: 'Slide 5' },
+    { src: '/images/pool2.webp', alt: 'Slide 5' },
 ];
 
-const pageTitle = computed(() => t('pages.pool.title'))
-const pageDescription = computed(() => t('pages.pool.description'))
+const pageTitle = computed(() => t('pages.garden.title'))
+const pageDescription = computed(() => t('pages.garden.description'))
 
 useHead({
     title: pageTitle,
@@ -32,77 +33,35 @@ useHead({
 </script>
 
 <template>
-    <Hero :title="t('landing.roomList[1].title')" :breadcrumbs="breadcrumbs" />
+    <Hero img-url="/images/pool_room_hero.webp" :title="t('landing.roomList[1].title')" :breadcrumbs="breadcrumbs" />
     <!-- content -->
     <div class="container mx-auto px-4 pt-32 pb-20">
         <ClientOnly>
             <RoomsHero :slides="slides" />
         </ClientOnly>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-8 mt-10 md:-mt-10 lg:-mt-20">
-            <!-- LEFT CONTENT -->
-            <div class="lg:col-span-2 space-y-6">
+        <RoomsTwoLayout>
+            <!-- LEFT CARD -->
+            <template v-slot:left>
                 <!-- Header Card -->
-                <div class="border rounded-2xl p-6 space-y-4">
-                    <div class="flex flex-wrap items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <h1 class="text-2xl font-semibold">{{ t('landing.roomList[1].title') }}</h1>
-                            <span class="px-3 py-1 text-sm rounded-full bg-emerald-100 text-emerald-700">
-                                Luxury Rooms
-                            </span>
-                        </div>
-                    </div>
-
-                    <p class="text-sm text-gray-500">
-                        Kec. Nusa Penida, Kabupaten Klungkung, Bali
-                    </p>
-
-                    <p class="text-2xl font-semibold text-emerald-700">
-                        $150 <span class="text-sm font-normal text-gray-500">/ {{ tLocal('night') }}</span>
-                    </p>
-
-                    <div class="border-t pt-4 flex flex-wrap gap-6 text-sm text-gray-600">
-                        <div class="flex items-center gap-2">🛏 1 Bed</div>
-                        <div class="flex items-center gap-2">🛁 1 Bath</div>
-                        <div class="flex items-center gap-2">📐 300 sqft</div>
-                        <div class="flex items-center gap-2">👤 2 Guests</div>
-
-                        <button class="ml-auto flex items-center gap-2 text-emerald-700 hover:underline">
-                            🔗 Share
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Overview -->
+                <RoomsHeaderCard :title="t('landing.roomList[1].title')" price="850.000" />
                 <div class="space-y-3">
-                    <h2 class="text-xl font-semibold">Overview</h2>
+                    <h2 class="text-3xl md:text-4xl font-serif mb-3">
+                        {{ t('rooms.pool.title') }}
+                    </h2>
                     <p class="text-gray-600 leading-relaxed">
-                        {{ tLocal('overview') }}
+                        {{ t('rooms.pool.overview') }}
                     </p>
                 </div>
-
-                <ClientOnly>
-                    <RoomsFacility class="mt-10" />
-                </ClientOnly>
+                <RoomsFacility class="mt-10" />
                 <RoomsBookingRules class="mt-10" />
-            </div>
-
+                <RoomsRoomPolicy class="mt-10" />
+            </template>
             <!-- RIGHT CARD -->
-            <RoomsRoomFacilitiesCard />
-        </div>
-
+            <template v-slot:right>
+                <RoomsRoomFacilitiesCard />
+            </template>
+        </RoomsTwoLayout>
     </div>
     <LandingFaq />
     <LandingContact />
 </template>
-
-<i18n lang="json">{
-    "en": {
-        "overview": "Our Garden View Rooms offer a serene escape with lush green landscapes right outside your window. Designed for comfort and relaxation, these rooms provide a peaceful retreat from the everyday hustle. Enjoy modern amenities and a tranquil atmosphere, making your stay both refreshing and memorable.",
-        "night": "night"
-    },
-    "id": {
-        "overview": "Kamar Garden View kami menawarkan pelarian yang tenang dengan pemandangan hijau subur tepat di luar jendela Anda. Dirancang untuk kenyamanan dan relaksasi, kamar-kamar ini menyediakan tempat peristirahatan yang damai dari hiruk pikuk sehari-hari. Nikmati fasilitas modern dan suasana yang tenang, menjadikan masa menginap Anda menyegarkan dan tak terlupakan.",
-        "night": "malam"
-    }
-}</i18n>

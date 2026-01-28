@@ -33,7 +33,7 @@ useHead({
 </script>
 
 <template>
-    <Hero img-url="/images/garden-view.jpg" :title="t('landing.roomList[0].title')" :breadcrumbs="breadcrumbs" />
+    <Hero img-url="/images/garden-room-hero.webp" :title="t('landing.roomList[0].title')" :breadcrumbs="breadcrumbs" />
     <!-- content -->
     <div class="container mx-auto px-4 pt-32 pb-20">
         <ClientOnly>
