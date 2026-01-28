@@ -24,11 +24,12 @@ useHead({
 </script>
 
 <template>
-  <Hero :title="t('pages.about.sub')" img-url="/images/slide1.jpg" :breadcrumbs="breadcrumbs" />
+  <Hero :title="t('pages.about.sub')" img-url="/images/garden_view_hero.jpg" :breadcrumbs="breadcrumbs" />
   <div class="container mx-auto px-4 pt-32">
     <AboutWeAre data-aos="fade-up" />
     <AboutRoomOverview data-aos="fade-up" />
     <AboutVision data-aos="fade-up" />
+    <AboutFacilityOverview data-aos="fade-up" />
     <LandingContact />
   </div>
 </template>

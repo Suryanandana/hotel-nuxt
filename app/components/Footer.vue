@@ -1,10 +1,14 @@
 <script setup>
-const navItems = [
-    { label: "About", href: "/" },
-    { label: "Rooms", href: "/" },
-    { label: "Facilities", href: "/" },
-    { label: "Contact", href: "/" },
-];
+import { computed } from 'vue';
+const { t  } = useI18n()
+
+const navItems = computed(() => [
+    { label: t('navbar.home'), href: "/" },
+    { label: t('navbar.about'), href: "about" },
+    { label: t('navbar.rooms'), href: "rooms" },
+    { label: t('navbar.facilities'), href: "facilities" },
+    // { label: t('navbar.contact'), href: "contact" },
+]);
 </script>
 
 <template>

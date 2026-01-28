@@ -16,7 +16,7 @@ import {
 
 const isOpen = ref(false);
 const isScrolled = ref(false);
-const { locale, locales, t, useLocalePath  } = useI18n()
+const { locale, locales, t  } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const navItems = computed(() => [
@@ -97,7 +97,7 @@ onMounted(() => {
             <div class="gap-x-2 hidden md:flex items-center">
                 <Button as-child>
                     <NuxtLink to="https://secure.guestpro.net/theulu/booking">
-                        Booking Now
+                        {{ t('navbar.booking') }}
                         <Icon name="solar:arrow-right-up-linear" />
                     </NuxtLink>
                 </Button>
@@ -113,7 +113,7 @@ onMounted(() => {
                             </Button>
                         </TooltipTrigger>
                         <TooltipContent>
-                            <p>Our Whatsapp Contact</p>
+                            <p>{{ t('navbar.wa') }}</p>
                         </TooltipContent>
                     </Tooltip>
                 </TooltipProvider>
@@ -143,7 +143,7 @@ onMounted(() => {
                                 </Popover>
                             </TooltipTrigger>
                             <TooltipContent>
-                                <p>Select Language</p>
+                                <p>{{ t('navbar.language') }}</p>
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>

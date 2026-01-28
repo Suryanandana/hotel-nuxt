@@ -1,34 +1,25 @@
 <template>
-  <section
-    ref="section"
-    class="relative min-h-screen bg-[#f6f2ea] flex items-center justify-center overflow-hidden"
-  >
+  <section ref="section" class="relative min-h-screen bg-[#f6f2ea] flex items-center justify-center overflow-hidden">
     <!-- Left Image -->
-    <div
-      ref="leftImage"
-      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]"
-    >
+    <div ref="leftImage"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]">
       <img src="/images/slide1.jpg" class="rounded-lg object-cover w-full h-full shadow-2xl" />
     </div>
 
     <!-- Right Image -->
-    <div
-      ref="rightImage"
-      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]"
-    >
+    <div ref="rightImage"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]">
       <img src="/images/slide2.jpg" class="rounded-lg object-cover w-full h-full shadow-2xl" />
     </div>
 
     <!-- Text -->
-    <div
-      ref="text"
-      class="relative z-20 text-center max-w-2xl opacity-0 px-6"
-    >
+    <div ref="text" class="relative z-20 text-center max-w-2xl opacity-0 px-6">
       <h2 class="text-4xl md:text-5xl font-serif mb-6 text-gray-900">
-        Why Choose Our Hotel?
+        {{ t('title') }}
       </h2>
+
       <p class="text-lg text-gray-600 leading-relaxed">
-        Experience the perfect blend of modern luxury and timeless elegance. From our world-class amenities to our dedicated staff, we ensure every moment of your stay is crafted to perfection. Discover a place where comfort meets sophistication.
+        {{ t('desc') }}
       </p>
     </div>
   </section>
@@ -38,6 +29,9 @@
 import { onMounted, ref } from "vue"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n({ useScope: 'local' })
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -78,3 +72,14 @@ onMounted(() => {
     }, 0.2)
 })
 </script>
+
+<i18n lang="json">{
+  "en": {
+    "title": "Why Choose Our Hotel",
+    "desc": "Enjoy a seamless blend of modern comfort and timeless elegance. With thoughtfully designed spaces, premium amenities, and attentive service, every stay is crafted to deliver an exceptional and memorable experience."
+  },
+  "id": {
+    "title": "Mengapa Memilih Hotel Kami",
+    "desc": "Rasakan perpaduan sempurna antara kenyamanan modern dan keanggunan yang tak lekang oleh waktu. Dengan fasilitas premium, desain yang berkelas, dan pelayanan penuh perhatian, setiap momen menginap dirancang untuk memberi pengalaman terbaik."
+  }
+}</i18n>

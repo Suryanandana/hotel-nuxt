@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted, ref, nextTick } from 'vue'
+import { onMounted, onUnmounted, ref, nextTick, computed } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import {
@@ -9,30 +9,14 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
-gsap.registerPlugin(ScrollTrigger)
+import { useI18n } from 'vue-i18n'
 
-const faqs = [
-  {
-    question: "What are the check-in and check-out times?",
-    answer: "Check-in is available from 3:00 PM, and check-out is until 11:00 AM. We can often accommodate early check-ins or late check-outs upon request, subject to availability."
-  },
-  {
-    question: "Is breakfast included in the room rate?",
-    answer: "Our 'Bed & Breakfast' packages include a full continental buffet. For room-only bookings, breakfast can be added upon arrival at our rooftop restaurant."
-  },
-  {
-    question: "Do you offer airport transfers?",
-    answer: "Yes, we provide luxury private car transfers to and from the airport. Please contact our concierge team at least 24 hours in advance to arrange your ride."
-  },
-  {
-    question: "Are pets allowed?",
-    answer: "We are delighted to welcome small pets (up to 10kg) in specific room categories. A small cleaning fee applies per stay to ensure the comfort of all guests."
-  },
-  {
-    question: "Do you have a spa and gym?",
-    answer: "Yes, guests have complimentary access to our 24-hour fitness center. Our wellness spa offers a range of treatments and requires booking in advance."
-  }
-]
+const { tm, rt, t } = useI18n({ useScope: 'local' })
+
+// ambil FAQ sebagai array object
+const faqs = computed(() => tm('faqs'))
+
+gsap.registerPlugin(ScrollTrigger)
 
 const sectionRef = ref(null)
 let ctx = null
@@ -69,10 +53,10 @@ onUnmounted(() => {
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-16 space-y-4 reveal-up opacity-0">
           <h2 class="text-4xl md:text-5xl font-serif tracking-tight text-stone-900 dark:text-stone-50">
-            Frequently Asked Questions
+            {{ t('title') }}
           </h2>
           <p class="text-lg text-stone-600 dark:text-stone-400 font-light">
-            Curated answers to help you plan your perfect stay.
+            {{ t('subtitle') }}
           </p>
         </div>
         
@@ -85,10 +69,10 @@ onUnmounted(() => {
             class="border border-stone-200 dark:border-stone-800 rounded-xl px-6 bg-white dark:bg-stone-900 shadow-sm hover:shadow-md transition-all duration-300 ease-out"
           >
             <AccordionTrigger class="text-lg font-medium text-stone-800 dark:text-stone-100 py-6 hover:no-underline hover:text-primary transition-colors">
-              {{ item.question }}
+              {{ rt(item.question) }}
             </AccordionTrigger>
             <AccordionContent class="text-stone-600 dark:text-stone-400 text-base leading-relaxed pb-6">
-              {{ item.answer }}
+              {{ rt(item.answer) }}
             </AccordionContent>
           </AccordionItem>
           </Accordion>
@@ -97,3 +81,58 @@ onUnmounted(() => {
     </div>
   </section>
 </template>
+
+<i18n lang="json">{
+  "en": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Curated answers to help you plan your perfect stay.",
+    "faqs": [
+      {
+        "question": "What are the check-in and check-out times?",
+        "answer": "Check-in starts from 3:00 PM, while check-out is until 11:00 AM. Early check-in or late check-out may be arranged upon request, subject to availability."
+      },
+      {
+        "question": "Is breakfast included in the room rate?",
+        "answer": "Our Bed & Breakfast packages include a full continental buffet. For room-only reservations, breakfast can be added upon arrival at our rooftop restaurant."
+      },
+      {
+        "question": "Do you offer airport transfers?",
+        "answer": "Yes, we provide luxury private airport transfers. Please contact our concierge at least 24 hours in advance to arrange your transportation."
+      },
+      {
+        "question": "Are pets allowed?",
+        "answer": "Small pets up to 10kg are welcome in selected room categories. A cleaning fee applies per stay to maintain comfort for all guests."
+      },
+      {
+        "question": "Do you have a spa and gym?",
+        "answer": "Guests enjoy complimentary access to our 24-hour fitness center. Our wellness spa offers a variety of treatments and requires advance booking."
+      }
+    ]
+  },
+  "id": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "subtitle": "Jawaban pilihan untuk membantu Anda merencanakan pengalaman menginap yang sempurna.",
+    "faqs": [
+      {
+        "question": "Kapan waktu check-in dan check-out?",
+        "answer": "Waktu check-in dimulai pukul 15.00, dan check-out hingga pukul 11.00. Check-in lebih awal atau check-out lebih lambat dapat diajukan sesuai ketersediaan."
+      },
+      {
+        "question": "Apakah sarapan sudah termasuk dalam harga kamar?",
+        "answer": "Paket Bed & Breakfast kami sudah termasuk sarapan prasmanan kontinental. Untuk pemesanan kamar saja, sarapan dapat ditambahkan saat kedatangan di restoran rooftop kami."
+      },
+      {
+        "question": "Apakah tersedia layanan antar-jemput bandara?",
+        "answer": "Ya, kami menyediakan layanan antar-jemput bandara dengan mobil pribadi premium. Silakan hubungi tim concierge minimal 24 jam sebelumnya."
+      },
+      {
+        "question": "Apakah hotel memperbolehkan membawa hewan peliharaan?",
+        "answer": "Hewan peliharaan kecil hingga 10kg diperbolehkan di kategori kamar tertentu. Biaya kebersihan akan dikenakan per masa menginap."
+      },
+      {
+        "question": "Apakah tersedia spa dan gym?",
+        "answer": "Tamu mendapatkan akses gratis ke pusat kebugaran 24 jam. Layanan spa kami menawarkan berbagai perawatan dan memerlukan reservasi sebelumnya."
+      }
+    ]
+  }
+}</i18n>

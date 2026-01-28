@@ -3,12 +3,19 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n({ useScope: 'local' })
+
+// ambil text dari i18n
+const text = computed(() => t('animatedText'))
+
 gsap.registerPlugin(ScrollTrigger)
 
 const sectionRef = ref(null)
 const container = ref(null)
 const imageRef = ref(null)
-const text = "Indulge in an oasis of tranquility and refined luxury. Every corner of our hotel is designed to offer you a unique experience of comfort and style."
 
 let ctx;
 
@@ -79,3 +86,12 @@ onUnmounted(() => {
     </div>
   </section>
 </template>
+
+<i18n lang="json">{
+  "en": {
+    "animatedText": "Indulge in an oasis of tranquility and refined luxury. Every detail of our hotel is thoughtfully designed to deliver a unique experience of comfort and style."
+  },
+  "id": {
+    "animatedText": "Nikmati oasis ketenangan dan kemewahan yang berkelas. Setiap detail di hotel kami dirancang dengan cermat untuk menghadirkan pengalaman unik penuh kenyamanan dan gaya."
+  }
+}</i18n>

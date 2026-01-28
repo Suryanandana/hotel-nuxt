@@ -43,9 +43,32 @@
     "about": "About",
     "rooms": "Rooms",
     "facilities": "Facilities",
-    "contact": "Contact"
+    "contact": "Contact",
+    "booking": "Book Now",
+    "wa": "Our Whatsapp Contact",
+    "language": "Select Language"
   },
   "landing": {
+    "hero": {
+      "slide1": {
+        "subtitle": "Discover Our Hotel",
+        "title1": "A Sanctuary",
+        "title2": "of Luxury and Comfort",
+        "button": "About Us"
+      },
+      "slide2": {
+        "subtitle": "Comfortable Rooms",
+        "title1": "Experience Ultimate Comfort",
+        "title2": "in Our Luxurious Rooms",
+        "button": "View Rooms"
+      },
+      "slide3": {
+        "subtitle": "Complete Facilities",
+        "title1": "Discover Exceptional",
+        "title2": "Facilities and Services",
+        "button": "Explore Facilities"
+      }
+    },
     "roomHeader": {
       "title": "Our Exquisite Rooms & Suites",
       "subtitle": "Discover your perfect sanctuary with our diverse range of luxurious accommodations."
@@ -134,7 +157,7 @@
       },
       "list": [{
           "title": "Hotel Pool",
-          "image": "/images/pool-view.png",
+          "image": "/images/pool_front.jpg",
           "text": "Relax in our stunning infinity pool with panoramic views.",
           "buttonText": "Detail Facility"
         },
