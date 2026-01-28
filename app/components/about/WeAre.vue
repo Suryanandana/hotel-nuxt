@@ -1,7 +1,7 @@
 <template>
-  <div class="grid grid-cols-12 gap-12 pb-20">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 pb-20">
     <!-- LEFT TABS -->
-    <div class="col-span-12 lg:col-span-4 space-y-6">
+    <div class="md:col-span-4 space-y-6">
       <div
         v-for="(tab, i) in tabs"
         :key="i"
@@ -30,7 +30,7 @@
     </div>
 
     <!-- RIGHT CONTENT -->
-    <div class="col-span-12 lg:col-span-8 relative overflow-hidden">
+    <div class="md:col-span-8 relative overflow-hidden">
       <div ref="contentRef" class="space-y-6">
         <p class="text-sm text-gray-400">
           • {{ rt(tabs[activeTab].title) }}
