@@ -72,6 +72,9 @@ onMounted(() => {
     </section>
 
     <!-- FAQ Section -->
+    <div class="container mx-auto px-4">
+      <AboutRoomOverview />
+    </div>
     <LandingFaq />
     <LandingContact />
   </div>

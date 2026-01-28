@@ -11,11 +11,12 @@ const breadcrumbs = [
 ]
 
 const slides = [
-    { src: '/images/slide1.jpg', alt: 'Slide 1' },
-    { src: '/images/slide2.jpg', alt: 'Slide 2' },
-    { src: '/images/slide3.png', alt: 'Slide 3' },
-    { src: '/images/pool.jpg', alt: 'Pool' },
-    { src: '/images/restaurant.jpg', alt: 'Restaurant' },
+    { src: '/images/garden-view.jpg', alt: 'Slide 1' },
+    { src: '/images/garden1.webp', alt: 'Slide 2' },
+    { src: '/images/garden-room1.webp', alt: 'Slide 3' },
+    { src: '/images/garden2.webp', alt: 'Slide 4' },
+    { src: '/images/garden-room2.webp', alt: 'Slide 5' },
+    { src: '/images/garden-room3.webp', alt: 'Slide 5' },
 ];
 
 const pageTitle = computed(() => t('pages.garden.title'))
@@ -32,7 +33,7 @@ useHead({
 </script>
 
 <template>
-    <Hero :title="t('landing.roomList[0].title')" :breadcrumbs="breadcrumbs" />
+    <Hero img-url="/images/garden-view.jpg" :title="t('landing.roomList[0].title')" :breadcrumbs="breadcrumbs" />
     <!-- content -->
     <div class="container mx-auto px-4 pt-32 pb-20">
         <ClientOnly>
@@ -53,7 +54,7 @@ useHead({
                 </div>
                 <RoomsFacility class="mt-10" :features="tm('landing.roomList[0].features')" />
                 <RoomsBookingRules class="mt-10" />
-                <RoomsRoomPolicy />
+                <RoomsRoomPolicy class="mt-10" />
             </template>
             <!-- RIGHT CARD -->
             <template v-slot:right>

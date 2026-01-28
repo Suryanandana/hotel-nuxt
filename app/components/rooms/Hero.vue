@@ -18,10 +18,13 @@ const mainOptions = {
   rewind: true,
   pagination: false,
   arrows: false,
-  height: '80%',
+  height: '60%',
   breakpoints: {
     768: {
       height: '100%'
+    },
+    1024: {
+      height: '80%'
     }
   }
 };
@@ -72,20 +75,20 @@ onMounted(() => {
 
 <template>
   <!-- Desktop Layout -->
-  <section v-if="isDesktop" class="flex flex-col md:flex-row">
+  <section v-if="isDesktop" class="flex flex-col md:flex-row xl:-mb-80 lg:-mb-60">
     <!-- Thumbnails -->
     <div class="p-2 col-start-1 row-start-1">
-      <Splide :options="desktopThumbsOptions" ref="thumbs" class="h-[80%]">
+      <Splide :options="desktopThumbsOptions" ref="thumbs" class="h-full md:h-[80%] lg:h-[60%]">
         <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-md">
-          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover rounded-md cursor-pointer">
+          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover bg-gray-300 rounded-md cursor-pointer">
         </SplideSlide>
       </Splide>
     </div>
     <!-- Main Slider -->
     <div class="relative col-span-3 col-start-2">
-      <Splide :options="mainOptions" ref="main" class="w-full h-full rounded-md">
-        <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-md">
-          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover rounded-md">
+      <Splide :options="mainOptions" ref="main" class="w-full h-full rounded-xl">
+        <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-xl">
+          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover bg-gray-300 rounded-xl">
         </SplideSlide>
       </Splide>
     </div>
