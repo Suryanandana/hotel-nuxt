@@ -54,6 +54,7 @@
   },
   "landing": {
     "hero": {
+      "title": "A Refined Tropical Beachfront in Lembongan",
       "slide1": {
         "subtitle": "Discover Our Hotel",
         "title1": "A Sanctuary",
@@ -156,7 +157,7 @@
     ],
     "facilitySection": {
       "header": {
-        "title": "Experience Our World-Class Facilities",
+        "title": "EXPERIENCE OUR EXCEPTIONAL FACILITIES",
         "subtitle": "Elevate your stay with amenities designed for ultimate comfort and enjoyment."
       },
       "list": [{
@@ -166,7 +167,7 @@
           "buttonText": "Detail Facility"
         },
         {
-          "title": "Mini Gym",
+          "title": "Mini Gym (under Construction)",
           "image": "/images/mini-gym.jpeg",
           "text": "Stay active during your stay with our well-equipped mini gym.",
           "buttonText": "Detail Facility"
@@ -180,7 +181,7 @@
         {
           "title": "Beach Club",
           "image": "/images/beach-club.jpg",
-          "text": "Enjoy the vibrant atmosphere of our exclusive beach club with refreshing drinks and live music.",
+          "text": "Enjoy the vibrant atmosphere of our exclusive beach club with refreshing drinks and live music on select day",
           "buttonText": "Detail Facility"
         }
       ]

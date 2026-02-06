@@ -38,9 +38,6 @@ onMounted(() => {
 
             <!-- LEFT CONTENT -->
             <div>
-                <p class="text-xs tracking-widest text-neutral-500 mb-3 uppercase">
-                    {{ t('subtitle') }}
-                </p>
 
                 <h2 class="text-4xl md:text-5xl font-serif mb-6 text-gray-900">
                     {{ t('title') }}
@@ -53,12 +50,19 @@ onMounted(() => {
                 <div class="space-y-5 text-gray-700 mb-8">
                     <div class="flex items-center gap-3">
                         <Icon name="solar:phone-calling-linear" class="text-xl" />
-                        <span class="font-medium text-lg">+41 934 121 1334</span>
+                        <span class="font-medium text-lg">+62 813-1333-3661</span>
+                        <span>(Reservation)</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <Icon name="solar:phone-calling-linear" class="text-xl" />
+                        <span class="font-medium text-lg">+62 813-1333-3661</span>
+                        <span>(Front Office)</span>
                     </div>
 
                     <div class="flex items-center gap-3">
                         <Icon name="solar:letter-linear" class="text-xl" />
-                        <span class="font-medium text-lg">info@domain.com</span>
+                        <span class="font-medium text-lg">ulubeachclubhotel@gmail.com</span>
                     </div>
                 </div>
 
@@ -68,9 +72,6 @@ onMounted(() => {
                     </NuxtLink>
                     <NuxtLink to="#" class="hover:text-green-950 text-green-800 transition-colors">
                         <Icon name="ic:baseline-whatsapp" />
-                    </NuxtLink>
-                    <NuxtLink to="#" class="hover:text-gray-950 text-gray-800 transition-colors">
-                        <Icon name="ri:twitter-x-line" />
                     </NuxtLink>
                 </div>
             </div>

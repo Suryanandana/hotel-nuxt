@@ -17,7 +17,7 @@
     },
     "about": {
       "title": "Tentang Kami - Hotel Kami",
-       "sub": "Pelajari lebih lanjut tentang hotel kami",
+      "sub": "Pelajari lebih lanjut tentang hotel kami",
       "description": "Pelajari lebih lanjut tentang sejarah, fasilitas, dan layanan hotel kami."
     },
     "garden": {
@@ -55,6 +55,7 @@
   },
   "landing": {
     "hero": {
+      "title": "Penginapan Tepi Pantai Tropis yang Elegan di Lembongan",
       "slide1": {
         "subtitle": "Temukan Hotel Kami",
         "title1": "Tempat Perlindungan",
@@ -90,7 +91,10 @@
           { "icon": "umbleicons:users", "text": "Maks 2 tamu" },
           { "icon": "fa:bath", "text": "Kamar Mandi Pribadi" },
           { "icon": "iconoir:wifi-tag", "text": "WiFi Gratis" },
-          { "icon": "icon-park-outline:air-conditioning", "text": "Pendingin Ruangan" },
+          {
+            "icon": "icon-park-outline:air-conditioning",
+            "text": "Pendingin Ruangan"
+          },
           { "icon": "material-symbols:resize", "text": "Ukuran kamar: 30m²" }
         ],
         "align": "left",
@@ -108,7 +112,10 @@
           { "icon": "umbleicons:users", "text": "Maks 2 tamu" },
           { "icon": "fa:bath", "text": "Kamar Mandi Pribadi" },
           { "icon": "iconoir:wifi-tag", "text": "WiFi Gratis" },
-          { "icon": "icon-park-outline:air-conditioning", "text": "Pendingin Ruangan" },
+          {
+            "icon": "icon-park-outline:air-conditioning",
+            "text": "Pendingin Ruangan"
+          },
           { "icon": "material-symbols:resize", "text": "Ukuran kamar: 30m²" }
         ],
         "align": "right",
@@ -117,36 +124,36 @@
       }
     ],
     "facilitySection": {
-    "header": {
-      "title": "Rasakan Fasilitas Kelas Dunia Kami",
-      "subtitle": "Tingkatkan pengalaman menginap Anda dengan fasilitas yang dirancang untuk kenyamanan dan kenikmatan terbaik."
-    },
-    "list": [
-      {
-        "title": "Kolam Renang Hotel",
-        "image": "/images/pool_front.jpg",
-        "text": "Bersantailah di kolam renang tanpa batas kami yang menakjubkan dengan pemandangan panorama.",
-        "buttonText": "Detail Fasilitas"
+      "header": {
+        "title": "Rasakan Fasilitas Kelas Dunia Kami",
+        "subtitle": "Tingkatkan pengalaman menginap Anda dengan fasilitas yang dirancang untuk kenyamanan dan kenikmatan terbaik."
       },
-      {
-        "title": "Gym Mini",
-        "image": "/images/mini-gym.jpeg",
-        "text": "Tetap aktif selama menginap dengan gym mini kami yang lengkap.",
-        "buttonText": "Detail Fasilitas"
-      },
-      {
-        "title": "Restoran",
-        "image": "/images/restaurant.jpg",
-        "text": "Rasakan keunggulan kuliner bersama koki pemenang penghargaan kami.",
-        "buttonText": "Detail Fasilitas"
-      },
-      {
-        "title": "Beach Club",
-        "image": "/images/beach-club.jpg",
-        "text": "Nikmati suasana semarak klub pantai eksklusif kami dengan minuman menyegarkan dan musik live.",
-        "buttonText": "Detail Fasilitas"
-      }
-    ]
-  }
+      "list": [
+        {
+          "title": "Kolam Renang Hotel",
+          "image": "/images/pool_front.jpg",
+          "text": "Bersantailah di kolam renang infinity kami yang menakjubkan dengan pemandangan panorama.",
+          "buttonText": "Detail Fasilitas"
+        },
+        {
+          "title": "Mini Gym (Dalam Pembangunan)",
+          "image": "/images/mini-gym.jpeg",
+          "text": "Tetap aktif selama menginap dengan fasilitas mini gym kami yang lengkap.",
+          "buttonText": "Detail Fasilitas"
+        },
+        {
+          "title": "Restoran",
+          "image": "/images/restaurant.jpg",
+          "text": "Nikmati pengalaman kuliner istimewa bersama para chef profesional kami.",
+          "buttonText": "Detail Fasilitas"
+        },
+        {
+          "title": "Beach Club",
+          "image": "/images/beach-club.jpg",
+          "text": "Rasakan suasana hidup di beach club eksklusif kami dengan minuman segar dan hiburan musik di hari-hari tertentu.",
+          "buttonText": "Detail Fasilitas"
+        }
+      ]
+    }
   }
 }

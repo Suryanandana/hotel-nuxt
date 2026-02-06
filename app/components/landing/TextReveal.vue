@@ -69,7 +69,7 @@ onUnmounted(() => {
       <div ref="container" class="max-w-6xl mx-auto text-center">
         <div class="mb-10 flex justify-center">
           <span class="inline-block text-xs font-bold tracking-[0.3em] text-stone-500 uppercase border border-stone-300 px-4 py-2 rounded-full bg-white/50 backdrop-blur-sm">
-            Our Philosophy
+            {{ t('title') }}
           </span>
         </div>
 
@@ -89,9 +89,11 @@ onUnmounted(() => {
 
 <i18n lang="json">{
   "en": {
-    "animatedText": "Indulge in an oasis of tranquility and refined luxury. Every detail of our hotel is thoughtfully designed to deliver a unique experience of comfort and style."
+    "title": "OUR PHILOSOPHY",
+    "animatedText": "Become a beachfront destination that radiates happiness, energy, and genuine warmth. Welcome every guest like an ocean wave—warm, uplifting, and leaving a lasting impression."
   },
   "id": {
+    "title": "FILOSOFI KAMI",
     "animatedText": "Nikmati oasis ketenangan dan kemewahan yang berkelas. Setiap detail di hotel kami dirancang dengan cermat untuk menghadirkan pengalaman unik penuh kenyamanan dan gaya."
   }
 }</i18n>
