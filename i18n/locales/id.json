@@ -82,7 +82,7 @@
     "roomList": [
       {
         "title": "Kamar Pemandangan Taman",
-        "price": "MULAI DARI Rp 750.000 / MALAM",
+        "price": "MULAI DARI Rp 1.150.000 / MALAM",
         "description": "Desain indah dengan perabotan modern termasuk jendela ceruk glamor dengan pemandangan pribadi Anda ke Lucerne.",
         "image": "/images/slide2.jpg",
         "features": [
@@ -103,7 +103,7 @@
       },
       {
         "title": "Kamar Pemandangan Kolam",
-        "price": "MULAI DARI Rp 850.000 / MALAM",
+        "price": "MULAI DARI Rp 1.250.000 / MALAM",
         "description": "Rasakan kenyamanan terbaik di suite mewah kami yang luas dengan ruang tamu terpisah dan fasilitas premium.",
         "image": "/images/pool-view.png",
         "features": [
