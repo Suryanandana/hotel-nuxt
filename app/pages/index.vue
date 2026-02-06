@@ -9,8 +9,7 @@ definePageMeta({
   title: 'pages.home.title'
 })
 
-const { t,  tm } = useI18n()
-const rooms = computed(() => tm('landing.roomList'))
+const { t } = useI18n()
 
 const pageTitle = computed(() => t('pages.home.title'))
 const pageDescription = computed(() => t('pages.top.description'))
@@ -59,9 +58,10 @@ onMounted(() => {
   <div>
     <LandingHero />
     <LandingAbout />
-    <section class="py-20 md:py-32 space-y-32">
+    <!-- <section class="py-20 md:py-32 space-y-32">
       <LandingRoomCard v-for="(room, index) in rooms" :key="index" :room="room" />
-    </section>
+    </section> -->
+    <LandingRoomOverviewSection />
     <LandingFacility />
     <LandingTextReveal />
     <LandingFaq />

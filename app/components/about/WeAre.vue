@@ -2,30 +2,18 @@
   <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 pb-20">
     <!-- LEFT TABS -->
     <div class="md:col-span-4 space-y-6">
-      <div
-        v-for="(tab, i) in tabs"
-        :key="i"
-        @click="changeTab(i)"
-        class="cursor-pointer group"
-      >
-        <div
-          class="flex items-center gap-4 text-lg transition-all"
-          :class="
-            activeTab === i
-              ? 'text-black font-semibold'
-              : 'text-gray-400 hover:text-gray-600'
-          "
-        >
+      <div v-for="(tab, i) in tabs" :key="i" @click="changeTab(i)" class="cursor-pointer group">
+        <div class="flex items-center gap-4 text-lg transition-all" :class="activeTab === i
+          ? 'text-black font-semibold'
+          : 'text-gray-400 hover:text-gray-600'
+          ">
           <span class="text-3xl w-8">
             {{ i + 1 }}
           </span>
           <span>{{ rt(tab.title) }}</span>
         </div>
 
-        <div
-          class="h-px mt-2 transition-all"
-          :class="activeTab === i ? 'bg-gray-700' : 'bg-gray-200'"
-        />
+        <div class="h-px mt-2 transition-all" :class="activeTab === i ? 'bg-gray-700' : 'bg-gray-200'" />
       </div>
     </div>
 
@@ -39,7 +27,7 @@
         <h2 class="text-4xl font-semibold">
           <span class="text-black">
             {{ rt(tabs[activeTab].headline.main) }}
-          </span>
+          </span><br>
           <span class="text-amber-400">
             {{ rt(tabs[activeTab].headline.accent) }}
           </span>
@@ -50,10 +38,7 @@
         </p>
 
         <ul class="list-disc pl-5 space-y-2 text-gray-600">
-          <li
-            v-for="(item, i) in tabs[activeTab].points"
-            :key="i"
-          >
+          <li v-for="(item, i) in tabs[activeTab].points" :key="i">
             {{ rt(item) }}
           </li>
         </ul>
@@ -104,17 +89,11 @@ function changeTab(index) {
       {
         "title": "Who We Are",
         "headline": {
-          "main": "Warm & Genuine",
-          "accent": " Hospitality"
+          "main": "THE ULU BEACH CLUB AND BUNGALOWS",
+          "accent": " Managed by PT. NUSA REJEKI PROPERTI"
         },
-        "description": "The Ulu Beach Club and Bungalows is a hospitality brand managed by PT. NUSA REJEKI PROPERTI, dedicated to creating warm, comfortable, and sincerely delivered stay experiences. We believe that true hospitality is not only about facilities, but about how guests are treated, welcomed, and cared for from the moment they arrive until their departure.",
-        "points": [
-          "Managed professionally under PT. NUSA REJEKI PROPERTI",
-          "Focused on warmth, comfort, and genuine service",
-          "Hospitality delivered with sincerity and personal care",
-          "Attention to detail in every guest experience"
-        ],
-        "image": "/img/who-we-are.jpg"
+        "description": "We are a hospitality company under PT. NUSA REJEKI PROPERTI, dedicated to creating warm, comfortable, and sincerely delivered stay experiences. Located on the serene shores of Jungut Batu, we blend professional service with a personal touch that reflects our core values: warmth, genuine hospitality, and attention to every detail. Through thoughtfully designed facilities and heartfelt service, The Ulu Beach Club and Bungalows is committed to providing an experience that makes every guest feel valued, welcomed, and truly at home",
+        "points": []
       },
       {
         "title": "Our Philosophy",
@@ -128,8 +107,7 @@ function changeTab(index) {
           "Balance between professionalism and personal service",
           "Designed to make guests feel welcomed and valued",
           "Inspired by warmth, sincerity, and thoughtful details"
-        ],
-        "image": "/img/philosophy.jpg"
+        ]
       },
       {
         "title": "About Us",
@@ -137,14 +115,8 @@ function changeTab(index) {
           "main": "A Hidden",
           "accent": " Beachfront Escape"
         },
-        "description": "The Ulu Beach Club and Bungalows is a hidden beachfront retreat in Jungut Batu, Nusa Lembongan. Whether you are traveling alone, with a partner, or with loved ones, our space offers peaceful island vibes, beautiful ocean views, and moments of relaxation that allow you to truly slow down and enjoy the present.",
-        "points": [
-          "Located in Jungut Batu, Nusa Lembongan",
-          "Peaceful atmosphere with island charm",
-          "Ideal for solo travelers, couples, and families",
-          "A place to relax, unwind, and reconnect"
-        ],
-        "image": "/img/about-us.jpg"
+        "description": "The Ulu Beach Club and Bungalows, a hidden beachfront escape in Jungut Batu, Nusa Lembongan. Enjoy peaceful island vibes, beautiful views, and relaxing moments whether you come alone or with loved ones. Our accommodation are designed with a mix of traditional charm and modern comfort, creating a warm and relaxing stay for every guest With our private Beach Club, you can spend easy days by the ocean, enjoy delicious food, refreshing cocktails, and watch the stunning sunset turn into a starry night Experience island life that is natural, relaxing, and unforgettable",
+        "points": []
       },
       {
         "title": "The Experience",
@@ -158,27 +130,20 @@ function changeTab(index) {
           "Private Beach Club by the ocean",
           "Food, cocktails, and relaxing seaside moments",
           "Natural, calming, and memorable island experience"
-        ],
-        "image": "/img/experience.jpg"
+        ]
       }
     ]
   },
   "id": {
     "tabs": [
       {
-        "title": "Siapa Kami",
+        "title": "Tentang Kami",
         "headline": {
-          "main": "Keramahan",
-          "accent": " yang Tulus"
+          "main": "THE ULU BEACH CLUB AND BUNGALOWS",
+          "accent": "Dikelola oleh PT. NUSA REJEKI PROPERTI"
         },
-        "description": "The Ulu Beach Club and Bungalows adalah brand hospitality yang dikelola oleh PT. NUSA REJEKI PROPERTI, dengan komitmen untuk menghadirkan pengalaman menginap yang hangat, nyaman, dan dilayani dengan ketulusan. Bagi kami, hospitality bukan hanya tentang fasilitas, tetapi tentang bagaimana setiap tamu disambut, diperhatikan, dan dibuat merasa berarti.",
-        "points": [
-          "Dikelola secara profesional oleh PT. NUSA REJEKI PROPERTI",
-          "Mengutamakan kenyamanan dan keramahan yang tulus",
-          "Pelayanan yang personal dan penuh perhatian",
-          "Fokus pada detail dalam setiap pengalaman tamu"
-        ],
-        "image": "/img/who-we-are.jpg"
+        "description": "Kami adalah perusahaan perhotelan di bawah naungan PT. NUSA REJEKI PROPERTI yang berdedikasi untuk menghadirkan pengalaman menginap yang hangat, nyaman, dan tulus. Berlokasi di pesisir tenang Jungut Batu, kami memadukan layanan profesional dengan sentuhan personal yang mencerminkan nilai utama kami: kehangatan, keramahan yang tulus, dan perhatian terhadap setiap detail. Melalui fasilitas yang dirancang dengan penuh perhatian serta pelayanan sepenuh hati, The Ulu Beach Club and Bungalows berkomitmen untuk memberikan pengalaman menginap yang membuat setiap tamu merasa dihargai, disambut, dan benar-benar seperti di rumah.",
+        "points": []
       },
       {
         "title": "Filosofi Kami",
@@ -198,17 +163,11 @@ function changeTab(index) {
       {
         "title": "Tentang Kami",
         "headline": {
-          "main": "Pelarian",
-          "accent": " Tepi Pantai"
+          "main": "Sebuah Persembunyian",
+          "accent": "Tepi Pantai yang Menenangkan"
         },
-        "description": "The Ulu Beach Club and Bungalows adalah tempat persembunyian tepi pantai di Jungut Batu, Nusa Lembongan. Cocok untuk kamu yang datang sendiri maupun bersama orang terdekat, tempat ini menawarkan suasana pulau yang damai, pemandangan indah, dan momen relaksasi yang membantu kamu menikmati waktu dengan lebih tenang.",
-        "points": [
-          "Terletak di Jungut Batu, Nusa Lembongan",
-          "Suasana pulau yang damai dan menenangkan",
-          "Cocok untuk solo traveler, pasangan, dan keluarga",
-          "Tempat untuk beristirahat dan melepas penat"
-        ],
-        "image": "/img/about-us.jpg"
+        "description": "The Ulu Beach Club and Bungalows merupakan sebuah tempat peristirahatan tersembunyi di tepi pantai Jungut Batu, Nusa Lembongan. Nikmati suasana pulau yang damai, pemandangan yang indah, serta momen relaksasi baik saat Anda datang sendiri maupun bersama orang terkasih. Akomodasi kami dirancang dengan perpaduan pesona tradisional dan kenyamanan modern, menciptakan pengalaman menginap yang hangat dan menenangkan bagi setiap tamu. Dengan Beach Club pribadi kami, Anda dapat menghabiskan hari-hari santai di tepi laut, menikmati hidangan lezat, кокtail segar, serta menyaksikan matahari terbenam yang memukau hingga berubah menjadi malam berbintang. Rasakan kehidupan pulau yang alami, santai, dan tak terlupakan.",
+        "points": []
       },
       {
         "title": "Pengalaman",

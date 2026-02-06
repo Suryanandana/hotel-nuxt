@@ -43,7 +43,7 @@ useHead({
             <!-- LEFT CARD -->
             <template v-slot:left>
                 <!-- Header Card -->
-                <RoomsHeaderCard :title="t('landing.roomList[1].title')" price="850.000" />
+                <RoomsHeaderCard :title="t('landing.roomList[1].title')" price="1.250.000" />
                 <div class="space-y-3">
                     <h2 class="text-3xl md:text-4xl font-serif mb-3">
                         {{ t('rooms.pool.title') }}

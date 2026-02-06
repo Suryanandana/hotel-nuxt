@@ -19,7 +19,7 @@ const { rt } = useI18n();
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black/40 transition-colors duration-500 group-hover:bg-black/50"></div>
 
-      <div class="relative z-10 max-w-xl">
+      <div class="relative z-10">
         <h2 class="text-4xl font-bold mb-2 text-white">{{ rt(card.title) }}</h2>
         <p class="text-white/90">{{ rt(card.text) }}</p>
       </div>

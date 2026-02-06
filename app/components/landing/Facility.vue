@@ -27,5 +27,3 @@ const cardsData = computed(() => tm('landing.facilitySection.list'))
     </div>
   </section>
 </template>
-
-<style scoped></style>
