@@ -56,7 +56,7 @@ onMounted(() => {
 
                     <div class="flex items-center gap-3">
                         <Icon name="solar:phone-calling-linear" class="text-xl" />
-                        <span class="font-medium text-lg">+62 813-1333-3661</span>
+                        <span class="font-medium text-lg">+62 812-9925-2623</span>
                         <span>(Front Office)</span>
                     </div>
 
