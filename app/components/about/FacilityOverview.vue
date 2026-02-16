@@ -59,7 +59,7 @@ const items = computed(() => tm('items'))
         "title": "Restaurant Experience",
         "description": "Our restaurant offers a memorable culinary journey where every dish is crafted with passion, sincerity, and artistry. Guests are warmly welcomed to enjoy international flavors in a relaxed and personal dining atmosphere.",
         "icon": "ion:restaurant-outline",
-        "image": "/images/restaurant.jpg"
+        "image": "/images/restaurant1.jpg"
       },
       {
         "title": "Private Beach Club",
@@ -71,7 +71,7 @@ const items = computed(() => tm('items'))
         "title": "Mini Gym",
         "description": "Our mini gym is designed for guests who wish to stay active during their stay, featuring essential equipment in a comfortable and refreshing environment.",
         "icon": "hugeicons:equipment-gym-03",
-        "image": "/images/mini-gym.jpeg"
+        "image": "/images/gym.png"
       },
       {
         "title": "Swimming Pool",
@@ -87,7 +87,7 @@ const items = computed(() => tm('items'))
         "title": "Pengalaman Bersantap",
         "description": "Restoran kami menghadirkan perjalanan kuliner yang berkesan, dengan setiap hidangan dibuat penuh ketulusan, passion, dan sentuhan seni. Nikmati cita rasa internasional dalam suasana bersantap yang hangat dan santai.",
         "icon": "ion:restaurant-outline",
-        "image": "/images/restaurant.jpg"
+        "image": "/images/restaurant1.jpg"
       },
       {
         "title": "Beach Club Pribadi",
@@ -99,7 +99,7 @@ const items = computed(() => tm('items'))
         "title": "Mini Gym",
         "description": "Mini gym kami disediakan bagi tamu yang ingin tetap aktif selama menginap, dilengkapi dengan peralatan esensial dalam suasana yang nyaman dan menyegarkan.",
         "icon": "hugeicons:equipment-gym-03",
-        "image": "/images/mini-gym.jpeg"
+        "image": "/images/gym.png"
       },
       {
         "title": "Kolam Renang",
