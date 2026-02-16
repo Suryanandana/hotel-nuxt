@@ -109,7 +109,7 @@ onMounted(() => {
 
             <div class="gap-x-2 hidden md:flex items-center">
                 <Button as-child>
-                    <NuxtLink to="https://secure.guestpro.net/theulu/booking">
+                    <NuxtLink to="https://secure.guestpro.net/theulu/booking" target="_blank" rel="noopener">
                         {{ t('navbar.booking') }}
                         <Icon name="solar:arrow-right-up-linear" />
                     </NuxtLink>
@@ -120,7 +120,7 @@ onMounted(() => {
                             <Button as-child variant="outline" size="icon" aria-label="Submit"
                                 class="bg-transparent text-lg font-bold hover:text-green-300 outline-green-300 border-green-300"
                                 :class="isScrolled ? 'text-white bg-green-600 hover:bg-white' : 'text-green-300'">
-                                <NuxtLink to="https://wa.me/6281313333661">
+                                <NuxtLink to="https://wa.me/6281313333661" target="_blank" rel="noopener">
                                     <Icon name="ic:baseline-whatsapp" />
                                 </NuxtLink>
                             </Button>
@@ -166,7 +166,7 @@ onMounted(() => {
             <!-- MOBILE HAMBURGER -->
              <div class="flex gap-3 md:hidden group">
                 <Button as-child>
-                    <NuxtLink to="https://secure.guestpro.net/theulu/booking">
+                    <NuxtLink to="https://secure.guestpro.net/theulu/booking" target="_blank" rel="noopener">
                         {{ t('navbar.booking') }}
                         <Icon name="solar:arrow-right-up-linear" />
                     </NuxtLink>
@@ -223,7 +223,7 @@ onMounted(() => {
             <!-- MOBILE ACTIONS -->
             <div class="mt-8 space-y-4">
                 <Button as-child variant="outline" class="w-full bg-transparent text-green-600 border-green-600 hover:bg-green-600 hover:text-white">
-                    <NuxtLink to="https://wa.me/6281313333661" @click="closeMenu">
+                    <NuxtLink to="https://wa.me/6281313333661" @click="closeMenu" target="_blank" rel="noopener">
                         <Icon name="ic:baseline-whatsapp" class="mr-2" />
                         {{ t('navbar.wa') }}
                     </NuxtLink>
