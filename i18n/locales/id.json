@@ -137,13 +137,13 @@
         },
         {
           "title": "Mini Gym (Dalam Pembangunan)",
-          "image": "/images/mini-gym.jpeg",
+          "image": "/images/gym.png",
           "text": "Tetap aktif selama menginap dengan fasilitas mini gym kami yang lengkap.",
           "buttonText": "Detail Fasilitas"
         },
         {
           "title": "Restoran",
-          "image": "/images/restaurant.jpg",
+          "image": "/images/restaurant1.jpg",
           "text": "Nikmati pengalaman kuliner istimewa bersama para chef profesional kami.",
           "buttonText": "Detail Fasilitas"
         },

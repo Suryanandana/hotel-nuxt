@@ -168,13 +168,13 @@
         },
         {
           "title": "Mini Gym (under Construction)",
-          "image": "/images/mini-gym.jpeg",
+          "image": "/images/gym.png",
           "text": "Stay active during your stay with our well-equipped mini gym.",
           "buttonText": "Detail Facility"
         },
         {
           "title": "Restaurant",
-          "image": "/images/restaurant.jpg",
+          "image": "/images/restaurant1.jpg",
           "text": "Experience culinary excellence with our award-winning chefs.",
           "buttonText": "Detail Facility"
         },
