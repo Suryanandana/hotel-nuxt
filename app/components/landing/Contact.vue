@@ -67,10 +67,10 @@ onMounted(() => {
                 </div>
 
                 <div class="flex gap-6 text-2xl">
-                    <NuxtLink to="#" class="hover:text-pink-950 text-pink-800 transition-colors">
+                    <NuxtLink to=" https://www.instagram.com/theulubeachclubandbungalows" target="_blank" rel="noopener" class="hover:text-pink-950 text-pink-800 transition-colors">
                         <Icon name="mdi:instagram" />
                     </NuxtLink>
-                    <NuxtLink to="#" class="hover:text-green-950 text-green-800 transition-colors">
+                    <NuxtLink to="https://wa.me/6281313333661" target="_blank" rel="noopener" class="hover:text-green-950 text-green-800 transition-colors">
                         <Icon name="ic:baseline-whatsapp" />
                     </NuxtLink>
                 </div>

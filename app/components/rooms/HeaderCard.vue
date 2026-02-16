@@ -32,6 +32,17 @@ defineProps({
         ]
     }
 })
+
+const isCopied = ref(false)
+
+const copyUrl = () => {
+    if (import.meta.client) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+            isCopied.value = true
+            setTimeout(() => isCopied.value = false, 2000)
+        })
+    }
+}
 </script>
 
 <template>
@@ -63,10 +74,6 @@ defineProps({
                     </div>
                 </div>
             </div>
-
-            <button class="ml-auto flex items-center gap-2 text-yellow-700 hover:underline">
-                🔗 Share
-            </button>
         </div>
     </div>
 </template>
