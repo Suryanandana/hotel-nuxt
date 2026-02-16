@@ -120,7 +120,7 @@ onMounted(() => {
                             <Button as-child variant="outline" size="icon" aria-label="Submit"
                                 class="bg-transparent text-lg font-bold hover:text-green-300 outline-green-300 border-green-300"
                                 :class="isScrolled ? 'text-white bg-green-600 hover:bg-white' : 'text-green-300'">
-                                <NuxtLink to="https://wa.me/628123456789">
+                                <NuxtLink to="https://wa.me/6281313333661">
                                     <Icon name="ic:baseline-whatsapp" />
                                 </NuxtLink>
                             </Button>
@@ -223,7 +223,7 @@ onMounted(() => {
             <!-- MOBILE ACTIONS -->
             <div class="mt-8 space-y-4">
                 <Button as-child variant="outline" class="w-full bg-transparent text-green-600 border-green-600 hover:bg-green-600 hover:text-white">
-                    <NuxtLink to="https://wa.me/628123456789" @click="closeMenu">
+                    <NuxtLink to="https://wa.me/6281313333661" @click="closeMenu">
                         <Icon name="ic:baseline-whatsapp" class="mr-2" />
                         {{ t('navbar.wa') }}
                     </NuxtLink>
