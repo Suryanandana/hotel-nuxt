@@ -90,7 +90,7 @@ onMounted(() => {
             <div class="flex gap-x-5 justify-center">
                 <Button as-child>
                     <NuxtLink to="https://secure.guestpro.net/theulu/booking" target="_blank" rel="noopener">
-                        {{ t('navbar.booking') }}
+                        {{ t('booking') }}
                         <Icon name="solar:arrow-right-up-linear" />
                     </NuxtLink>
                 </Button>   

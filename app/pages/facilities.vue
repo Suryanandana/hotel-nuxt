@@ -6,12 +6,13 @@ const { t, tm } = useI18n()
 const cardsData = computed(() => tm('landing.facilitySection.list'))
 
 // --- SEO & Metadata Halaman ---
-useHead({
-    title: 'Our Facilities',
-    meta: [
-        { name: 'description', content: 'Explore the world-class facilities at our hotel, designed for your comfort and enjoyment.' }
-    ]
+useSeoMeta({
+    title: t('pages.facilities.title'),
+    description: t('pages.facilities.description'),
+    ogTitle: t('pages.facilities.title'),
+    ogDescription: t('pages.facilities.description'),
 })
+
 const breadcrumbs = [
     {url: '/', label: t('navbar.home')},
     {url: 'facilities', label: t('navbar.facilities')}

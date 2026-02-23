@@ -13,13 +13,11 @@ const breadcrumbs = [
 const pageTitle = computed(() => t('pages.about.title'))
 const pageDescription = computed(() => t('pages.about.description'))
 
-useHead({
+useSeoMeta({
   title: pageTitle,
-  meta: [
-    { name: 'description', content: pageDescription },
-    { property: 'og:title', content: pageTitle },
-    { property: 'og:description', content: pageDescription }
-  ]
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
 })
 </script>
 

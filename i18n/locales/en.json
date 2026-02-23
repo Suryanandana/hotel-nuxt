@@ -8,14 +8,15 @@
   },
   "pages": {
     "home": {
-      "title": "Home - My Hotel"
+      "title": "Home",
+      "description": "Welcome to My Hotel, your premier tropical sanctuary in Lembongan. Experience unparalleled comfort, breathtaking ocean views, and world-class service."
     },
     "top": {
-      "description": "Experience comfort and great service at our hotel.",
-      "languages": "Available languages"
+      "description": "Discover the ultimate island getaway with luxurious rooms and premium facilities at My Hotel Lembongan.",
+      "languages": "Select Language"
     },
     "about": {
-      "title": "About Us - My Hotel",
+      "title": "About Us",
       "sub": "Learn more about our hotel's",
       "description": "Learn more about our hotel's story, amenities, and services."
     },
@@ -26,6 +27,14 @@
     "pool": {
       "title": "Pool View Room",
       "description": "Relax and unwind in our Pool View Room, offering refreshing views of our sparkling swimming pool."
+    },
+    "facilities": {
+      "title": "Facilities",
+      "description": "Discover our exceptional facilities designed to enhance your stay and provide unforgettable experiences."
+    },
+    "rooms": {
+      "title": "Rooms & Suites",
+      "description": "Explore our exquisite collection of rooms and suites, each designed for your ultimate comfort and relaxation."
     }
   },
   "rooms": {

@@ -27,7 +27,7 @@
             <!-- IMAGE -->
             <div
                 class="w-full h-[280px] md:h-[320px] lg:h-[420px] bg-gray-200 rounded-3xl flex items-center justify-center overflow-hidden">
-                <NuxtImg src="/images/drone1.jpg" class="w-full h-full object-cover" />
+                <NuxtImg src="/images/drone1.jpg" class="w-full h-full object-cover" alt="Drone view of the hotel" />
             </div>
 
             <!-- LIST -->

@@ -49,7 +49,7 @@ const copyUrl = () => {
     <div class="border rounded-2xl p-6 space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center gap-3">
-                <h1 class="text-2xl font-semibold">{{ title }}</h1>
+                <h2 class="text-2xl font-semibold">{{ title }}</h2>
                 <span class="px-3 py-1 text-sm rounded-full bg-yellow-100 text-yellow-700">
                     {{ category }}
                 </span>

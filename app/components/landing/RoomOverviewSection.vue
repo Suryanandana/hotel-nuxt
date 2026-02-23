@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-7xl mx-auto px-6 py-20 mt-20 font-sans">
+    <section class="container mx-auto px-6 py-20 mt-20 font-sans">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             <div class="space-y-8">
