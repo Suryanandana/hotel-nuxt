@@ -1,4 +1,6 @@
 <script setup>
+import { Analytics } from '@vercel/analytics/nuxt';
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 useSeoMeta({
   titleTemplate: '%s %separator The Ulu Beach Club & Bungalows', // %s akan diganti judul halaman spesifik
   ogType: 'website',
@@ -35,6 +37,8 @@ useSchemaOrg([
 <template>
   <div class="overflow-x-hidden">
     <NuxtLoadingIndicator color="#FFD700" />
+    <Analytics />
+    <SpeedInsights />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
