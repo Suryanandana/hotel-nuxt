@@ -19,7 +19,7 @@ const navItems = computed(() => [
             </span>
             <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0 gap-6">
                 <li v-for="item in navItems" :key="item.href">
-                    <NuxtLink :to="item.href" class="relative transition-colors hover:text-black after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                    <NuxtLink :to="$localePath(item.href)" class="relative transition-colors hover:text-black after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                         {{ item.label }}
                     </NuxtLink>
                 </li>

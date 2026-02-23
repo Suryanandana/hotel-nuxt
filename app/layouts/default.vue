@@ -3,7 +3,6 @@ import { computed, ref, onUnmounted } from 'vue'
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import ScrollSmoother from "gsap/ScrollSmoother"
-import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
 const route = useRoute()
 const router = useRouter()
@@ -90,7 +89,6 @@ onUnmounted(() => {
     </Head>
 
     <Body class="font-[Poppins]">
-      <SpeedInsights/>
       <Navbar />
       <div id="smooth-wrapper">
         <div id="smooth-content">

@@ -15,11 +15,11 @@ const breadcrumbs = [
 ]
 
 // --- SEO & Metadata Halaman ---
-useHead({
-  title: 'Our Rooms & Suites',
-  meta: [
-    { name: 'description', content: 'Explore our collection of luxurious rooms and suites, each designed for your ultimate comfort and relaxation.' }
-  ]
+useSeoMeta({
+  title: t('pages.rooms.title'),
+  description: t('pages.rooms.description'),
+  ogTitle: t('pages.rooms.title'),
+  ogDescription: t('pages.rooms.description'),
 })
 
 // --- Animasi ---

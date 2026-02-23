@@ -4,21 +4,21 @@
     <!-- Left Image -->
     <div ref="leftImage"
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]">
-      <img src="/images/slide1.jpg" class="rounded-lg object-cover w-full h-full shadow-2xl" />
+      <img src="/images/slide1.jpg" alt="Hotel Garden" class="rounded-lg object-cover w-full h-full shadow-2xl" />
     </div>
 
     <!-- Right Image -->
     <div ref="rightImage"
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]">
-      <img src="/images/slide2.jpg" class="rounded-lg object-cover w-full h-full shadow-2xl" />
+      <img src="/images/slide2.jpg" alt="Hotel Room" class="rounded-lg object-cover w-full h-full shadow-2xl" />
     </div>
 
     <!-- Text -->
     <div ref="text" class="relative z-20 text-center max-w-2xl opacity-0 px-6">
       <span class="text-yellow-600">{{ t('subtitle') }}</span>
-      <h2 class="text-2xl md:text-4xl font-serif mb-6 text-yellow-500 font-semibold">
+      <h1 class="text-2xl md:text-4xl font-serif mb-6 text-yellow-500 font-semibold">
         {{ t('title') }}
-      </h2>
+      </h1>
 
       <p class="text-md text-gray-600 leading-relaxed">
         {{ t('desc') }} <br><br> {{ t('desc2') }}
