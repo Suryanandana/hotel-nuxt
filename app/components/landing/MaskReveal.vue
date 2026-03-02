@@ -49,7 +49,8 @@ onMounted(() => {
     )
     
     // Efek Parallax halus pada gambar di dalamnya
-    tl.fromTo(image.value,
+    // Gunakan .$el karena NuxtImg adalah Vue component, bukan DOM element langsung
+    tl.fromTo(image.value.$el,
         { scale: 1.1, y: "10%" },
         { scale: 1, y: "0%", ease: "none" },
         0
@@ -68,7 +69,7 @@ onMounted(() => {
     <section ref="section" class="relative w-full h-screen bg-white flex items-center justify-center overflow-hidden">
         <!-- Masked Container -->
         <div ref="mask" class="absolute inset-0 w-full h-full z-10">
-            <img ref="image" src="/images/slide2.jpg" alt="Reveal" class="w-full h-full object-cover" />
+            <NuxtImg ref="image" src="/images/slide2.jpg" alt="Reveal" sizes="100vw lg:100vw" format="webp" quality="80" loading="lazy" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/30"></div>
         </div>
 

@@ -80,7 +80,7 @@ onMounted(() => {
     <div class="p-2 col-start-1 row-start-1">
       <Splide :options="desktopThumbsOptions" ref="thumbs" class="h-full md:h-[80%] lg:h-[60%]">
         <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-md">
-          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover bg-gray-300 rounded-md cursor-pointer">
+          <NuxtImg :src="slide.src" :alt="slide.alt" sizes="110px md:110px" format="webp" quality="80" loading="lazy" class="w-full h-full object-cover bg-gray-300 rounded-md cursor-pointer" />
         </SplideSlide>
       </Splide>
     </div>
@@ -88,7 +88,7 @@ onMounted(() => {
     <div class="relative col-span-3 col-start-2">
       <Splide :options="mainOptions" ref="main" class="w-full h-full rounded-xl">
         <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-xl">
-          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover bg-gray-300 rounded-xl">
+          <NuxtImg :src="slide.src" :alt="slide.alt" sizes="100vw md:80vw lg:100vw" format="webp" quality="80" preload class="w-full h-full object-cover bg-gray-300 rounded-xl" />
         </SplideSlide>
       </Splide>
     </div>
@@ -99,14 +99,14 @@ onMounted(() => {
     <section class="relative h-[60vh]">
       <Splide :options="mainOptions" ref="main" class="w-full h-full">
         <SplideSlide v-for="slide in slides" :key="slide.alt">
-          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover">
+          <NuxtImg :src="slide.src" :alt="slide.alt" sizes="100vw md:80vw lg:100vw" format="webp" quality="80" preload class="w-full h-full object-cover" />
         </SplideSlide>
       </Splide>
     </section>
     <div class="bg-background p-2">
       <Splide :options="mobileThumbsOptions" ref="thumbs">
         <SplideSlide v-for="slide in slides" :key="slide.alt">
-          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover rounded-md cursor-pointer">
+          <NuxtImg :src="slide.src" :alt="slide.alt" sizes="110px md:110px" format="webp" quality="80" loading="lazy" class="w-full h-full object-cover rounded-md cursor-pointer" />
         </SplideSlide>
       </Splide>
     </div>

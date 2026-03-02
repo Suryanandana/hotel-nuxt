@@ -4,7 +4,7 @@
       <div v-for="(item, index) in items" :key="index" class="grid grid-cols-1 lg:grid-cols-2">
         <!-- Image -->
         <div class="relative h-64 sm:h-96 lg:h-full order-1" :class="index % 2 !== 0 ? 'lg:order-2' : ''">
-          <img :src="rt(item.image)" :alt="rt(item.title)" class="absolute inset-0 h-full w-full object-cover" />
+          <NuxtImg :src="rt(item.image)" :alt="rt(item.title)" sizes="100vw sm:50vw lg:100vw" format="webp" quality="80" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
         </div>
 
         <!-- Text -->

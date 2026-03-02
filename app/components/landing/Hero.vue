@@ -13,7 +13,7 @@ const { t } = useI18n()
         <SplideTrack>
             <SplideSlide>
                 <div class="w-full h-lvh bg-red-200 overflow-hidden z-20 relative flex justify-center items-center">
-                    <NuxtImg src="/images/garden_view_hero.jpg" alt="Garden View"
+                    <NuxtImg src="/images/garden_view_hero.jpg" alt="Garden View" sizes="100vw sm:50vw md:100vw lg:100vw" format="webp" quality="80" loading="lazy"
                         class="absolute top-0 left-0 z-10 object-cover w-full h-full animation" />
                     <div class="absolute top-0 left-0 w-full h-full bg-gray-900 z-20 opacity-50"></div>
                     <div
@@ -37,7 +37,7 @@ const { t } = useI18n()
             </SplideSlide>
             <SplideSlide>
                 <div class="w-full h-lvh bg-gray-500 overflow-hidden z-20 relative flex justify-center items-center">
-                    <NuxtImg src="/images/room_hero.webp" alt="Hotel Room"
+                    <NuxtImg src="/images/room_hero.webp" alt="Hotel Room" sizes="100vw sm:50vw md:100vw lg:100vw" format="webp" quality="80" loading="lazy"
                         class="absolute top-0 left-0 z-10 object-cover w-full h-full animation" />
                     <div class="absolute top-0 left-0 w-full h-full bg-gray-900 z-20 opacity-50"></div>
                     <div
@@ -62,7 +62,7 @@ const { t } = useI18n()
             </SplideSlide>
             <SplideSlide>
                 <div class="w-full h-lvh bg-gray-500 overflow-hidden z-20 relative flex justify-center items-center">
-                    <NuxtImg src="/images/pool-view-hero.jpg" alt="Pool View"
+                    <NuxtImg src="/images/pool-view-hero.jpg" alt="Pool View" sizes="100vw sm:50vw md:100vw lg:100vw" format="webp" quality="80" loading="lazy"
                         class="absolute top-0 left-0 z-10 object-cover w-full h-full animation" />
                     <div class="absolute top-0 left-0 w-full h-full bg-gray-900 z-20 opacity-50"></div>
                     <div

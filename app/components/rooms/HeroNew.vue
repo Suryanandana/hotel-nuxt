@@ -54,7 +54,7 @@ onMounted(() => {
     <div class="relative h-96 flex items-center justify-center text-white rounded-lg">
       <Splide :options="mainOptions" ref="main" class="w-full h-full">
         <SplideSlide v-for="slide in slides" :key="slide.alt">
-          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-contain">
+          <NuxtImg :src="slide.src" :alt="slide.alt" sizes="100vw md:100vw lg:100vw" format="webp" quality="80" preload class="w-full h-full object-contain" />
           <div class="absolute inset-0 bg-black/50"></div>
           <div class="hero-content absolute inset-0 flex items-center justify-center text-center px-4">
             <div>
@@ -79,7 +79,7 @@ onMounted(() => {
         class="w-full"
       >
         <SplideSlide v-for="slide in slides" :key="slide.alt">
-          <img :src="slide.src" :alt="slide.alt" class="w-full h-full object-cover rounded-md cursor-pointer">
+          <NuxtImg :src="slide.src" :alt="slide.alt" sizes="110px md:110px" format="webp" quality="80" loading="lazy" class="w-full h-full object-cover rounded-md cursor-pointer" />
         </SplideSlide>
       </Splide>
     </div>

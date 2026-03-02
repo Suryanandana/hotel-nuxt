@@ -13,7 +13,7 @@ const { rt } = useI18n();
     <div data-aos="fade-up"
       class="facility-card w-full flex items-end justify-between rounded-[30px] relative min-h-[450px] p-[35px] overflow-hidden group">
       <!-- Background Image -->
-      <img :src="rt(card.image)" :alt="rt(card.title)"
+      <NuxtImg :src="rt(card.image)" :alt="rt(card.title)" sizes="100vw sm:50vw lg:100vw" format="webp" quality="80" loading="lazy"
         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
       <!-- Overlay -->
