@@ -9,6 +9,7 @@ const cardsData = computed(() => tm('landing.facilitySection.list'))
 useSeoMeta({
     title: t('pages.facilities.title'),
     description: t('pages.facilities.description'),
+    keywords: t('pages.facilities.keywords'),
     ogTitle: t('pages.facilities.title'),
     ogDescription: t('pages.facilities.description'),
 })
