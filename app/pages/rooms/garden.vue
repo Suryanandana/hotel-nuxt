@@ -21,10 +21,12 @@ const slides = [
 
 const pageTitle = computed(() => t('pages.garden.title'))
 const pageDescription = computed(() => t('pages.garden.description'))
+const pageKeywords = computed(() => t('pages.garden.keywords'))
 
 useSeoMeta({
     title: pageTitle,
     description: pageDescription,
+    keywords: pageKeywords,
     ogTitle: pageTitle,
     ogDescription: pageDescription,
 })

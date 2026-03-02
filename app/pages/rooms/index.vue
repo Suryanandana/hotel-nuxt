@@ -18,6 +18,7 @@ const breadcrumbs = [
 useSeoMeta({
   title: t('pages.rooms.title'),
   description: t('pages.rooms.description'),
+  keywords: t('pages.rooms.keywords'),
   ogTitle: t('pages.rooms.title'),
   ogDescription: t('pages.rooms.description'),
 })

@@ -12,10 +12,12 @@ const breadcrumbs = [
 ]
 const pageTitle = computed(() => t('pages.about.title'))
 const pageDescription = computed(() => t('pages.about.description'))
+const pageKeywords = computed(() => t('pages.about.keywords'))
 
 useSeoMeta({
   title: pageTitle,
   description: pageDescription,
+  keywords: pageKeywords,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
 })

@@ -1,40 +1,46 @@
 {
-  "welcome": "Welcome to our Hotel",
+  "welcome": "Welcome to The Ulu Beach Club & Bungalows",
   "site": {
-    "name": "My Hotel"
+    "name": "The Ulu Beach Club & Bungalows – Nusa Lembongan, Bali"
   },
   "layouts": {
-    "title": "My Hotel"
+    "title": "The Ulu Hotel – Nusa Lembongan, Bali"
   },
   "pages": {
     "home": {
-      "title": "Home",
-      "description": "Welcome to My Hotel, your premier tropical sanctuary in Lembongan. Experience unparalleled comfort, breathtaking ocean views, and world-class service."
+      "title": "The Ulu – Luxury Beach Club & Hotel in Nusa Lembongan, Bali",
+      "description": "The Ulu Beach Club & Bungalows is a luxury hotel in Nusa Lembongan, Bali. Experience stunning ocean views, private bungalows, beachfront dining, and an exclusive beach club — just minutes from Bali.",
+      "keywords": "hotel bali, ulu hotel, the ulu hotel, hotel nusa lembongan, beach club bali, luxury resort bali, bungalow lembongan, hotel dekat bali, resort lembongan, the ulu beach club"
     },
     "top": {
-      "description": "Discover the ultimate island getaway with luxurious rooms and premium facilities at My Hotel Lembongan.",
+      "description": "Stay at The Ulu Hotel in Nusa Lembongan – a luxury beach club and bungalows overlooking the ocean, just a short boat ride from Bali.",
       "languages": "Select Language"
     },
     "about": {
-      "title": "About Us",
-      "sub": "Learn more about our hotel's",
-      "description": "Learn more about our hotel's story, amenities, and services."
+      "title": "About The Ulu – Beachfront Hotel in Nusa Lembongan, Bali",
+      "sub": "Our Story – The Ulu Hotel",
+      "description": "Learn about The Ulu Beach Club & Bungalows — a luxury beachfront hotel in Nusa Lembongan, Bali. Discover our story, vision, and what makes us a top-rated Bali island retreat.",
+      "keywords": "about ulu hotel, the ulu story, beachfront hotel bali, luxury resort lembongan, hotel near bali"
     },
     "garden": {
-      "title": "Garden View Room",
-      "description": "Enjoy the serene beauty of our Garden View Room, offering a peaceful retreat with lush garden vistas."
+      "title": "Garden View Room – The Ulu Hotel Nusa Lembongan",
+      "description": "Book the Garden View Room at The Ulu Hotel, a luxury bungalow in Nusa Lembongan, Bali. Enjoy tropical garden scenery, AC, free WiFi, and a serene island atmosphere.",
+      "keywords": "garden view room bali, kamar hotel lembongan, bungalow lembongan, garden room nusa lembongan, the ulu room bali"
     },
     "pool": {
-      "title": "Pool View Room",
-      "description": "Relax and unwind in our Pool View Room, offering refreshing views of our sparkling swimming pool."
+      "title": "Pool View Room – The Ulu Hotel Nusa Lembongan",
+      "description": "Book the Pool View Room at The Ulu Hotel in Nusa Lembongan, Bali. Wake up to refreshing pool views in a luxurious private bungalow with world-class amenities.",
+      "keywords": "pool view room bali, pool bungalow lembongan, hotel with pool bali, kamar kolam renang lembongan, the ulu pool room"
     },
     "facilities": {
-      "title": "Facilities",
-      "description": "Discover our exceptional facilities designed to enhance your stay and provide unforgettable experiences."
+      "title": "Facilities – Pool, Beach Club & Restaurants | The Ulu Bali",
+      "description": "Explore world-class facilities at The Ulu Hotel in Nusa Lembongan: infinity pool, beach club, restaurant, and gym — making it one of the best resorts near Bali.",
+      "keywords": "fasilitas hotel bali, beach club lembongan, infinity pool bali, resort facilities nusa lembongan, the ulu facilities"
     },
     "rooms": {
-      "title": "Rooms & Suites",
-      "description": "Explore our exquisite collection of rooms and suites, each designed for your ultimate comfort and relaxation."
+      "title": "Rooms & Bungalows – The Ulu Hotel Nusa Lembongan, Bali",
+      "description": "Choose from garden or pool view bungalows at The Ulu Hotel in Nusa Lembongan, Bali. Luxury rooms starting from IDR 1,150,000/night with stunning tropical views.",
+      "keywords": "hotel rooms bali, bungalow nusa lembongan, resort kamar bali, ulu hotel rooms, luxury accommodation lembongan bali"
     }
   },
   "rooms": {
@@ -87,12 +93,14 @@
       "title": "Our Exquisite Rooms & Suites",
       "subtitle": "Discover your perfect sanctuary with our diverse range of luxurious accommodations."
     },
-    "roomList": [{
+    "roomList": [
+      {
         "title": "Garden View Room",
         "price": "FROM Rp 1.150.000 / NIGHT",
         "description": "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
         "image": "/images/slide2.jpg",
-        "features": [{
+        "features": [
+          {
             "icon": "solar:bed-linear",
             "text": "King Size Bed"
           },
@@ -130,7 +138,8 @@
         "price": "FROM Rp 1.250.000 / NIGHT",
         "description": "Experience ultimate comfort in our spacious luxury suites featuring a separate living area and premium amenities.",
         "image": "/images/pool-view.png",
-        "features": [{
+        "features": [
+          {
             "icon": "solar:bed-linear",
             "text": "King Size Bed"
           },
@@ -169,7 +178,8 @@
         "title": "EXPERIENCE OUR EXCEPTIONAL FACILITIES",
         "subtitle": "Elevate your stay with amenities designed for ultimate comfort and enjoyment."
       },
-      "list": [{
+      "list": [
+        {
           "title": "Hotel Pool",
           "image": "/images/pool_front.jpg",
           "text": "Relax in our stunning infinity pool with panoramic views.",

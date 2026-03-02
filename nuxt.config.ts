@@ -5,6 +5,12 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   app: {
+    head: {
+      link: [
+        // Tambahkan baris ini
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      ]
+    }
     // pageTransition: { name: 'page', mode: 'out-in' }
   },
   css: ["./app/assets/css/main.css"],
@@ -41,7 +47,7 @@ export default defineNuxtConfig({
     url: "https://www.theululembongan.com",
     name: "The Ulu Beach Club & Bungalows",
     description:
-      "Experience the ultimate tropical getaway at The Ulu Beach Club & Bungalows in Nusa Lembongan. Enjoy luxury bungalows, a vibrant beach club, and breathtaking ocean views.",
+      "The Ulu – a luxury beach club & bungalows hotel in Nusa Lembongan, Bali. Escape to The Ulu Hotel for stunning ocean views, private pool rooms, and an exclusive beachfront experience near Bali.",
     defaultLocale: "en",
   },
   i18n: {

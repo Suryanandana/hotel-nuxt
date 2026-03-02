@@ -1,37 +1,47 @@
 {
-  "welcome": "Selamat datang di Hotel kami",
+  "welcome": "Selamat datang di The Ulu Beach Club & Bungalows",
   "subtitle": "Subjudul",
   "site": {
-    "name": "Hotel Kami"
+    "name": "The Ulu Beach Club & Bungalows – Nusa Lembongan, Bali"
   },
   "layouts": {
-    "title": "Hotel Kami"
+    "title": "The Ulu Hotel – Nusa Lembongan, Bali"
   },
   "pages": {
     "home": {
-      "title": "Beranda",
-      "description": "Selamat datang di My Hotel, tempat perlindungan tropis utama Anda di Lembongan. Rasakan kenyamanan yang tak tertandingi, pemandangan laut yang menakjubkan, dan layanan kelas dunia."
+      "title": "The Ulu – Hotel & Beach Club Mewah di Nusa Lembongan, Bali",
+      "description": "The Ulu Beach Club & Bungalows adalah hotel mewah di Nusa Lembongan, dekat Bali. Nikmati pemandangan laut, bungalow pribadi, beach club eksklusif, dan layanan bintang lima — pilihan terbaik hotel di Bali.",
+      "keywords": "hotel di bali, ulu hotel, the ulu hotel, hotel nusa lembongan, beach club bali, resort mewah bali, bungalow lembongan, penginapan dekat bali, hotel lembongan bali"
     },
     "top": {
-      "description": "Nikmati kenyamanan dan pelayanan terbaik di hotel kami.",
+      "description": "Menginap di The Ulu Hotel, Nusa Lembongan – resort & beach club tepi pantai dengan pemandangan laut spektakuler, hanya beberapa menit dari Bali.",
       "languages": "Bahasa tersedia"
     },
     "about": {
-      "title": "Tentang Kami",
-      "sub": "Pelajari lebih lanjut tentang hotel kami",
-      "description": "Pelajari lebih lanjut tentang sejarah, fasilitas, dan layanan hotel kami."
+      "title": "Tentang The Ulu – Hotel Tepi Pantai di Nusa Lembongan, Bali",
+      "sub": "Kisah Kami – The Ulu Hotel",
+      "description": "Pelajari kisah The Ulu Beach Club & Bungalows — hotel mewah di Nusa Lembongan, Bali. Temukan visi kami dan mengapa The Ulu menjadi pilihan utama resort di dekat Bali.",
+      "keywords": "tentang ulu hotel, the ulu bali, hotel tepi pantai bali, resort lembongan bali, penginapan mewah nusa lembongan"
     },
     "garden": {
-      "title": "Kamar Pemandangan Taman",
-      "description": "Nikmati keindahan tenang Kamar Pemandangan Taman kami, menawarkan tempat peristirahatan damai dengan pemandangan taman yang rimbun."
+      "title": "Kamar Garden View – The Ulu Hotel Nusa Lembongan",
+      "description": "Pesan Kamar Garden View di The Ulu Hotel, bungalow mewah di Nusa Lembongan, Bali. Nikmati pemandangan taman tropis, AC, WiFi gratis, dan suasana pulau yang damai.",
+      "keywords": "kamar garden view bali, kamar hotel lembongan, bungalow taman nusa lembongan, hotel di bali garden view, the ulu kamar"
     },
     "pool": {
-      "title": "Kamar Pemandangan Kolam",
-      "description": "Bersantai dan lepaskan penat di Kamar Pemandangan Kolam kami, menawarkan pemandangan kolam renang kami yang berkilau."
+      "title": "Kamar Pool View – The Ulu Hotel Nusa Lembongan",
+      "description": "Pesan Kamar Pool View di The Ulu Hotel, Nusa Lembongan, Bali. Bangun dengan pemandangan kolam renang yang menyegarkan di bungalow pribadi mewah kami.",
+      "keywords": "kamar pool view bali, bungalow kolam renang lembongan, hotel dengan kolam bali, kamar kolam renang nusa lembongan, the ulu pool room"
     },
     "rooms": {
-      "title": "Kamar & Suite",
-      "description": "Jelajahi koleksi kamar dan suite kami yang indah, masing-masing dirancang untuk kenyamanan dan relaksasi maksimal Anda."
+      "title": "Kamar & Bungalow – The Ulu Hotel Nusa Lembongan, Bali",
+      "description": "Pilih kamar garden view atau pool view di The Ulu Hotel, Nusa Lembongan, Bali. Mulai dari IDR 1.150.000/malam dengan pemandangan tropis memukau.",
+      "keywords": "kamar hotel bali, bungalow nusa lembongan, resort kamar bali, ulu hotel kamar, penginapan mewah lembongan bali"
+    },
+    "facilities": {
+      "title": "Fasilitas – Kolam Renang, Beach Club & Restoran | The Ulu Bali",
+      "description": "Jelajahi fasilitas unggulan di The Ulu Hotel, Nusa Lembongan: kolam renang infinity, beach club eksklusif, restoran, dan gym — menjadikannya salah satu resort terbaik dekat Bali.",
+      "keywords": "fasilitas hotel bali, beach club lembongan, kolam renang infinity bali, fasilitas resort nusa lembongan, the ulu fasilitas"
     }
   },
   "navbar": {
@@ -91,16 +101,34 @@
         "description": "Desain indah dengan perabotan modern termasuk jendela ceruk glamor dengan pemandangan pribadi Anda ke Lucerne.",
         "image": "/images/slide2.jpg",
         "features": [
-          { "icon": "solar:bed-linear", "text": "Ranjang Ukuran King" },
-          { "icon": "solar:tv-linear", "text": "TV" },
-          { "icon": "umbleicons:users", "text": "Maks 2 tamu" },
-          { "icon": "fa:bath", "text": "Kamar Mandi Pribadi" },
-          { "icon": "iconoir:wifi-tag", "text": "WiFi Gratis" },
+          {
+            "icon": "solar:bed-linear",
+            "text": "Ranjang Ukuran King"
+          },
+          {
+            "icon": "solar:tv-linear",
+            "text": "TV"
+          },
+          {
+            "icon": "umbleicons:users",
+            "text": "Maks 2 tamu"
+          },
+          {
+            "icon": "fa:bath",
+            "text": "Kamar Mandi Pribadi"
+          },
+          {
+            "icon": "iconoir:wifi-tag",
+            "text": "WiFi Gratis"
+          },
           {
             "icon": "icon-park-outline:air-conditioning",
             "text": "Pendingin Ruangan"
           },
-          { "icon": "material-symbols:resize", "text": "Ukuran kamar: 30m²" }
+          {
+            "icon": "material-symbols:resize",
+            "text": "Ukuran kamar: 30m²"
+          }
         ],
         "align": "left",
         "url": "rooms-garden",
@@ -112,16 +140,34 @@
         "description": "Rasakan kenyamanan terbaik di suite mewah kami yang luas dengan ruang tamu terpisah dan fasilitas premium.",
         "image": "/images/pool-view.png",
         "features": [
-          { "icon": "solar:bed-linear", "text": "Ranjang Ukuran King" },
-          { "icon": "solar:tv-linear", "text": "TV" },
-          { "icon": "umbleicons:users", "text": "Maks 2 tamu" },
-          { "icon": "fa:bath", "text": "Kamar Mandi Pribadi" },
-          { "icon": "iconoir:wifi-tag", "text": "WiFi Gratis" },
+          {
+            "icon": "solar:bed-linear",
+            "text": "Ranjang Ukuran King"
+          },
+          {
+            "icon": "solar:tv-linear",
+            "text": "TV"
+          },
+          {
+            "icon": "umbleicons:users",
+            "text": "Maks 2 tamu"
+          },
+          {
+            "icon": "fa:bath",
+            "text": "Kamar Mandi Pribadi"
+          },
+          {
+            "icon": "iconoir:wifi-tag",
+            "text": "WiFi Gratis"
+          },
           {
             "icon": "icon-park-outline:air-conditioning",
             "text": "Pendingin Ruangan"
           },
-          { "icon": "material-symbols:resize", "text": "Ukuran kamar: 30m²" }
+          {
+            "icon": "material-symbols:resize",
+            "text": "Ukuran kamar: 30m²"
+          }
         ],
         "align": "right",
         "url": "rooms-pool",

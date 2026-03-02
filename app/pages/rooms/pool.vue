@@ -19,12 +19,14 @@ const slides = [
     { src: '/images/pool2.webp', alt: 'Slide 5' },
 ];
 
-const pageTitle = computed(() => t('pages.garden.title'))
-const pageDescription = computed(() => t('pages.garden.description'))
+const pageTitle = computed(() => t('pages.pool.title'))
+const pageDescription = computed(() => t('pages.pool.description'))
+const pageKeywords = computed(() => t('pages.pool.keywords'))
 
 useSeoMeta({
     title: pageTitle,
     description: pageDescription,
+    keywords: pageKeywords,
     ogTitle: pageTitle,
     ogDescription: pageDescription,
 })

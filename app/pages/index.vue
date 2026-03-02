@@ -8,12 +8,14 @@ gsap.registerPlugin(ScrollTrigger)
 const { t } = useI18n()
 const pageTitle = computed(() => t('pages.home.title'))
 const pageDescription = computed(() => t('pages.home.description'))
+const pageKeywords = computed(() => t('pages.home.keywords'))
 
 // 2. useSeoMeta: Gunakan ini untuk SEO tags (Title, Desc, OG).
 // Ini menggantikan useHead untuk keperluan SEO agar lebih rapi.
 useSeoMeta({
   title: pageTitle,
   description: pageDescription,
+  keywords: pageKeywords,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
 })
