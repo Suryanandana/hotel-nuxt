@@ -57,10 +57,11 @@ onUnmounted(() => {
   <section ref="sectionRef" class="py-32 bg-[#F3F1EB] flex items-center justify-center min-h-screen relative overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none select-none">
-      <img 
+      <NuxtImg 
         ref="imageRef"
         src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1000&auto=format&fit=crop" 
         alt="Hotel Ambience" 
+        sizes="300px md:450px lg:100vw" format="webp" quality="80" loading="lazy"
         class="w-[300px] h-[450px] md:w-[450px] md:h-[650px] object-cover rounded-t-full opacity-20 contrast-125"
       />
     </div>

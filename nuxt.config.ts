@@ -43,6 +43,20 @@ export default defineNuxtConfig({
   aos: {
     once: true,
   },
+  image: {
+    // [1, 2]: generate 1x & 2x — gambar tajam di desktop Retina & layar HiDPI
+    // Note: hydration warning di dev mode adalah known issue @nuxt/image v2,
+    // tidak berpengaruh di production (DOM tidak diubah, hanya check)
+    densities: [1, 2],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+  },
   site: {
     url: "https://www.theululembongan.com",
     name: "The Ulu Beach Club & Bungalows",

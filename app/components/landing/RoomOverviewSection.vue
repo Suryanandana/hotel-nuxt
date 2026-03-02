@@ -42,14 +42,16 @@
 
             <div class="flex gap-4 items-start h-[600px]">
                 <div class="flex-1 h-[500px] overflow-hidden rounded-sm shadow-xl">
-                    <img src="/images/room-overview1.webp"
+                    <NuxtImg src="/images/room-overview1.webp"
                         alt="Room Interior"
+                        sizes="100vw sm:50vw lg:100vw" format="webp" quality="80" loading="lazy"
                         class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
                 </div>
 
                 <div class="flex-1 h-[500px] mt-14 overflow-hidden rounded-sm shadow-xl">
-                    <img src="/images/room-overview2.webp"
+                    <NuxtImg src="/images/room-overview2.webp"
                         alt="Lobby View"
+                        sizes="100vw sm:50vw lg:100vw" format="webp" quality="80" loading="lazy"
                         class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
                 </div>
             </div>

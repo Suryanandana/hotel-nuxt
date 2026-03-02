@@ -14,7 +14,7 @@ const { rt } = useI18n({
         <!-- IMAGE BLOCK -->
         <div class="room-image relative w-full lg:w-[70%] h-[420px] md:h-[520px] rounded-2xl overflow-hidden shadow-lg"
             :class="rt(room.align) === 'left' ? 'lg:mr-auto' : 'lg:ml-auto'">
-            <img :src="rt(room.image)" :alt="rt(room.title)"
+            <NuxtImg :src="rt(room.image)" :alt="rt(room.title)" sizes="100vw sm:50vw lg:100vw" format="webp" quality="80" loading="lazy"
                 class="absolute inset-0 w-full h-full object-cover" />
         </div>
 
