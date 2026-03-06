@@ -24,7 +24,7 @@ const desktopThumbsOptions = {
   type: 'slide',
   direction: 'ttb',
   height: '100%',
-  perPage: 3,
+  perPage: 4,
   wheel: true,
   gap: '0.5rem',
   rewind: true,
@@ -42,7 +42,6 @@ const mobileThumbsOptions = {
   pagination: false,
   isNavigation: true,
   perPage: 4,
-  arrows: false,
   fixedWidth: 110,
   fixedHeight: 70,
   cover: true,
@@ -61,31 +60,47 @@ onMounted(() => {
     main.value.splide.sync(thumbs.value.splide);
   }
 });
-
 </script>
 
 <template>
-  <!-- Desktop Layout -->
-  <section v-if="isDesktop" class="flex flex-col md:flex-row">
-    <!-- Thumbnails -->
-    <div class="p-2 col-start-1 row-start-1">
-      <Splide :options="desktopThumbsOptions" ref="thumbs">
-        <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-md">
-          <NuxtImg :src="slide.src" :alt="slide.alt" sizes="110px md:110px" format="webp" quality="80" loading="lazy" class="w-full h-full object-cover bg-gray-300 rounded-md cursor-pointer" />
+  <!-- Desktop / Tablet Layout: 2 kolom (thumbnail kiri | main slider kanan) -->
+  <section v-if="isDesktop" class="flex flex-row gap-2 h-[420px] md:h-[480px] lg:h-[560px]">
+    <!-- Thumbnails (kolom kiri) — lebar tetap agar tidak terlalu kecil -->
+    <div class="w-[110px] md:w-[130px] lg:w-[200px] shrink-0">
+      <Splide :options="desktopThumbsOptions" ref="thumbs" class="h-full">
+        <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-md overflow-hidden">
+          <NuxtImg
+            :src="slide.src"
+            :alt="slide.alt"
+            sizes="150px"
+            format="webp"
+            quality="80"
+            loading="lazy"
+            class="w-full h-full object-cover bg-gray-300 rounded-md cursor-pointer"
+          />
         </SplideSlide>
       </Splide>
     </div>
-    <!-- Main Slider -->
-    <div class="relative col-span-3 col-start-2">
-      <Splide :options="mainOptions" ref="main" class="w-full h-full rounded-xl">
-        <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-xl">
-          <NuxtImg :src="slide.src" :alt="slide.alt" sizes="100vw md:80vw lg:100vw" format="webp" quality="80" preload class="w-full h-full object-cover bg-gray-300 rounded-xl" />
+
+    <!-- Main Slider (kolom kanan) — mengisi sisa ruang -->
+    <div class="flex-1 min-w-0">
+      <Splide :options="mainOptions" ref="main" class="w-full h-full rounded-xl overflow-hidden">
+        <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-xl overflow-hidden">
+          <NuxtImg
+            :src="slide.src"
+            :alt="slide.alt"
+            sizes="100vw md:80vw lg:100vw"
+            format="webp"
+            quality="80"
+            preload
+            class="w-full h-full object-cover bg-gray-300 rounded-xl"
+          />
         </SplideSlide>
       </Splide>
     </div>
   </section>
 
-  <!-- Mobile Layout -->
+  <!-- Mobile Layout: 2 row (main slider atas | thumbnail bawah) -->
   <div v-else>
     <section class="relative">
       <Splide :options="mainOptions" ref="main" class="w-full h-full">
