@@ -96,9 +96,9 @@
     "roomList": [
       {
         "title": "Garden View Room",
-        "price": "FROM Rp 1.150.000 / NIGHT",
+        "price": "FROM Rp 1.230.000 / NIGHT",
         "description": "Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.",
-        "image": "/images/slide2.jpg",
+        "image": "/images/hotel/ulu garden view.jpg",
         "features": [
           {
             "icon": "solar:bed-linear",
@@ -135,9 +135,9 @@
       },
       {
         "title": "Pool View Room",
-        "price": "FROM Rp 1.250.000 / NIGHT",
+        "price": "FROM Rp 1.230.000 / NIGHT",
         "description": "Experience ultimate comfort in our spacious luxury suites featuring a separate living area and premium amenities.",
-        "image": "/images/pool-view.png",
+        "image": "/images/hotel/ulu pool view.jpg",
         "features": [
           {
             "icon": "solar:bed-linear",
