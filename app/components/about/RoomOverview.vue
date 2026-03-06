@@ -49,7 +49,7 @@ const items = computed(() => tm('items'))
         "title": "Room Overview",
         "description": "We offer a total of 24 thoughtfully designed rooms created to deliver comfort, tranquility, and a truly relaxing stay. Guests can choose between calming garden-view rooms or refreshing pool-view rooms, all designed to enhance a peaceful island atmosphere.",
         "icon": "solar:bed-broken",
-        "image": "/images/slide3.png"
+        "image": "/images/hotel/Gambaran kamar.jpg"
       },
       {
         "title": "Ulu Pool Rooms",
@@ -73,7 +73,7 @@ const items = computed(() => tm('items'))
         "title": "Gambaran Kamar",
         "description": "Kami menawarkan total 24 kamar yang dirancang dengan cermat untuk memberikan kenyamanan, ketenangan, dan pengalaman menginap yang benar-benar santai. Tamu dapat memilih antara kamar dengan pemandangan taman yang menenangkan atau kamar dengan pemandangan kolam yang menyegarkan, semuanya dirancang untuk meningkatkan suasana pulau yang damai.",
         "icon": "solar:bed-broken",
-        "image": "/images/slide3.png"
+        "image": "/images/hotel/Gambaran kamar.jpg"
       },
       {
         "title": "Ulu Pool Rooms",
