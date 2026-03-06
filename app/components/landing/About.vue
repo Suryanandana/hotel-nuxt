@@ -4,13 +4,13 @@
     <!-- Left Image -->
     <div ref="leftImage"
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]">
-      <NuxtImg src="/images/slide1.jpg" alt="Hotel Garden" sizes="sm:300px md:400px lg:100vw" format="webp" quality="80" loading="lazy" class="rounded-lg object-cover w-full h-full shadow-2xl" />
+      <NuxtImg src="/images/hotel/kiri.jpg" alt="Hotel Garden" sizes="sm:300px md:400px lg:100vw" format="webp" quality="80" loading="lazy" class="rounded-lg object-cover w-full h-full shadow-2xl" />
     </div>
 
     <!-- Right Image -->
     <div ref="rightImage"
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[300px] md:w-[380px] h-[450px] md:h-[550px]">
-      <NuxtImg src="/images/slide2.jpg" alt="Hotel Room" sizes="300px md:400px lg:100vw" format="webp" quality="80" loading="lazy" class="rounded-lg object-cover w-full h-full shadow-2xl" />
+      <NuxtImg src="/images/hotel/kanan.jpg" alt="Hotel Room" sizes="300px md:400px lg:100vw" format="webp" quality="80" loading="lazy" class="rounded-lg object-cover w-full h-full shadow-2xl" />
     </div>
 
     <!-- Text -->

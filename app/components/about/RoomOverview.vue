@@ -56,14 +56,14 @@ const items = computed(() => tm('items'))
         "description": "Comprising 12 rooms with views of the swimming pool, our Pool View Rooms provide a refreshing and tranquil stay. Six rooms are located on the ground floor with easy access and close proximity to the pool area, while six rooms on the upper floor offer broader views and a more private setting.",
         "description2": "Each room is designed with a consistent layout, emphasizing modern comfort and warm aesthetic touches. Both ground-floor and upper-floor rooms feature the same facilities, ensuring a comfortable, relaxed, and memorable stay.",
         "icon": "fluent:swimming-pool-20-filled",
-        "image": "/images/pool_front.jpg"
+        "image": "/images/hotel/ulu pool view.jpg"
       },
       {
         "title": "Ulu Garden Room",
         "description": "Consisting of 12 rooms overlooking the garden, our Garden View Rooms offer a peaceful stay surrounded by lush natural greenery. Six rooms are located on the ground floor, providing easy access and a closer connection to the garden area, while six rooms on the upper floor offer a wider perspective and a more private atmosphere.",
         "description2": "Each room features a consistent and thoughtfully designed layout, blending modern comfort with a calming ambiance. Whether on the ground or upper floor, all rooms are equipped with the same facilities to ensure a comfortable, relaxing, and harmonious stay with the surrounding environment.",
         "icon": "temaki:garden-bed",
-        "image": "/images/garden_front.jpg"
+        "image": "/images/hotel/ulu garden view.jpg"
       }
     ]
   },
@@ -80,14 +80,14 @@ const items = computed(() => tm('items'))
         "description": "Terdiri dari 12 kamar dengan pemandangan kolam renang, Pool View Rooms kami menawarkan pengalaman menginap yang menyegarkan dan menenangkan. Enam kamar terletak di lantai dasar dengan akses mudah serta dekat dengan area kolam, sementara enam kamar di lantai atas menyajikan pemandangan yang lebih luas dan suasana yang lebih privat.",
         "description2": "Setiap kamar dirancang dengan tata letak yang konsisten, mengutamakan kenyamanan modern dengan sentuhan estetika yang hangat. Baik di lantai dasar maupun lantai atas, seluruh kamar dilengkapi dengan fasilitas yang sama untuk memastikan pengalaman menginap yang nyaman, santai, dan berkesan.",
         "icon": "fluent:swimming-pool-20-filled",
-        "image": "/images/pool_front.jpg"
+        "image": "/images/hotel/ulu pool view.jpg"
       },
       {
         "title": "Ulu Garden Room",
         "description": "Terdiri dari 12 kamar yang menghadap taman, Garden View Rooms kami menawarkan suasana menginap yang tenang dikelilingi oleh kehijauan alam yang asri. Enam kamar berada di lantai dasar dengan akses yang mudah serta kedekatan dengan area taman, sementara enam kamar di lantai atas memberikan sudut pandang yang lebih luas dan suasana yang lebih privat.",
         "description2": "Setiap kamar memiliki tata letak yang konsisten dan dirancang dengan penuh perhatian, memadukan kenyamanan modern dengan suasana yang menenangkan. Baik di lantai dasar maupun lantai atas, seluruh kamar dilengkapi dengan fasilitas yang sama untuk memastikan pengalaman menginap yang nyaman, rileks, dan selaras dengan lingkungan sekitar.",
         "icon": "temaki:garden-bed",
-        "image": "/images/garden_front.jpg"
+        "image": "/images/hotel/ulu garden view.jpg"
       }
     ]
   }

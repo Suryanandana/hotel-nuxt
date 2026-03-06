@@ -24,7 +24,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <Hero :title="t('pages.about.sub')" img-url="/images/garden_view_hero.jpg" :breadcrumbs="breadcrumbs" />
+  <Hero :title="t('pages.about.sub')" img-url="/images/hotel/TENTANG 1.jpg" :breadcrumbs="breadcrumbs" />
   <div class="container mx-auto px-4 pt-32">
     <AboutWeAre data-aos="fade-up" />
     <AboutRoomOverview data-aos="fade-up" />

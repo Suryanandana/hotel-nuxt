@@ -18,15 +18,6 @@ const mainOptions = {
   rewind: true,
   pagination: false,
   arrows: false,
-  height: '60%',
-  breakpoints: {
-    768: {
-      height: '100%'
-    },
-    1024: {
-      height: '80%'
-    }
-  }
 };
 
 const desktopThumbsOptions = {
@@ -75,10 +66,10 @@ onMounted(() => {
 
 <template>
   <!-- Desktop Layout -->
-  <section v-if="isDesktop" class="flex flex-col md:flex-row xl:-mb-80 lg:-mb-60">
+  <section v-if="isDesktop" class="flex flex-col md:flex-row">
     <!-- Thumbnails -->
     <div class="p-2 col-start-1 row-start-1">
-      <Splide :options="desktopThumbsOptions" ref="thumbs" class="h-full md:h-[80%] lg:h-[60%]">
+      <Splide :options="desktopThumbsOptions" ref="thumbs">
         <SplideSlide v-for="slide in slides" :key="slide.alt" class="rounded-md">
           <NuxtImg :src="slide.src" :alt="slide.alt" sizes="110px md:110px" format="webp" quality="80" loading="lazy" class="w-full h-full object-cover bg-gray-300 rounded-md cursor-pointer" />
         </SplideSlide>
@@ -96,7 +87,7 @@ onMounted(() => {
 
   <!-- Mobile Layout -->
   <div v-else>
-    <section class="relative h-[60vh]">
+    <section class="relative">
       <Splide :options="mainOptions" ref="main" class="w-full h-full">
         <SplideSlide v-for="slide in slides" :key="slide.alt">
           <NuxtImg :src="slide.src" :alt="slide.alt" sizes="100vw md:80vw lg:100vw" format="webp" quality="80" preload class="w-full h-full object-cover" />
