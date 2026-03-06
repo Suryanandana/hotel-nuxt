@@ -69,7 +69,7 @@ onMounted(() => {
     <section ref="section" class="relative w-full h-screen bg-white flex items-center justify-center overflow-hidden">
         <!-- Masked Container -->
         <div ref="mask" class="absolute inset-0 w-full h-full z-10">
-            <NuxtImg ref="image" src="/images/slide2.jpg" alt="Reveal" sizes="100vw lg:100vw" format="webp" quality="80" loading="lazy" class="w-full h-full object-cover" />
+            <NuxtImg ref="image" src="/images/hotel/General manager.jpg" alt="Reveal" sizes="100vw lg:100vw" format="webp" quality="80" loading="lazy" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/30"></div>
         </div>
 

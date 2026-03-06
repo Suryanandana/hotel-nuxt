@@ -78,7 +78,7 @@ const items = computed(() => tm('items'))
         "title": "Swimming Pool",
         "description": "Enjoy a refreshing swim in our pool, surrounded by a calm tropical atmosphere—perfect for unwinding, soaking up the sun, or cooling off after a day of island adventures.",
         "icon": "material-symbols:pool-rounded",
-        "image": "/images/pool_front.jpg"
+        "image": "/images/hotel/pool.jpg"
       }
     ]
   },
@@ -106,7 +106,7 @@ const items = computed(() => tm('items'))
         "title": "Kolam Renang",
         "description": "Kolam renang kami menawarkan tempat yang sempurna untuk bersantai dan menyegarkan diri, dikelilingi suasana tropis yang tenang dan menenangkan.",
         "icon": "material-symbols:pool-rounded",
-        "image": "/images/pool_front.jpg"
+        "image": "/images/hotel/pool.jpg"
       }
     ]
   }
